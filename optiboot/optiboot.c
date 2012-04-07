@@ -455,7 +455,11 @@ int main(void) {
   td.u16  += 8; //add correction
   td.u16 >>= 4; //div by 16 -> div by 2 (2 data bits) + div by 8
   td.u16--;     //sub 1
-  UBRR0L = td.u8.l;
+#ifdef __AVR_ATmega8__
+  UBRRL = td.u8.l;
+#else
+  UART_SRL = td.u8.l;
+#endif
 
   //wait for sync command
   while(getch() != STK_GET_SYNC)

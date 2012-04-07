@@ -1,0 +1,7 @@
+<Project name="optiboot">
+<File path="Makefile"></File>
+<File path="optiboot.c"></File>
+<File path="boot.h"></File>
+<File path="stk500.h"></File>
+<File path="pin_defs.h"></File>
+</Project>

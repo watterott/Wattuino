@@ -1,9 +1,9 @@
 # Wattuino
 Arduino compatible module.
 
-<http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz>
+http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz
 
-<http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz>
+http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz
 
 ![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/img/wattuino_pro_mini.jpg)
 

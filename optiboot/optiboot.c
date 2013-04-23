@@ -37,15 +37,16 @@
 /*   ATmega328 non-picopower devices                      */
 /*   ATmega644P based devices (Sanguino)                  */
 /*   ATmega1284P based devices                            */
+/*   ATmega1280 based devices (Arduino Mega)              */
 /*                                                        */
 /* Alpha test                                             */
-/*   ATmega1280 based devices (Arduino Mega)              */
+/*   ATmega32                                             */
 /*                                                        */
 /* Work in progress:                                      */
 /*   ATtiny84 based devices (Luminet)                     */
 /*                                                        */
 /* Does not support:                                      */
-/*   USB based devices (eg. Teensy)                       */
+/*   USB based devices (eg. Teensy, Leonardo)             */
 /*                                                        */
 /* Assumptions:                                           */
 /*   The code makes several assumptions that reduce the   */
@@ -137,13 +138,30 @@
 /*  repository and was distributed with Arduino 0022.     */
 /* Version 4 starts with the arduino repository commit    */
 /*  that brought the arduino repository up-to-date with   */
-/* the optiboot source tree changes since v3.             */
+/*  the optiboot source tree changes since v3.            */
+/* Version 5 was created at the time of the new Makefile  */
+/*  structure (Mar, 2013), even though no binaries changed*/
+/* It would be good if versions implemented outside the   */
+/*  official repository used an out-of-seqeunce version   */
+/*  number (like 104.6 if based on based on 4.5) to       */
+/*  prevent collisions.                                   */
 /*                                                        */
 /**********************************************************/
 
 /**********************************************************/
 /* Edit History:                                          */
 /*                                                        */
+/* Mar 2013                                               */
+/* 5.0 WestfW: Major Makefile restructuring.              */
+/*             See Makefile and pin_defs.h                */
+/*             (no binary changes)                        */
+/*                                                        */
+/* 4.6 WestfW/Pito: Add ATmega32 support                  */
+/* 4.6 WestfW/radoni: Don't set LED_PIN as an output if   */
+/*                    not used. (LED_START_FLASHES = 0)   */
+/* Jan 2013	                                              */
+/* 4.6 WestfW/dkinzer: use autoincrement lpm for read     */
+/* 4.6 WestfW/dkinzer: pass reset cause to app in R2      */
 /* Mar 2012                                               */
 /* 4.5 WestfW: add infrastructure for non-zero UARTS.     */
 /* 4.5 WestfW: fix SIGNATURE_2 for m644 (bad in avr-libc) */
@@ -176,15 +194,14 @@
 /**********************************************************/
 
 #define OPTIBOOT_MAJVER 5
-#define OPTIBOOT_MINVER 5
+#define OPTIBOOT_MINVER 6
 
 #define MAKESTR(a) #a
 #define MAKEVER(a, b) MAKESTR(a*256+b)
 
-//asm("  .section .version\n"
-//    "optiboot_version:  .word " MAKEVER(OPTIBOOT_MAJVER, OPTIBOOT_MINVER) "\n"
-//    "  .section .text\n");
-asm(".section .text\n");
+asm("  .section .version\n"
+    "optiboot_version:  .word " MAKEVER(OPTIBOOT_MAJVER, OPTIBOOT_MINVER) "\n"
+    "  .section .text\n");
 
 #include <inttypes.h>
 #include <avr/io.h>
@@ -225,6 +242,20 @@ asm(".section .text\n");
 #define UART 0
 #endif
 
+#define BAUD_SETTING (( (F_CPU + BAUD_RATE * 4L) / ((BAUD_RATE * 8L))) - 1 )
+#define BAUD_ACTUAL (F_CPU/(8 * ((BAUD_SETTING)+1)))
+#define BAUD_ERROR (( 100*(BAUD_RATE - BAUD_ACTUAL) ) / BAUD_RATE)
+/*
+#if BAUD_ERROR >= 5
+#error BAUD_RATE error greater than 5%
+#elif BAUD_ERROR <= -5
+#error BAUD_RATE error greater than -5%
+#elif BAUD_ERROR >= 2
+#warning BAUD_RATE error greater than 2%
+#elif BAUD_ERROR <= -2
+#warning BAUD_RATE error greater than -2%
+#endif
+*/
 #if 0
 /* Switch in soft UART for hard baud rates */
 /*
@@ -266,7 +297,7 @@ asm(".section .text\n");
 /* The main function is in init9, which removes the interrupt vector table */
 /* we don't need. It is also 'naked', which means the compiler does not    */
 /* generate any entry or exit code itself. */
-int main(void) __attribute__ ((naked)) __attribute__ ((section (".init9")));
+int main(void) __attribute__ ((OS_main)) __attribute__ ((section (".init9")));
 void putch(char);
 uint8_t getch(void);
 static inline void getNch(uint8_t); /* "static inline" is a compiler hint to reduce code size */
@@ -280,7 +311,7 @@ void watchdogConfig(uint8_t x);
 #ifdef SOFT_UART
 void uartDelay() __attribute__ ((naked));
 #endif
-void appStart() __attribute__ ((naked));
+void appStart(uint8_t rstFlags) __attribute__ ((naked));
 
 /*
  * NRWW memory
@@ -300,7 +331,7 @@ void appStart() __attribute__ ((naked));
 #if defined(__AVR_ATmega168__)
 #define RAMSTART (0x100)
 #define NRWWSTART (0x3800)
-#elif defined(__AVR_ATmega328P__)
+#elif defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32__)
 #define RAMSTART (0x100)
 #define NRWWSTART (0x7000)
 #elif defined (__AVR_ATmega644P__)
@@ -334,7 +365,7 @@ void appStart() __attribute__ ((naked));
 
 /*
  * Handle devices with up to 4 uarts (eg m1280.)  Rather inelegantly.
- * Note that mega8 still needs special handling, because ubrr is handled
+ * Note that mega8/m32 still needs special handling, because ubrr is handled
  * differently.
  */
 #if UART == 0
@@ -344,18 +375,27 @@ void appStart() __attribute__ ((naked));
 # define UART_SRL UBRR0L
 # define UART_UDR UDR0
 #elif UART == 1
+#if !defined(UDR1)
+#error UART == 1, but no UART1 on device
+#endif
 # define UART_SRA UCSR1A
 # define UART_SRB UCSR1B
 # define UART_SRC UCSR1C
 # define UART_SRL UBRR1L
 # define UART_UDR UDR1
 #elif UART == 2
+#if !defined(UDR2)
+#error UART == 2, but no UART2 on device
+#endif
 # define UART_SRA UCSR2A
 # define UART_SRB UCSR2B
 # define UART_SRC UCSR2C
 # define UART_SRL UBRR2L
 # define UART_UDR UDR2
 #elif UART == 3
+#if !defined(UDR1)
+#error UART == 3, but no UART3 on device
+#endif
 # define UART_SRA UCSR3A
 # define UART_SRB UCSR3B
 # define UART_SRC UCSR3C
@@ -386,21 +426,21 @@ int main(void) {
   // If not, uncomment the following instructions:
   // cli();
   asm volatile ("clr __zero_reg__");
-#ifdef __AVR_ATmega8__
+#if defined(__AVR_ATmega8__) || defined (__AVR_ATmega32__)
   SP=RAMEND;  // This is done by hardware reset
 #endif
 
   // Adaboot no-wait mod
   ch = MCUSR;
   MCUSR = 0;
-  if (!(ch & _BV(EXTRF))) appStart();
+  if (!(ch & _BV(EXTRF))) appStart(ch);
 
 #if LED_START_FLASHES > 0
   // Set up Timer 1 for timeout counter
   TCCR1B = _BV(CS12) | _BV(CS10); // div 1024
 #endif
 #ifndef SOFT_UART
-#ifdef __AVR_ATmega8__
+#if defined(__AVR_ATmega8__) || defined (__AVR_ATmega32__)
   UCSRA = _BV(U2X); //Double speed mode USART
   UCSRB = _BV(RXEN) | _BV(TXEN);  // enable Rx & Tx
   UCSRC = _BV(URSEL) | _BV(UCSZ1) | _BV(UCSZ0);  // config USART; 8N1
@@ -476,12 +516,14 @@ int main(void) {
       verifySpace();
       if (ch == 0x82) {
         putch(OPTIBOOT_MINVER);
-      } else if (ch == 0x81) {
+      }
+      else if (ch == 0x81) {
         putch(OPTIBOOT_MAJVER);
-      } else {
+      }
+      else {
         /*
          * GET PARAMETER returns a generic 0x03 reply for
-               * other parameters - enough to keep Avrdude happy
+         * other parameters - enough to keep Avrdude happy
          */
         putch(0x03);
       }
@@ -531,7 +573,9 @@ int main(void) {
       while (--length);
 
       // If we are in NRWW section, page erase has to be delayed until now.
-      // Todo: Take RAMPZ into account
+      // Todo: Take RAMPZ into account (not doing so just means that we will
+      //  treat the top of both "pages" of flash as NRWW, for a slight speed
+      //  decrease, so fixing this is not urgent.)
       if (address >= NRWWSTART) __boot_page_erase_short((uint16_t)(void*)address);
 
       // Read command terminator, start reply
@@ -590,8 +634,8 @@ int main(void) {
       getch();
 
       verifySpace();
-#ifdef VIRTUAL_BOOT_PARTITION
       do {
+#ifdef VIRTUAL_BOOT_PARTITION
         // Undo vector patch in bottom page so verify passes
         if      (address == 0) ch=rstVect & 0xff;
         else if (address == 1) ch=rstVect >> 8;
@@ -599,25 +643,19 @@ int main(void) {
         else if (address == 9) ch=wdtVect >> 8;
         else ch = pgm_read_byte_near(address);
         address++;
+#elif defined(RAMPZ)
+        // Since RAMPZ should already be set, we need to use EPLM directly.
+        // Also, we can use the autoincrement version of lpm to update "address"
+        //      do putch(pgm_read_byte_near(address++));
+        //      while (--length);
+        // read a Flash and increment the address (may increment RAMPZ)
+        __asm__ ("elpm %0,Z+\n" : "=r" (ch), "=z" (address): "1" (address));
+#else
+        // read a Flash byte and increment the address
+        __asm__ ("lpm %0,Z+\n" : "=r" (ch), "=z" (address): "1" (address));
+#endif
         putch(ch);
       } while (--length);
-#else
-#ifdef RAMPZ
-// Since RAMPZ should already be set, we need to use EPLM directly.
-//      do putch(pgm_read_byte_near(address++));
-//      while (--length);
-      do {
-        uint8_t result;
-        __asm__ ("elpm %0,Z\n":"=r"(result):"z"(address));
-        putch(result);
-        address++;
-      }
-      while (--length);
-#else
-      do putch(pgm_read_byte_near(address++));
-      while (--length);
-#endif
-#endif
     }
 
     /* Get device signature bytes  */
@@ -675,7 +713,7 @@ uint8_t getch(void) {
   uint8_t ch;
 
 #ifdef LED_DATA_FLASH
-#ifdef __AVR_ATmega8__
+#if defined(__AVR_ATmega8__) || defined (__AVR_ATmega32__)
   LED_PORT ^= _BV(LED);
 #else
   LED_PIN |= _BV(LED);
@@ -725,7 +763,7 @@ uint8_t getch(void) {
 #endif
 
 #ifdef LED_DATA_FLASH
-#ifdef __AVR_ATmega8__
+#if defined(__AVR_ATmega8__) || defined (__AVR_ATmega32__)
   LED_PORT ^= _BV(LED);
 #else
   LED_PIN |= _BV(LED);
@@ -774,7 +812,7 @@ void flash_led(uint8_t count) {
     TCNT1 = -(F_CPU/(1024*16));
     TIFR1 = _BV(TOV1);
     while(!(TIFR1 & _BV(TOV1)));
-#ifdef __AVR_ATmega8__
+#if defined(__AVR_ATmega8__)  || defined (__AVR_ATmega32__)
     LED_PORT ^= _BV(LED);
 #else
     LED_PIN |= _BV(LED);
@@ -796,7 +834,12 @@ void watchdogConfig(uint8_t x) {
   WDTCSR = x;
 }
 
-void appStart() {
+void appStart(uint8_t rstFlags) {
+  // save the reset flags in the designated register
+  //  This can be saved in a main program by putting code in .init0 (which
+  //  executes before normal c init code) to save R2 to a global variable.
+  __asm__ __volatile__ ("mov r2, %0\n" :: "r" (rstFlags));
+
   watchdogConfig(WATCHDOG_OFF);
   __asm__ __volatile__ (
 #ifdef VIRTUAL_BOOT_PARTITION

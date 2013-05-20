@@ -14,5 +14,4 @@ http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz
 * Arduino Uno Bootloader (optiboot) with auto baud rate detection
 * LC filter on AVCC of the AVR microcontroller
 * All pins of the AVR are available (also ADC6, ADC7)
-* 5V or 3V3 voltage regulator
-* Over current protected
+* 5V or 3V3 voltage regulator with over current protection

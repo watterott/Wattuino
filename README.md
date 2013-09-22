@@ -9,9 +9,9 @@ Shop:
 
 
 ## Wattuino Pro Mini Features
-* Atmel AVR ATmega328P @ 16 MHz or 8 MHz (external resonator)
+* Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
 * Compatible with Arduino Pro Mini
-* Arduino Uno Bootloader (optiboot) with auto baud rate detection
+* Arduino Bootloader (optiboot) with auto baud rate detection
 * LC filter on AVCC of the AVR microcontroller
 * All pins of the AVR are available (also ADC6, ADC7)
-* 5V or 3V3 voltage regulator with over current protection
+* 5V or 3.3V voltage regulator with over current protection

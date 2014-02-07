@@ -19,3 +19,7 @@ CAD Software Parts:
 * LC filter on AVCC of the AVR microcontroller
 * All pins of the AVR are available (also ADC6, ADC7)
 * 5V or 3.3V LDO voltage regulator with over current protection (TS5204)
+
+
+## Hardware
+* [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/pcb)

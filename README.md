@@ -1,5 +1,5 @@
 # Wattuino
-Arduino compatible module.
+Arduino compatible boards and modules.
 
 Shop:
 [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz), 
@@ -7,12 +7,11 @@ Shop:
 
 CAD Software Parts:
 [Eagle](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.lbr), 
-[Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini.fzpz)
-
-![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/img/wattuino_pro_mini.jpg)
+[Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)
 
 
 ## Wattuino Pro Mini Features
+![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/img/wattuino_pro_mini.jpg)
 * Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
 * Compatible with Arduino Pro Mini
 * Arduino Bootloader (optiboot) with auto baud rate detection
@@ -23,3 +22,7 @@ CAD Software Parts:
 
 ## Hardware
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/pcb)
+
+
+## Software
+* [Arduino Bootloader and Extensions](https://github.com/watterott/wattuino/tree/master/src)

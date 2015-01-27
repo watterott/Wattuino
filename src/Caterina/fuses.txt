@@ -1,0 +1,12 @@
+ATmega32U4 Fuse Settings
+------------------------
+Extended: 0xCB
+High:     0xD8
+Low:      0xFF
+Lockbits: 0xEF (SPM prohibited in Boot Section)
+
+
+USB Vendor and Product ID
+-------------------------
+VID: 0x1D50 (Openmoko)
+PID: 0x60B0 (http://wiki.openmoko.org/wiki/USB_Product_IDs)

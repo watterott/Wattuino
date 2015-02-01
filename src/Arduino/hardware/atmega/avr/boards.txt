@@ -1,10 +1,16 @@
+# VID 0x6666 is a prototype product Vendor ID
+# http://www.linux-usb.org/usb.ids
+
+# ATmega32u4 @ 16 MHz
 atmega32u4-16.name=ATmega32u4 (16 MHz)
 atmega32u4-16.vid.0=0x1D50
 atmega32u4-16.pid.0=0x60B0
-atmega32u4-16.vid.1=0x2341
-atmega32u4-16.pid.1=0x8036
+atmega32u4-16.vid.1=0x6666
+atmega32u4-16.pid.1=0x60B0
 atmega32u4-16.vid.2=0x2341
-atmega32u4-16.pid.2=0x0036
+atmega32u4-16.pid.2=0x8036
+atmega32u4-16.vid.3=0x2341
+atmega32u4-16.pid.3=0x0036
 atmega32u4-16.bootloader.tool=avrdude
 atmega32u4-16.bootloader.low_fuses=0xff
 atmega32u4-16.bootloader.high_fuses=0xd8
@@ -22,21 +28,25 @@ atmega32u4-16.upload.use_1200bps_touch=true
 atmega32u4-16.upload.wait_for_upload_port=true
 atmega32u4-16.build.mcu=atmega32u4
 atmega32u4-16.build.f_cpu=16000000L
-atmega32u4-16.build.vid=0x2341
-atmega32u4-16.build.pid=0x8036
-atmega32u4-16.build.usb_product="USB IO board"
+atmega32u4-16.build.vid=0x6666
+atmega32u4-16.build.pid=0x60B0
+atmega32u4-16.build.usb_product="USB IO Board"
+atmega32u4-16.build.usb_manufacturer="ATmega32u4"
 atmega32u4-16.build.board=AVR_LEONARDO
 atmega32u4-16.build.core=arduino:arduino
 atmega32u4-16.build.variant=leonardo
 atmega32u4-16.build.extra_flags={build.usb_flags}
 
+# ATmega32u4 @ 8 MHz
 atmega32u4-8.name=ATmega32u4 (8 MHz)
 atmega32u4-8.vid.0=0x1D50
 atmega32u4-8.pid.0=0x60B0
-atmega32u4-8.vid.1=0x2341
-atmega32u4-8.pid.1=0x8036
+atmega32u4-8.vid.1=0x6666
+atmega32u4-8.pid.1=0x60B0
 atmega32u4-8.vid.2=0x2341
-atmega32u4-8.pid.2=0x0036
+atmega32u4-8.pid.2=0x8036
+atmega32u4-8.vid.3=0x2341
+atmega32u4-8.pid.3=0x0036
 atmega32u4-8.bootloader.tool=avrdude
 atmega32u4-8.bootloader.low_fuses=0xff
 atmega32u4-8.bootloader.high_fuses=0xd8
@@ -54,9 +64,10 @@ atmega32u4-8.upload.use_1200bps_touch=true
 atmega32u4-8.upload.wait_for_upload_port=true
 atmega32u4-8.build.mcu=atmega32u4
 atmega32u4-8.build.f_cpu=8000000L
-atmega32u4-8.build.vid=0x2341
-atmega32u4-8.build.pid=0x8036
-atmega32u4-8.build.usb_product="USB IO board"
+atmega32u4-8.build.vid=0x6666
+atmega32u4-8.build.pid=0x60B0
+atmega32u4-8.build.usb_product="USB IO Board"
+atmega32u4-8.build.usb_manufacturer="ATmega32u4"
 atmega32u4-8.build.board=AVR_LEONARDO
 atmega32u4-8.build.core=arduino:arduino
 atmega32u4-8.build.variant=leonardo

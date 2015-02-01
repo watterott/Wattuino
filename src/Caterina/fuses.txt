@@ -10,3 +10,6 @@ USB Vendor and Product ID
 -------------------------
 VID: 0x1D50 (Openmoko)
 PID: 0x60B0 (http://wiki.openmoko.org/wiki/USB_Product_IDs)
+
+VID 0x6666 is a prototype product Vendor ID
+http://www.linux-usb.org/usb.ids

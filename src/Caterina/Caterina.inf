@@ -4,6 +4,7 @@ DriverPackageDisplayName="USB Serial Port Driver"
 ManufacturerName="ATmega32u4"
 ServiceName="USB RS-232 Emulation Driver"
 caterina.bootloader="Caterina Bootloader"
+caterina.sketch="USB Serial Port"
 leonardo.bootloader="Arduino Leonardo Bootloader"
 leonardo.sketch="Arduino Leonardo"
 
@@ -27,16 +28,19 @@ DefaultDestDir=12
 
 [DeviceList]
 %caterina.bootloader%=DriverInstall, USB\VID_1D50&PID_60B0
+%caterina.sketch%=DriverInstall, USB\VID_6666&PID_60B0&MI_00
 %leonardo.bootloader%=DriverInstall, USB\VID_2341&PID_0036
 %leonardo.sketch%=DriverInstall, USB\VID_2341&PID_8036&MI_00
 
 [DeviceList.NTamd64]
 %caterina.bootloader%=DriverInstall, USB\VID_1D50&PID_60B0
+%caterina.sketch%=DriverInstall, USB\VID_6666&PID_60B0&MI_00
 %leonardo.bootloader%=DriverInstall, USB\VID_2341&PID_0036
 %leonardo.sketch%=DriverInstall, USB\VID_2341&PID_8036&MI_00
 
 [DeviceList.NTia64]
 %caterina.bootloader%=DriverInstall, USB\VID_1D50&PID_60B0
+%caterina.sketch%=DriverInstall, USB\VID_6666&PID_60B0&MI_00
 %leonardo.bootloader%=DriverInstall, USB\VID_2341&PID_0036
 %leonardo.sketch%=DriverInstall, USB\VID_2341&PID_8036&MI_00
 

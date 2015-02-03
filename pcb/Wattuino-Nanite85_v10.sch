@@ -9079,15 +9079,15 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <part name="R2" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="100"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="R4" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="2k2"/>
+<part name="R4" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="1k5"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
 <part name="VBUS" library="we-rcl" deviceset="JUMPER2" device="-0603-NC" value="JUMPER2-0603-NC"/>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="R1" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="3k9"/>
 <part name="P+16" library="supply1" deviceset="+5V" device=""/>
-<part name="D2" library="we-rcl" deviceset="DIODE" device="-SOD882" value="uClamp2511T"/>
-<part name="D1" library="we-rcl" deviceset="DIODE" device="-SOD882" value="uClamp2511T"/>
+<part name="D2" library="we-rcl" deviceset="DIODE" device="-SOD882" value="Z3V6"/>
+<part name="D1" library="we-rcl" deviceset="DIODE" device="-SOD882" value="Z3V6"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="J2" library="we-con" deviceset="MA04-1" device=""/>
@@ -9101,13 +9101,15 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <plain>
 <text x="162.56" y="21.59" size="1.27" layer="95">Released under the Creative Commons Attribution Share-Alike License</text>
 <text x="162.56" y="19.05" size="1.27" layer="95">http://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="162.56" y="15.24" size="1.27" layer="95">Designed by Stephan Watterott (Watterott electronic)</text>
+<text x="162.56" y="12.7" size="1.27" layer="95">Designed by Stephan Watterott (Watterott electronic)
+Based on the original Nanite 85 design by Tim Böscke
+https://github.com/cpldcpu/Nanite</text>
 <wire x1="174.625" y1="113.03" x2="175.895" y2="113.03" width="0.4064" layer="94"/>
 <text x="48.26" y="133.35" size="1.778" layer="97">The used USB-Bootloader on the ATtiny85 is Micronucleus 
 https://github.com/micronucleus/micronucleus</text>
-<text x="160.02" y="101.6" size="1.27" layer="97">TVS-Diode: 3.1V, 6pF
-DigiKey:
-UCLAMP2511TTCTDKR-ND</text>
+<text x="144.78" y="87.63" size="1.27" layer="97">CZRER52C3V6 (3.6V &lt;180pF) + 1k5 Pull-Up 
+or
+uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <text x="107.95" y="128.27" size="1.27" layer="97">Arduino</text>
 <text x="107.95" y="125.73" size="1.27" layer="97">D0</text>
 <text x="107.95" y="123.19" size="1.27" layer="97">D1</text>

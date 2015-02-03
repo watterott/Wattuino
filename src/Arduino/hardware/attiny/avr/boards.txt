@@ -1,3 +1,4 @@
+# ATtiny85 @ internal 16.5 MHz
 attiny85-16.name=ATtiny85 (internal 16.5 MHz)
 attiny85-16.bootloader.tool=micronucleus
 attiny85-16.bootloader.low_fuses=0xe1

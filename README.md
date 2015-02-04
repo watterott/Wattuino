@@ -1,10 +1,6 @@
 # Wattuino
 Arduino compatible boards and modules.
 
-CAD Software Parts:
-[Eagle](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.lbr), 
-[Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)
-
 
 ## Wattuino Pro Mini
 ![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini_v10.jpg)
@@ -15,7 +11,9 @@ CAD Software Parts:
 * Arduino Bootloader (optiboot) with auto baud rate detection
 * LC filter on AVCC of the AVR microcontroller
 * All pins of the AVR are available (also ADC6, ADC7)
-* 5V or 3.3V LDO voltage regulator with over current protection (TS5204)
+* 5V or 3.3V LDO voltage regulator with over current protection
+* FTDI connector for programming/communication
+* Size: 33mm x 18mm
 
 
 ## Wattuino Nanite 85
@@ -25,9 +23,13 @@ CAD Software Parts:
 * Pin-compatible with 8-Pin DIP ATtiny85
 * Based on the original [Nanite 85](https://github.com/cpldcpu/Nanite) design by [Tim Böscke](https://github.com/cpldcpu)
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader
-* MicroUSB connector
+* MicroUSB connector for programming/communication
+* Size: 17.46mm x 10.16mm
 
 
 ## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/pcb)
 * [Arduino Bootloader and Extensions](https://github.com/watterott/wattuino/tree/master/src)
+* CAD Parts:
+  [Eagle](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.lbr),
+  [Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)

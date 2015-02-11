@@ -3,7 +3,7 @@ Arduino compatible boards and modules.
 
 
 ## Wattuino Pro Mini
-![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini_v10.jpg)
+[![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
 * Shop: [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
 * Shop: [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
 * Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
@@ -17,7 +17,7 @@ Arduino compatible boards and modules.
 
 
 ## Wattuino Nanite 85
-![Wattuino Nanite85](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite85_v10.jpg)
+[![Wattuino Nanite85](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite85_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
 * Shop: [Wattuino Nanite 85](http://www.watterott.com/en/Wattuino-Nanite85)
 * Atmel AVR ATtiny85 (internal clock)
 * Pin-compatible with 8-Pin DIP ATtiny85

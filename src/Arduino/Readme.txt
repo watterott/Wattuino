@@ -1,4 +1,4 @@
-ATtiny85+Micronucleus and ATmega32u4+Caterina Support for Arduino IDE 1.5
+ATtiny85+Micronucleus and ATmega32u4+Caterina Support for Arduino IDE >=1.5
 
 Installation: Copy the two directories to your Arduino folder /arduino/
 

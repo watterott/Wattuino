@@ -1,6 +1,8 @@
 ATtiny85+Micronucleus and ATmega32u4+Caterina Support for Arduino IDE >=1.5
 
-Installation: Copy the two directories to your Arduino folder /arduino/
+Download: https://github.com/watterott/wattuino/raw/master/src/Arduino/Arduino.zip
+
+Installation: Copy the two directories "drivers" and "hardware" to your Arduino program directory.
 
 Based on the work of David A. Mellis: https://github.com/damellis/attiny
 

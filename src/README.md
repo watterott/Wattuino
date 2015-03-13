@@ -1,5 +1,7 @@
-[Arduino](https://github.com/arduino/Arduino) - ATtiny85+Micronucleus and ATmega32u4+Caterina Support for Arduino IDE >=1.5
+[Arduino](https://github.com/watterott/wattuino/tree/master/src/Arduino) - Board Support Package for Arduino IDE
 
-[Micronucleus](https://github.com/micronucleus/micronucleus) - ATtiny85 USB Bootloader based on [V-USB](http://www.obdev.at/vusb/)
+[Optiboot](https://github.com/watterott/wattuino/tree/master/src/Optiboot) - ATmega328 Serial Bootloader
 
-[Optiboot](https://code.google.com/p/optiboot/) - ATmega328 Serial Bootloader
+[Caterina](https://github.com/watterott/wattuino/tree/master/src/Caterina) - ATmega32u4 USB Bootloader
+
+[Micronucleus](https://github.com/watterott/wattuino/tree/master/src/Micronucleus) - ATtiny85 USB Bootloader based on [V-USB](http://www.obdev.at/vusb/)

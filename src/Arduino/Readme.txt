@@ -1,8 +1,8 @@
-ATtiny85+Micronucleus and ATmega32u4+Caterina Support for Arduino IDE >=1.5
+Watterott Board Support Package for Arduino IDE >=1.6
 
 Download: https://github.com/watterott/wattuino/raw/master/src/Arduino/Arduino.zip
 
-Installation: Copy the two directories "drivers" and "hardware" to your Arduino program directory.
+Installation: Copy the directory "hardware" to your Arduino program directory.
 
 Based on the work of David A. Mellis: https://github.com/damellis/attiny
 

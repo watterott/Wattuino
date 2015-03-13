@@ -29,7 +29,7 @@ Arduino compatible boards and modules.
 
 ## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/pcb)
-* [Arduino Bootloader and Extensions](https://github.com/watterott/wattuino/tree/master/src)
+* [Arduino Bootloader and Board Support Package](https://github.com/watterott/wattuino/tree/master/src)
 * CAD Parts:
   [Eagle](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.lbr),
   [Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)

@@ -75,6 +75,8 @@ atmega32u4-8.build.extra_flags={build.usb_flags}
 
 # ATtiny85 @ internal 16.5 MHz
 attiny85-16.name=ATtiny85 (internal 16.5 MHz)
+attiny85-16.vid.0=0x16D0
+attiny85-16.pid.0=0x0753
 attiny85-16.bootloader.tool=micronucleus
 attiny85-16.bootloader.low_fuses=0xe1
 attiny85-16.bootloader.high_fuses=0xdd

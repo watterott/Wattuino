@@ -35,7 +35,7 @@ atmega32u4-16.build.usb_manufacturer="ATmega32u4"
 atmega32u4-16.build.board=AVR_LEONARDO
 atmega32u4-16.build.core=arduino:arduino
 atmega32u4-16.build.variant=leonardo
-atmega32u4-16.build.extra_flags={build.usb_flags}
+atmega32u4-16.build.extra_flags={build.usb_flags} -DMOUSE_ABS_ENABLED
 
 # ATmega32u4 @ 8 MHz
 atmega32u4-8.name=ATmega32u4 (8 MHz)

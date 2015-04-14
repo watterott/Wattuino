@@ -6,13 +6,14 @@
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
 
 name=Watterott AVR Boards
-version=1.6.1
+version=1.0.0
 
 # AVR compile variables
 # --------------------- 
 
 # Default "compiler.path" is correct, change only if you want to overidde the initial value
-compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+#compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.path={runtime.tools.avr-gcc.path}/bin/
 compiler.c.cmd=avr-gcc
 compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
 # -w flag added to avoid printing a wrong warning http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59396
@@ -71,12 +72,15 @@ recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
 recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
 recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
 
+
 # AVR Uploader/Programmers tools
 # ------------------------------
 
 ## AVRdude
-tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
-tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+#tools.avrdude.path={runtime.ide.path}/hardware/tools/avr/
+tools.avrdude.path={runtime.tools.avrdude.path}
+tools.avrdude.cmd.path={path}/bin/avrdude
+tools.avrdude.config.path={path}/etc/avrdude.conf
 
 tools.avrdude.upload.params.verbose=-v
 tools.avrdude.upload.params.quiet=-q -q
@@ -95,9 +99,9 @@ tools.avrdude.bootloader.params.quiet=-q -q
 tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
 
 ## Micronucleus
+tools.micronucleus.path={runtime.platform.path}/tools
 tools.micronucleus.cmd=micronucleus
 tools.micronucleus.cmd.windows=micronucleus.exe
-tools.micronucleus.path={runtime.platform.path}/tools
 
 tools.micronucleus.upload.params.verbose=
 tools.micronucleus.upload.params.quiet=

@@ -1,7 +1,7 @@
 
 # Watterott AVR Core and platform.
 # ------------------------------
-
+#
 # For more info:
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
 
@@ -11,18 +11,23 @@ version=1.0.0
 # AVR compile variables
 # --------------------- 
 
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall
+compiler.warning_flags.all=-Wall -Wextra
+
 # Default "compiler.path" is correct, change only if you want to overidde the initial value
 #compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
 compiler.path={runtime.tools.avr-gcc.path}/bin/
 compiler.c.cmd=avr-gcc
-compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.flags=-c -g -Os {compiler.warning_flags} -ffunction-sections -fdata-sections -MMD
 # -w flag added to avoid printing a wrong warning http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59396
 # This is fixed in gcc 4.8.3 and will be removed as soon as we update the toolchain
-compiler.c.elf.flags=-w -Os -Wl,--gc-sections
+compiler.c.elf.flags=-Os {compiler.warning_flags} -Wl,--gc-sections
 compiler.c.elf.cmd=avr-gcc
 compiler.S.flags=-c -g -x assembler-with-cpp
 compiler.cpp.cmd=avr-g++
-compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
+compiler.cpp.flags=-c -g -Os {compiler.warning_flags} -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
 compiler.ar.cmd=avr-ar
 compiler.ar.flags=rcs
 compiler.objcopy.cmd=avr-objcopy
@@ -124,5 +129,6 @@ tools.micronucleus.bootloader.pattern="{path}/{cmd}" --run --timeout 60 "{runtim
 # USB Default Flags
 # Default blank usb manufacturer will be filled it at compile time
 # - from numeric vendor ID, set to Unknown otherwise
-build.usb_manufacturer="Unknown"
-build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+#build.usb_manufacturer="Unknown"
+#build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid}

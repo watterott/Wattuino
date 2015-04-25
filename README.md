@@ -2,12 +2,23 @@
 Arduino compatible boards and modules.
 
 
+## Wattuino Uno
+* Compatible with Arduino Uno R3
+* Atmel AVR ATmega328 @ 16 MHz (external resonator)
+* Arduino Bootloader (optiboot) with auto baud rate detection
+* LC filter on AVCC of the AVR microcontroller
+* FTDI FT231X USB UART Bridge
+* USB-B connector for programming/communication
+* 5V and 3.3V LDO voltage regulators
+* Size: 68.58mm x 53.34mm
+
+
 ## Wattuino Pro Mini
 [![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
 * Shop: [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
 * Shop: [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
-* Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
 * Compatible with Arduino Pro Mini
+* Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
 * Arduino Bootloader (optiboot) with auto baud rate detection
 * LC filter on AVCC of the AVR microcontroller
 * All pins of the AVR are available (also ADC6, ADC7)

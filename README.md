@@ -3,8 +3,8 @@ Arduino compatible boards and modules.
 
 
 ## Wattuino Uno
-[![Wattuino Uno](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-Uno)
-* Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-Uno)
+[![Wattuino Uno](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-UNO)
+* Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO)
 * Compatible with Arduino Uno R3
 * Atmel AVR ATmega328 @ 16 MHz (external resonator)
 * Arduino Bootloader (optiboot) with auto baud rate detection

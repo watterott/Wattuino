@@ -4,7 +4,7 @@ Arduino compatible boards and modules.
 
 ## Wattuino Uno
 [![Wattuino Uno](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-UNO)
-* Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO)
+* Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO), [Wattuino Uno Kit](http://www.watterott.com/en/Wattuino-Uno-Kit)
 * Compatible with Arduino Uno R3
 * Atmel AVR ATmega328 @ 16 MHz (external resonator)
 * Arduino Bootloader (optiboot) with auto baud rate detection
@@ -17,8 +17,7 @@ Arduino compatible boards and modules.
 
 ## Wattuino Pro Mini
 [![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
-* Shop: [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
-* Shop: [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
+* Shop [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz), [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
 * Compatible with Arduino Pro Mini
 * Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
 * Arduino Bootloader (optiboot) with auto baud rate detection

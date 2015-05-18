@@ -1,5 +1,5 @@
 # Wattuino
-Arduino compatible boards and modules.
+Arduino compatible Boards and Modules.
 
 
 ## Wattuino Uno

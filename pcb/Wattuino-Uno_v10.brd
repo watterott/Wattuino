@@ -1393,7 +1393,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="20.47875" y="22.225" size="0.8128" layer="25" font="vector" ratio="10" align="center"/>
 <attribute name="VALUE" x="17.78" y="23.01875" size="0.8128" layer="27" font="vector" ratio="10" align="center"/>
 </element>
-<element name="R10" library="we-rcl" package="C0402" value="100k" x="10.16" y="28.8925" smashed="yes">
+<element name="R10" library="we-rcl" package="C0402" value="10k" x="10.16" y="28.8925" smashed="yes">
 <attribute name="NAME" x="10.16" y="26.82875" size="0.8128" layer="25" font="vector" ratio="10" rot="R90" align="center"/>
 <attribute name="VALUE" x="10.4775" y="30.48" size="0.8128" layer="27" font="vector" ratio="10" rot="R180" align="center"/>
 </element>
@@ -1558,7 +1558,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="15.875" y="7.62" size="0.8128" layer="25" font="vector" ratio="10" rot="R180" align="center"/>
 <attribute name="VALUE" x="15.875" y="11.43" size="0.8128" layer="27" font="vector" align="center"/>
 </element>
-<element name="R12" library="we-rcl" package="C0402" value="1k" x="8.5725" y="28.8925" smashed="yes" rot="R180">
+<element name="R12" library="we-rcl" package="C0402" value="10k" x="8.5725" y="28.8925" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.5725" y="26.82875" size="0.8128" layer="25" font="vector" ratio="10" rot="R90" align="center"/>
 <attribute name="VALUE" x="8.255" y="30.48" size="0.8128" layer="27" font="vector" ratio="10" rot="R180" align="center"/>
 </element>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -57,6 +57,7 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -8678,26 +8679,6 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <pad name="SHLD2" x="0" y="-6.5659" drill="2.3" rot="R90"/>
 <text x="0" y="0" size="0.8128" layer="25" font="vector" ratio="10" rot="R270" align="center">&gt;NAME</text>
 </package>
-<package name="USB-B-H">
-<description>USB Series B Hole Mounted</description>
-<wire x1="12.486" y1="-6.0144" x2="12.486" y2="5.9998" width="0.127" layer="21"/>
-<wire x1="-3.2366" y1="-6.0144" x2="-3.2366" y2="5.9998" width="0.127" layer="21"/>
-<wire x1="-3.2312" y1="-6.0198" x2="12.466" y2="-6.0198" width="0.127" layer="21"/>
-<wire x1="-3.2058" y1="6.0198" x2="12.4406" y2="6.0198" width="0.127" layer="21"/>
-<wire x1="5.08" y1="-5.08" x2="11.43" y2="-4.445" width="0.127" layer="21"/>
-<wire x1="11.43" y1="-4.445" x2="11.43" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="11.43" y1="-1.27" x2="5.08" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="5.08" y1="5.08" x2="11.43" y2="4.445" width="0.127" layer="21"/>
-<wire x1="11.43" y1="4.445" x2="11.43" y2="1.27" width="0.127" layer="21"/>
-<wire x1="11.43" y1="1.27" x2="5.08" y2="0.635" width="0.127" layer="21"/>
-<pad name="VBUS" x="-1.9812" y="1.25" drill="0.9" diameter="1.45" rot="R270"/>
-<pad name="D-" x="-1.9812" y="-1.25" drill="0.9" diameter="1.45" rot="R270"/>
-<pad name="D+" x="0" y="-1.25" drill="0.9" diameter="1.45" rot="R90"/>
-<pad name="GND" x="0" y="1.25" drill="0.9" diameter="1.45" rot="R90"/>
-<pad name="SHLD1" x="2.7178" y="6.0198" drill="2.3" rot="R180"/>
-<pad name="SHLD2" x="2.7178" y="-6.0198" drill="2.3" rot="R180"/>
-<text x="2.54" y="0" size="0.8128" layer="25" font="vector" ratio="10" rot="R270" align="center">&gt;NAME</text>
-</package>
 <package name="USB-A-S">
 <description>USB Series A Surface Mounted</description>
 <wire x1="-3.6957" y1="-6.5659" x2="10.287" y2="-6.5659" width="0.127" layer="21"/>
@@ -8759,6 +8740,74 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <pad name="SHLD2" x="-7" y="-2.72" drill="1.5" rot="R180"/>
 <pad name="SHLD1" x="-7" y="2.72" drill="1.5" rot="R180"/>
 <text x="3.81" y="0" size="0.8128" layer="25" font="vector" ratio="10" align="center">&gt;NAME</text>
+</package>
+<package name="USB-B-H">
+<description>USB Series B Hole Mounted</description>
+<wire x1="12.486" y1="-6.0144" x2="12.486" y2="5.9998" width="0.127" layer="21"/>
+<wire x1="-3.2366" y1="-6.0144" x2="-3.2366" y2="5.9998" width="0.127" layer="21"/>
+<wire x1="-3.2312" y1="-6.0198" x2="12.466" y2="-6.0198" width="0.127" layer="21"/>
+<wire x1="-3.2058" y1="6.0198" x2="12.4406" y2="6.0198" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-5.08" x2="11.43" y2="-4.445" width="0.127" layer="21"/>
+<wire x1="11.43" y1="-4.445" x2="11.43" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="11.43" y1="-1.27" x2="5.08" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="5.08" y1="5.08" x2="11.43" y2="4.445" width="0.127" layer="21"/>
+<wire x1="11.43" y1="4.445" x2="11.43" y2="1.27" width="0.127" layer="21"/>
+<wire x1="11.43" y1="1.27" x2="5.08" y2="0.635" width="0.127" layer="21"/>
+<pad name="VBUS" x="-1.985" y="1.25" drill="0.9" diameter="1.45" rot="R270"/>
+<pad name="D-" x="-1.985" y="-1.25" drill="0.9" diameter="1.45" rot="R270"/>
+<pad name="D+" x="0" y="-1.25" drill="0.9" diameter="1.45" rot="R90"/>
+<pad name="GND" x="0" y="1.25" drill="0.9" diameter="1.45" rot="R90"/>
+<pad name="SHLD1" x="2.7178" y="6.0198" drill="2.3" rot="R180"/>
+<pad name="SHLD2" x="2.7178" y="-6.0198" drill="2.3" rot="R180"/>
+<text x="2.54" y="0" size="0.8128" layer="25" font="vector" ratio="10" rot="R270" align="center">&gt;NAME</text>
+<polygon width="0.127" layer="16">
+<vertex x="-0.55" y="1.25"/>
+<vertex x="-0.55" y="2.3"/>
+<vertex x="0.55" y="2.3"/>
+<vertex x="0.55" y="1.25"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-0.6" y="1.2"/>
+<vertex x="0.6" y="1.2"/>
+<vertex x="0.6" y="2.35"/>
+<vertex x="-0.6" y="2.35"/>
+</polygon>
+<polygon width="0.127" layer="16">
+<vertex x="-2.535" y="1.25"/>
+<vertex x="-2.535" y="2.3"/>
+<vertex x="-1.435" y="2.3"/>
+<vertex x="-1.435" y="1.25"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-2.585" y="1.2"/>
+<vertex x="-1.385" y="1.2"/>
+<vertex x="-1.385" y="2.35"/>
+<vertex x="-2.585" y="2.35"/>
+</polygon>
+<polygon width="0.127" layer="16">
+<vertex x="0.55" y="-1.25"/>
+<vertex x="0.55" y="-2.3"/>
+<vertex x="-0.55" y="-2.3"/>
+<vertex x="-0.55" y="-1.25"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="0.6" y="-1.2"/>
+<vertex x="-0.6" y="-1.2"/>
+<vertex x="-0.6" y="-2.35"/>
+<vertex x="0.6" y="-2.35"/>
+</polygon>
+<polygon width="0.127" layer="16">
+<vertex x="-1.435" y="-1.25"/>
+<vertex x="-1.435" y="-2.3"/>
+<vertex x="-2.535" y="-2.3"/>
+<vertex x="-2.535" y="-1.25"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-1.385" y="-1.2"/>
+<vertex x="-2.585" y="-1.2"/>
+<vertex x="-2.585" y="-2.35"/>
+<vertex x="-1.385" y="-2.35"/>
+</polygon>
 </package>
 </packages>
 <symbols>

@@ -31,7 +31,7 @@ Arduino compatible Boards and Modules.
 ## Wattuino Nanite 841
 [![Wattuino Nanite841](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite841_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
 * Shop: [Wattuino Nanite 841](http://www.watterott.com/en/Wattuino-Nanite841)
-* Atmel AVR ATtiny841 (internal clock)
+* Atmel AVR ATtiny841 @ 8 MHz (internal clock)
 * Pin-compatible with 14-Pin SOIC ATtiny841
 * Designed by [Tim Böscke](https://github.com/cpldcpu)
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader
@@ -42,7 +42,7 @@ Arduino compatible Boards and Modules.
 ## Wattuino Nanite 85
 [![Wattuino Nanite85](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite85_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
 * Shop: [Wattuino Nanite 85](http://www.watterott.com/en/Wattuino-Nanite85)
-* Atmel AVR ATtiny85 (internal clock)
+* Atmel AVR ATtiny85 @ 16.5 MHz (internal clock)
 * Pin-compatible with 8-Pin DIP ATtiny85
 * Based on the original [Nanite 85](https://github.com/cpldcpu/Nanite) design by [Tim Böscke](https://github.com/cpldcpu)
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader
@@ -53,6 +53,7 @@ Arduino compatible Boards and Modules.
 ## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/pcb)
 * [Arduino Bootloader and Board Support Package](https://github.com/watterott/wattuino/tree/master/src)
+* [Arduino Core for ATtiny Microcontroller](https://github.com/SpenceKonde/arduino-tiny-841/)
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
   [Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)

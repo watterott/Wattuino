@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9172,6 +9172,14 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <text x="107.95" y="115.57" size="1.27" layer="97">D4</text>
 <text x="107.95" y="113.03" size="1.27" layer="97">D5</text>
 <text x="72.39" y="142.24" size="3.81" layer="250">ATtiny85 AVR</text>
+<text x="113.03" y="68.58" size="1.778" layer="97" align="center-left">D0</text>
+<text x="113.03" y="71.12" size="1.778" layer="97" align="center-left">D1</text>
+<text x="113.03" y="73.66" size="1.778" layer="97" align="center-left">D2</text>
+<text x="69.85" y="76.2" size="1.778" layer="97" rot="R180" align="center-left">D5</text>
+<text x="69.85" y="73.66" size="1.778" layer="97" rot="R180" align="center-left">D3</text>
+<text x="69.85" y="71.12" size="1.778" layer="97" rot="R180" align="center-left">D4</text>
+<text x="69.85" y="68.58" size="1.778" layer="97" rot="R180" align="center-left">GND</text>
+<text x="113.03" y="76.2" size="1.778" layer="97" align="center-left">VCC</text>
 </plain>
 <instances>
 <instance part="X1" gate="X" x="165.1" y="7.62"/>
@@ -9309,7 +9317,7 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <wire x1="119.38" y1="115.57" x2="124.46" y2="115.57" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="85.09" y="73.66" size="1.016" layer="95" xref="yes"/>
+<label x="85.09" y="73.66" size="1.27" layer="95" xref="yes"/>
 <pinref part="J2" gate="J" pin="3"/>
 <wire x1="85.09" y1="73.66" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
 </segment>
@@ -9337,7 +9345,7 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <wire x1="119.38" y1="118.11" x2="132.08" y2="118.11" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="85.09" y="71.12" size="1.016" layer="95" xref="yes"/>
+<label x="85.09" y="71.12" size="1.27" layer="95" xref="yes"/>
 <pinref part="J2" gate="J" pin="2"/>
 <wire x1="85.09" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
 </segment>
@@ -9362,7 +9370,7 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <segment>
 <pinref part="J3" gate="J" pin="4"/>
 <wire x1="102.87" y1="68.58" x2="99.06" y2="68.58" width="0.1524" layer="91"/>
-<label x="99.06" y="68.58" size="1.016" layer="95" rot="R180" xref="yes"/>
+<label x="99.06" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PB2" class="0">
@@ -9374,7 +9382,7 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <segment>
 <pinref part="J3" gate="J" pin="2"/>
 <wire x1="102.87" y1="73.66" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
-<label x="99.06" y="73.66" size="1.016" layer="95" rot="R180" xref="yes"/>
+<label x="99.06" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PB1" class="0">
@@ -9386,7 +9394,7 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <segment>
 <pinref part="J3" gate="J" pin="3"/>
 <wire x1="102.87" y1="71.12" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
-<label x="99.06" y="71.12" size="1.016" layer="95" rot="R180" xref="yes"/>
+<label x="99.06" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PB5" class="0">
@@ -9406,7 +9414,7 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <segment>
 <pinref part="J2" gate="J" pin="4"/>
 <wire x1="81.28" y1="76.2" x2="85.09" y2="76.2" width="0.1524" layer="91"/>
-<label x="85.09" y="76.2" size="1.016" layer="95" xref="yes"/>
+<label x="85.09" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VBUS" class="0">

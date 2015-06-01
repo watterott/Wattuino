@@ -11,6 +11,10 @@ atmega32u4-16.vid.2=0x2341
 atmega32u4-16.pid.2=0x0036
 atmega32u4-16.vid.3=0x2341
 atmega32u4-16.pid.3=0x8036
+atmega32u4-16.vid.4=0x2A03
+atmega32u4-16.pid.4=0x0036
+atmega32u4-16.vid.5=0x2A03
+atmega32u4-16.pid.5=0x8036
 atmega32u4-16.bootloader.tool=avrdude
 atmega32u4-16.bootloader.low_fuses=0xff
 atmega32u4-16.bootloader.high_fuses=0xd8
@@ -47,6 +51,10 @@ atmega32u4-8.vid.2=0x2341
 atmega32u4-8.pid.2=0x0036
 atmega32u4-8.vid.3=0x2341
 atmega32u4-8.pid.3=0x8036
+atmega32u4-8.vid.4=0x2A03
+atmega32u4-8.pid.4=0x0036
+atmega32u4-8.vid.5=0x2A03
+atmega32u4-8.pid.5=0x8036
 atmega32u4-8.bootloader.tool=avrdude
 atmega32u4-8.bootloader.low_fuses=0xff
 atmega32u4-8.bootloader.high_fuses=0xd8
@@ -73,28 +81,70 @@ atmega32u4-8.build.core=arduino:arduino
 atmega32u4-8.build.variant=leonardo
 atmega32u4-8.build.extra_flags={build.usb_flags}
 
-# ATtiny85 @ internal 16.5 MHz
-attiny85-16.name=ATtiny85 (internal 16.5 MHz)
-attiny85-16.vid.0=0x16D0
-attiny85-16.pid.0=0x0753
-attiny85-16.bootloader.tool=micronucleus
-attiny85-16.bootloader.low_fuses=0xe1
-attiny85-16.bootloader.high_fuses=0xdd
-attiny85-16.bootloader.extended_fuses=0xfe
-attiny85-16.bootloader.file=micronucleus-1.11-upgrade.hex
-attiny85-16.upload.tool=micronucleus
-attiny85-16.upload.protocol=usb
-attiny85-16.upload.wait_for_upload_port=false
-attiny85-16.upload.use_1200bps_touch=false
-attiny85-16.upload.disable_flushing=false
-attiny85-16.upload.maximum_size=6300
-attiny85-16.build.mcu=attiny85
-attiny85-16.build.f_cpu=16500000L
+# ATtiny841 @ internal 8 MHz
+attiny841.name=ATtiny841 (8 MHz)
+attiny841.vid.0=0x16D0
+attiny841.pid.0=0x0753
+attiny841.bootloader.tool=avrdude
+attiny841.bootloader.low_fuses=0xE2
+attiny841.bootloader.high_fuses=0xDD
+attiny841.bootloader.extended_fuses=0xFE
+attiny841.bootloader.unlock_bits=0xFF
+attiny841.bootloader.lock_bits=0xFF
+attiny841.bootloader.file=micronucleus-t841.hex
+attiny841.upload.tool=micronucleus
+attiny841.upload.protocol=usb
+attiny841.upload.wait_for_upload_port=false
+attiny841.upload.use_1200bps_touch=false
+attiny841.upload.disable_flushing=false
+attiny841.upload.maximum_size=6500
+attiny841.build.mcu=attiny841
+attiny841.build.f_cpu=8000000L
 # use Standard Arduino Core
-attiny85-16.build.board=AVR_ATTINY85
-attiny85-16.build.core=arduino:arduino
-attiny85-16.build.variant=tiny8
-# use Digistump Core
-#attiny85-16.build.board=AVR_DIGISPARK
-#attiny85-16.build.core=digistump:tiny
-#attiny85-16.build.variant=digispark
+attiny841.build.board=AVR_ATTINY841
+attiny841.build.core=arduino:arduino
+attiny841.build.variant=tiny14
+# use Tiny-841 Core: https://github.com/SpenceKonde/arduino-tiny-841/
+#attiny841.build.board=AVR_ATTINY841
+#attiny841.build.core=arduino-tiny-841:tiny
+#attiny841.build.variant=
+# use Tiny Core: https://github.com/shimniok/arduino-tiny
+#attiny841.build.board=AVR_ATTINY841
+#attiny841.build.core=arduino-tiny:tiny
+#attiny841.build.variant=
+
+# ATtiny85 @ internal 16.5 MHz
+attiny85.name=ATtiny85 (16.5 MHz)
+attiny85.vid.0=0x16D0
+attiny85.pid.0=0x0753
+attiny85.bootloader.tool=avrdude
+attiny85.bootloader.low_fuses=0xE1
+attiny85.bootloader.high_fuses=0xDD
+attiny85.bootloader.extended_fuses=0xFE
+attiny85.bootloader.unlock_bits=0xFF
+attiny85.bootloader.lock_bits=0xFF
+attiny85.bootloader.file=micronucleus-t85.hex
+attiny85.upload.tool=micronucleus
+attiny85.upload.protocol=usb
+attiny85.upload.wait_for_upload_port=false
+attiny85.upload.use_1200bps_touch=false
+attiny85.upload.disable_flushing=false
+attiny85.upload.maximum_size=6300
+attiny85.build.mcu=attiny85
+attiny85.build.f_cpu=16500000L
+# use Standard Arduino Core
+attiny85.build.board=AVR_ATTINY85
+attiny85.build.core=arduino:arduino
+attiny85.build.variant=tiny8
+# use Tiny-841 Core: https://github.com/SpenceKonde/arduino-tiny-841/
+#attiny85.build.board=AVR_ATTINY85
+#attiny85.build.core=arduino-tiny-841:tiny
+#attiny85.build.variant=
+# use Tiny Core: https://github.com/shimniok/arduino-tiny
+#attiny85.build.board=AVR_ATTINY85
+#attiny85.build.core=arduino-tiny:tiny
+#attiny85.build.variant=
+# use Digistump Core: https://github.com/digistump/DigistumpArduino
+#attiny85.build.board=AVR_DIGISPARK
+#attiny85.build.core=digistump:tiny
+#attiny85.build.variant=digispark

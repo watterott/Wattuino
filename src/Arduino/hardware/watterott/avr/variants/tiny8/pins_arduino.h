@@ -33,10 +33,10 @@
 // ATMEL ATTINY45 / ARDUINO
 //
 //                  +-\/-+
-// Ain0 (D 5) PB5  1|    |8  Vcc
-// Ain3 (D 3) PB3  2|    |7  PB2 (D 2)  Ain1
-// Ain2 (D 4) PB4  3|    |6  PB1 (D 1) pwm1
-//            GND  4|    |5  PB0 (D 0) pwm0
+// AIN0 (D 5) PB5  1|    |8  Vcc
+// AIN3 (D 3) PB3  2|    |7  PB2 (D 2) AIN1
+// AIN2 (D 4) PB4  3|    |6  PB1 (D 1) PWM1
+//            GND  4|    |5  PB0 (D 0) PWM0
 //                  +----+
 
 static const uint8_t A0 = 6;

@@ -32,7 +32,7 @@ Arduino compatible Boards and Modules.
 [![Wattuino Nanite841](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite841_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
 * Shop: [Wattuino Nanite 841](http://www.watterott.com/en/Wattuino-Nanite841)
 * Atmel AVR ATtiny841 @ 8 MHz (internal clock)
-* Pin-compatible with 14-Pin SOIC ATtiny841
+* 14-Pin DIP and pin-compatible with 14-Pin SOIC ATtiny841
 * Designed by [Tim Böscke](https://github.com/cpldcpu)
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader
 * MicroUSB connector for programming/communication

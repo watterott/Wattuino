@@ -1,16 +1,19 @@
-# Watterott Board Support Package for Arduino IDE >=1.6
+# Watterott Board Support Package
+Board Support Package for Arduino IDE >=1.6
+
 
 ## Automatic Installation
 
 Add the following URL to the Arduino Boards Manager:
+```
 https://github.com/watterott/wattuino/raw/master/src/Arduino/package_watterott_index.json
+```
 and install the Watterott Boards via the Boards Manager.
 
 
 ## Manual Installation
 
-Download: https://github.com/watterott/wattuino/raw/master/src/Arduino/Arduino.zip
-Copy the directory "hardware" to your Arduino program directory.
+Download https://github.com/watterott/wattuino/raw/master/src/Arduino/Arduino.zip and copy the directory "hardware" to your Arduino program directory.
 
 
 ## Known Issues
@@ -20,7 +23,7 @@ Sometimes the driver for the USB Bootloader (Caterina or Micronucleus) is not lo
 This is the case when *Done uploading.* is not shown after the upload process.
 Check the driver state in the Device Manager, when the Bootloader is active (Caterina after the *Upload* is started and Micronucleus after a reset).
 On Windows 8 or higher the [driver signature enforcement](https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8/disabling-signed-driver-enforcement-on-windows-8) has to be disabled for the driver installation.
-* [Caterina Driver](https://github.com/watterott/wattuino/raw/master/src/Caterina/Caterina.inf),
+* [Caterina Driver](https://github.com/watterott/wattuino/raw/master/src/Caterina/Caterina.inf)
 * [Micronucleus Driver](https://github.com/watterott/wattuino/raw/master/src/Micronucleus/driver/driver.zip)
 * [FTDI Drivers](http://www.ftdichip.com/Drivers/VCP.htm)
 

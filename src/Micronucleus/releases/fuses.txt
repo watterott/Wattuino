@@ -12,3 +12,9 @@ Extended: 0xFE
 High:     0xDD
 Low:      0xE2
 Lockbits: 0xFF (no memory lock)
+
+
+Bootloader Activation
+---------------------
+...always    -> run Bootloader on every start
+...ext_reset -> run Bootloader only after the reset switch is pressed

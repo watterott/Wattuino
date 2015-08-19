@@ -55,7 +55,7 @@ Arduino/Genuino compatible Boards and Modules.
 * [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/src)
 * [Arduino IDE Core for ATtiny Microcontroller](https://github.com/SpenceKonde/arduino-tiny-841/)
 * [FTDI USB Drivers](http://www.ftdichip.com/Drivers/VCP.htm)
-* [Zadig libusb Installer (Micronucleus)](http://zadig.akeo.ie)
+* [Zadig libusb Installer (for Micronucleus)](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer)
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
   [Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)

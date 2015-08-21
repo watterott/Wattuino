@@ -52,7 +52,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 ## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/hardware)
-* [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/software)
+* [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
 * [Arduino IDE Core for ATtiny Microcontroller](https://github.com/SpenceKonde/arduino-tiny-841/)
 * [FTDI USB Drivers](http://www.ftdichip.com/Drivers/VCP.htm)
 * [Zadig libusb Installer (for Micronucleus)](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer)

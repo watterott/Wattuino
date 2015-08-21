@@ -3,10 +3,10 @@
     {
       "name": "watterott",
       "maintainer": "Watterott",
-      "websiteURL": "https://github.com/watterott/wattuino",
+      "websiteURL": "http://www.watterott.com",
       "email": "",
       "help": {
-        "online": ""
+        "online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"
       },
       "platforms": [
         {
@@ -15,7 +15,7 @@
           "version": "1.0.0",
           "category": "Watterott",
           "help": {
-            "online": ""
+            "online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"
           },
           "url": "https://github.com/watterott/wattuino/raw/master/software/Arduino/watterott-1.0.0.zip",
           "archiveFileName": "watterott-1.0.0.zip",
@@ -40,7 +40,8 @@
           ]
         }
       ],
-      "tools": []
+      "tools": [
+      ]
     }
   ]
 }

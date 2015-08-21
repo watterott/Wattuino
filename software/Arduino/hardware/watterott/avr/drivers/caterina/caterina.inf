@@ -17,6 +17,7 @@ ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
 Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
+CatalogFile=caterina.cat
 DriverVer=01/01/2015,1.0.0.0
 
 [Manufacturer]

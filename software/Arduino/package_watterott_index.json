@@ -17,10 +17,10 @@
           "help": {
             "online": ""
           },
-          "url": "https://github.com/watterott/wattuino/raw/master/src/Arduino/watterott-1.0.0.zip",
+          "url": "https://github.com/watterott/wattuino/raw/master/software/Arduino/watterott-1.0.0.zip",
           "archiveFileName": "watterott-1.0.0.zip",
-          "checksum": "SHA-256:1f10953c01d5b6424557821c9f28f938f80a74ec88bb8b4e7126fa0ef0633fce",
-          "size": "406528",
+          "checksum": "MD5:dc4c07d8934d0c390ce1a7f74495c610",
+          "size": "432968",
           "boards": [
             {"name": "ATmega32u4"},
             {"name": "ATtiny841"},

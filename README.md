@@ -3,7 +3,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Uno
-[![Wattuino Uno](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-UNO)
+[![Wattuino Uno](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-UNO)
 * Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO), [Wattuino Uno Kit](http://www.watterott.com/en/Wattuino-Uno-Kit)
 * Compatible with Uno R3
 * Atmel AVR ATmega328 @ 16 MHz (external resonator)
@@ -16,7 +16,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Pro Mini
-[![Wattuino Pro Mini](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
+[![Wattuino Pro Mini](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
 * Shop [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz), [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
 * Compatible with Pro Mini
 * Atmel AVR ATmega328 @ 16 MHz or 8 MHz (external resonator)
@@ -29,7 +29,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Nanite 841
-[![Wattuino Nanite841](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite841_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
+[![Wattuino Nanite841](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite841_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
 * Shop: [Wattuino Nanite 841](http://www.watterott.com/en/Wattuino-Nanite841)
 * Atmel AVR ATtiny841 @ 8 MHz (internal clock)
 * 14-Pin DIP and pin-compatible with 14-Pin SOIC ATtiny841
@@ -40,7 +40,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Nanite 85
-[![Wattuino Nanite85](https://raw.github.com/watterott/wattuino/master/pcb/Wattuino-Nanite85_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
+[![Wattuino Nanite85](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite85_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
 * Shop: [Wattuino Nanite 85](http://www.watterott.com/en/Wattuino-Nanite85)
 * Atmel AVR ATtiny85 @ 16.5 MHz (internal clock)
 * Pin-compatible with 8-Pin DIP ATtiny85
@@ -51,11 +51,11 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Hardware and Software
-* [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/pcb)
-* [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/src)
+* [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/hardware)
+* [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/software)
 * [Arduino IDE Core for ATtiny Microcontroller](https://github.com/SpenceKonde/arduino-tiny-841/)
 * [FTDI USB Drivers](http://www.ftdichip.com/Drivers/VCP.htm)
 * [Zadig libusb Installer (for Micronucleus)](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer)
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
-  [Fritzing](https://raw.github.com/watterott/wattuino/master/pcb/wattuino.fzpz)
+  [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)

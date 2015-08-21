@@ -19,7 +19,7 @@
           },
           "url": "https://github.com/watterott/wattuino/raw/master/software/Arduino/watterott-1.0.0.zip",
           "archiveFileName": "watterott-1.0.0.zip",
-          "checksum": "MD5:dc4c07d8934d0c390ce1a7f74495c610",
+          "checksum": "SHA-1:00031d2c5faceffb0847303593489851f1dbe0da",
           "size": "432968",
           "boards": [
             {"name": "ATmega32u4"},

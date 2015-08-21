@@ -13,7 +13,7 @@ and install the Watterott Boards via the Boards Manager.
 
 ## Manual Installation
 
-Download [watterott-1.0.0.zip](https://github.com/watterott/wattuino/raw/master/src/Arduino/watterott-1.0.0.zip) and copy the archive content to your Arduino program directory under: ```<ARDUINO>/hardware/watterott/```.
+Download [watterott-1.0.0.zip](https://github.com/watterott/wattuino/raw/master/software/Arduino/watterott-1.0.0.zip) and copy the archive content to your Arduino program directory under: ```<ARDUINO>/hardware/watterott/```.
 
 
 ## Known Issues

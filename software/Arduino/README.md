@@ -45,3 +45,6 @@ Or you can also remove the Modem Manager from your system with
 ```
 sudo apt-get uninstall modemmanager
 ```
+
+### Micronucleus
+The Micronucleus bootloader is not started automatically. You have to press the reset switch to activate the bootloader after *Uploading...* is shown in the Arduino IDE.

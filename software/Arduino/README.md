@@ -32,9 +32,9 @@ The Modem Manager detects the Serial Ports (e.g. Caterina Bootloader) as a modem
 Run one of the commands - depending on your system:
 
 ```sudo nano /etc/udev/rules.d/77-mm-usb-device-blacklist.rules```
-    
+
 ```sudo nano /lib/udev/rules.d/77-mm-usb-device-blacklist.rules```
-    
+
 and add the following lines to the file:
 ```
 ATTRS{idVendor}=="6666", ENV{ID_MM_DEVICE_IGNORE}="1"
@@ -47,4 +47,17 @@ sudo apt-get uninstall modemmanager
 ```
 
 ### Micronucleus
-The Micronucleus bootloader is not started automatically. You have to press the reset switch to activate the bootloader after *Uploading...* is shown in the Arduino IDE.
+The Micronucleus bootloader is **not** started automatically. You have to press the reset switch to activate the bootloader after *Uploading...* is shown in the Arduino IDE.
+
+The Micronucleus upload tool needs root rights to run and so the Arduino IDE has to be started with sudo or you can also create a rule to allow non-root users access to the Micronucleus USB device.
+For this run one of the commands - depending on your system:
+
+```sudo nano /etc/udev/rules.d/49-micronucleus.rules```
+
+```sudo nano /lib/udev/rules.d/49-micronucleus.rules```
+
+and add the following lines to the file:
+```
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666"
+KERNEL=="ttyACM*", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1"
+```

@@ -14,8 +14,8 @@
           "version": "1.0.0",
           "category": "Watterott",
           "help": {"online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"},
-          "url": "https://github.com/watterott/wattuino/raw/master/software/Arduino/watterott-1.0.0.zip",
-          "archiveFileName": "watterott-1.0.0.zip",
+          "url": "https://github.com/watterott/wattuino/raw/master/software/Arduino/watterott.zip",
+          "archiveFileName": "watterott.zip",
           "checksum": "MD5:9def7c6488211036a5fdd30c6c20cad4",
           "size": "380473",
           "boards": [
@@ -37,7 +37,7 @@
             {
               "packager": "watterott",
               "name": "micronucleus",
-              "version": "1.0.0"
+              "version": "2.0a4"
             }
           ]
         }
@@ -46,33 +46,33 @@
       "tools": [
         {
           "name":"micronucleus",
-          "version":"1.0.0",
+          "version":"2.0a4",
           "systems": [
             {
                 "host":"i686-mingw32",
-                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-1.0.0-win32.zip",
-                "archiveFileName":"micronucleus-1.0.0-win32.zip",
+                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-win32.zip",
+                "archiveFileName":"micronucleus-win32.zip",
                 "checksum":"MD5:06964d6a7447bfcaf76a5484227c0e69",
                 "size":"13187"
             },
             {
                 "host":"x86_64-linux-gnu",
-                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-1.0.0-linux64.tar.gz",
-                "archiveFileName":"micronucleus-1.0.0-linux64.tar.gz",
+                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-linux64.tar.gz",
+                "archiveFileName":"micronucleus-linux64.tar.gz",
                 "checksum":"MD5:e6559e80980da3736b4f438ad882cab7",
                 "size":"20183"
             },
             {
                 "host":"i686-linux-gnu",
-                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-1.0.0-linux32.tar.gz",
-                "archiveFileName":"micronucleus-1.0.0-linux32.tar.gz",
+                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-linux32.tar.gz",
+                "archiveFileName":"micronucleus-linux32.tar.gz",
                 "checksum":"MD5:3a17c285c5f784c6176b2a36bbbaa1bc",
                 "size":"19123"
             },
             {
                 "host":"x86_64-apple-darwin",
-                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-1.0.0-osx.tar.gz",
-                "archiveFileName":"micronucleus-1.0.0-osx.tar.gz",
+                "url":"https://github.com/watterott/wattuino/raw/master/software/Arduino/micronucleus-osx.tar.gz",
+                "archiveFileName":"micronucleus-osx.tar.gz",
                 "checksum":"MD5:aecfa61c47cee3e8e753e534cfdbf078",
                 "size":"41335"
             }

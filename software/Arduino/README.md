@@ -47,7 +47,7 @@ sudo apt-get uninstall modemmanager
 ```
 
 ### Micronucleus
-The Micronucleus bootloader is **not** started automatically. You have to press the reset switch to activate the bootloader after *Uploading...* is shown in the Arduino IDE.
+The Micronucleus bootloader is not started automatically. You have to **press the reset switch to activate the bootloader** after *Uploading...* is shown in the Arduino IDE.
 
 The Micronucleus upload tool needs root rights to run and so the Arduino IDE has to be started with sudo or you can also create a rule to allow non-root users access to the Micronucleus USB device.
 For this run one of the commands - depending on your system:
@@ -61,3 +61,9 @@ and add the following lines to the file:
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666"
 KERNEL=="ttyACM*", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1"
 ```
+
+
+## Third party libraries/software
+* [Micronucleus ATtiny USB Bootloader by Micronucleus Team](https://github.com/micronucleus/micronucleus)
+* [Arduino Core for ATtiny85 by Spence Konde](https://github.com/SpenceKonde/ATTinyCore)
+* [Arduino Core for ATtiny841 by Spence Konde](https://github.com/SpenceKonde/arduino-tiny-841)

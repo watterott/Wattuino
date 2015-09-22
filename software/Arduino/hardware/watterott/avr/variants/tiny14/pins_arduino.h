@@ -67,7 +67,14 @@ static const uint8_t SDA = 6;
 static const uint8_t SCL = 4;
 
 #define LED_BUILTIN 8
+
+#define NUM_ANALOG_INPUTS 11
+
+#else
+#define NUM_ANALOG_INPUTS 7
 #endif
+
+#define NUM_DIGITAL_PINS 11
 
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 10) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( ((p) <= 7) ? PCIE0 : PCIE1 )
@@ -163,6 +170,6 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] =
 };
 #endif
 
-#endif
+#endif //ARDUINO_MAIN
 
-#endif
+#endif //Pins_Arduino_h

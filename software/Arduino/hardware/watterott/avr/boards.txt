@@ -50,7 +50,7 @@ atmega32u4.build.usb_manufacturer="ATmega32u4"
 atmega32u4.build.board=AVR_LEONARDO
 atmega32u4.build.core=arduino:arduino
 atmega32u4.build.variant=leonardo
-atmega32u4.build.extra_flags={build.usb_flags}
+atmega32u4.build.extra_flags={build.usb_flags} -DMOUSE_ABS_ENABLED
 
 
 # ATtiny841 @ internal 8 MHz

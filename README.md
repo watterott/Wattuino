@@ -55,8 +55,11 @@ Arduino/Genuino compatible Boards and Modules.
 ## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/hardware)
 * [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
-* [FTDI USB Drivers](http://www.ftdichip.com/Drivers/VCP.htm)
-* [Zadig libusb Installer (for Micronucleus)](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer)
+* Drivers:
+  [FTDI FT23x](http://www.ftdichip.com/Drivers/VCP.htm),
+  [Caterina Atmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),
+  [Micronucleus Attiny](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip)
+  (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
   [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)

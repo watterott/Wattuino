@@ -20,6 +20,7 @@
   along with Arduino-Tiny-841.  If not, see <http://www.gnu.org/licenses/>.
 
 ==============================================================================*/
+#include <avr/interrupt.h>
 
 #ifndef CoreAtomic_h
 #define CoreAtomic_h

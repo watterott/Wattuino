@@ -6,7 +6,7 @@ menu.core=Core
 menu.info=Info
 
 
-# ATmega32u4 @ 16 MHz
+# ATmega32u4 @ 8MHz or 16MHz
 atmega32u4.name=ATmega32u4
 atmega32u4.menu.speed.16mhz=16 MHz
 atmega32u4.menu.speed.16mhz.build.f_cpu=16000000L
@@ -53,17 +53,17 @@ atmega32u4.build.variant=leonardo
 atmega32u4.build.extra_flags={build.usb_flags} -DMOUSE_ABS_ENABLED
 
 
-# ATtiny841 @ internal 8 MHz
+# ATtiny841 @ internal 8MHz
 attiny841.name=ATtiny841 (8 MHz)
 # use Standard Arduino Core
 attiny841.menu.core.arduino=Standard Arduino
 attiny841.menu.core.arduino.build.core=arduino:arduino
 attiny841.menu.core.arduino.build.variant=tiny14
 # use Spence Konde Core: https://github.com/SpenceKonde/arduino-tiny-841/
-attiny841.menu.core.spencekonde=ATtiny841 (by Spence Konde)
-#attiny841.menu.core.spencekonde.build.core=arduino-tiny-841:tiny
-attiny841.menu.core.spencekonde.build.core=tiny841
-attiny841.menu.core.spencekonde.build.variant=tiny14
+attiny841.menu.core.tinycore=ATtiny841 (by Spence Konde)
+#attiny841.menu.core.tinycore.build.core=arduino-tiny-841:tiny
+attiny841.menu.core.tinycore.build.core=tiny841
+attiny841.menu.core.tinycore.build.variant=tiny14
 # info menu item
 attiny841.menu.info.info=Press Reset, when Uploading is shown.
 attiny841.vid.0=0x16D0
@@ -88,7 +88,7 @@ attiny841.build.board=AVR_ATTINY841
 #attiny841.build.variant=tiny14
 
 
-# ATtiny85 @ internal 16.5 MHz
+# ATtiny85 @ internal 16.5MHz
 attiny85.name=ATtiny85 (16.5 MHz)
 # use Standard Arduino Core
 attiny85.menu.core.arduino=Standard Arduino
@@ -96,11 +96,11 @@ attiny85.menu.core.arduino.build.board=AVR_ATTINY85
 attiny85.menu.core.arduino.build.core=arduino:arduino
 attiny85.menu.core.arduino.build.variant=tiny8
 # use Spence Konde Core: https://github.com/SpenceKonde/ATTinyCore
-attiny85.menu.core.spencekonde=ATtiny85 (by Spence Konde)
-attiny85.menu.core.spencekonde.build.board=AVR_ATTINY85
-#attiny85.menu.core.spencekonde.build.core=ATTinyCore:tiny
-attiny85.menu.core.spencekonde.build.core=tiny85
-attiny85.menu.core.spencekonde.build.variant=tiny8
+attiny85.menu.core.tinycore=ATtiny85 (by Spence Konde)
+attiny85.menu.core.tinycore.build.board=AVR_ATTINY85
+#attiny85.menu.core.tinycore.build.core=ATTinyCore:tiny
+attiny85.menu.core.tinycore.build.core=tiny85
+attiny85.menu.core.tinycore.build.variant=tiny8
 # use Digistump Core: https://github.com/digistump/DigistumpArduino
 attiny85.menu.core.digistump=Digistump/Digispark
 attiny85.menu.core.digistump.build.board=AVR_DIGISPARK

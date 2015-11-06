@@ -54,7 +54,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 ## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/hardware)
-* [Arduino IDE Board Support Package](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
+* [Board Support Package for Arduino IDE](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
 * Drivers:
   [FTDI FT23x](http://www.ftdichip.com/Drivers/VCP.htm),
   [Caterina Atmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),

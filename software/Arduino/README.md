@@ -1,14 +1,14 @@
 # Watterott Board Support Package
-Board Support Package for Arduino IDE >=1.6
+Board Support Package for Arduino IDE v1.6.4+
 
 
 ## Installation
 
-Add the following URL to the Arduino Boards Manager:
+Add the following URL to the Arduino Boards Manager (*File->Preferences*):
 ```
 https://github.com/watterott/wattuino/raw/master/software/Arduino/package_watterott_index.json
 ```
-and install the Watterott Boards via the Boards Manager.
+and install the Watterott Boards via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Known Issues

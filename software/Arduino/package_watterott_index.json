@@ -12,7 +12,7 @@
           "name": "Watterott AVR Boards",
           "architecture": "avr",
           "version": "1.0.0",
-          "category": "Contributed",
+          "category": "contributed",
           "help": {"online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"},
           "url": "https://github.com/watterott/wattuino/raw/b5659b5ce0162043326a54d48dff343835f226e3/software/Arduino/watterott.zip",
           "archiveFileName": "watterott-1.0.0.zip",
@@ -45,12 +45,45 @@
           "name": "Watterott AVR Boards",
           "architecture": "avr",
           "version": "1.0.1",
-          "category": "Contributed",
+          "category": "contributed",
           "help": {"online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"},
           "url": "https://github.com/watterott/wattuino/raw/0bc77de7f4d4377586ab71cc3ae5237c5fe93446/software/Arduino/watterott.zip",
           "archiveFileName": "watterott-1.0.1.zip",
           "checksum": "MD5:66826ba0c86ae601fc237df164506ebe",
           "size": "530381",
+          "boards": [
+            {"name": "ATmega32u4"},
+            {"name": "ATtiny841"},
+            {"name": "ATtiny85"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            },
+            {
+              "packager": "watterott",
+              "name": "micronucleus",
+              "version": "2.0a4"
+            }
+          ]
+        },
+        {
+          "name": "Watterott AVR Boards",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "contributed",
+          "help": {"online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"},
+          "url": "https://github.com/watterott/wattuino/raw/4c6f8f5cefbdb5167041d3a47d45de5e9a940f71/software/Arduino/watterott.zip",
+          "archiveFileName": "watterott-1.0.2.zip",
+          "checksum": "MD5:da130bd0f3ad102dd277bb4d3280e31e",
+          "size": "532535",
           "boards": [
             {"name": "ATmega32u4"},
             {"name": "ATtiny841"},

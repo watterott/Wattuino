@@ -60,9 +60,9 @@
 
 #define DEFAULT_TO_TINY_DEBUG_SERIAL              0
 
-#endif
 
 // missing defines (?)
+#if !defined(PCINT0)
 #define PCINT0 0
 #define PCINT1 1
 #define PCINT2 2
@@ -75,7 +75,8 @@
 #define PCINT9 1
 #define PCINT10 2
 #define PCINT11 3
-#define PCINT12 4
+#endif
+#endif
 
 /*=============================================================================
   Build options for the ATtiny1634 processor and other boring ones

@@ -241,6 +241,12 @@ optiboot_version = 256*(OPTIBOOT_MAJVER + OPTIBOOT_CUSTOMVER) + OPTIBOOT_MINVER;
 
 #include <inttypes.h>
 #include <avr/io.h>
+/*
+Signature Bytes
+ATmega328   0x1E 0x95 0x14
+ATmega328P  0x1E 0x95 0x0F
+ATmega328PB 0x1E 0x95 0x16
+*/
 #if !defined(_AVR_IOXXX_H_)
 # if defined(__AVR_ATmega328P__)
 #  include <avr/iom328p.h>

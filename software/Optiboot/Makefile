@@ -30,7 +30,7 @@
 #----------------------------------------------------------------------------
 
 
-# MCU name atmega328p
+# MCU name atmega328p or atmega328pb
 MCU = atmega328p
 
 

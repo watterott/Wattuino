@@ -1,11 +1,55 @@
+/*
+ * pin_defs.h
+ * optiboot helper defining the default pin assignments (LED, SOFT_UART)
+ * for the various chips that are supported.  This also has some ugly macros
+ * for selecting among various UARTs and LED possibilities using command-line
+ * defines like "UART=2 LED=B5"
+ *
+ * Copyright 2013-2015 by Bill Westfield.
+ * Copyright 2010 by Peter Knight.
+ * This software is licensed under version 2 of the Gnu Public Licence.
+ * See optiboot.c for details.
+ */
+
 /*------------------------------------------------------------------------ */
-#if defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega88) || defined(__AVR_ATmega8__) || defined(__AVR_ATmega88__)
+#if defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328PB__) || defined(__AVR_ATmega88) || defined(__AVR_ATmega8__) || defined(__AVR_ATmega88__)
 /*------------------------------------------------------------------------ */
 
 /* Onboard LED is connected to pin PB5 in Arduino NG, Diecimila, and Duemilanove
  */
 #if !defined(LED)
 #define LED B5
+#endif
+
+//UART
+#if !defined(U2X0)
+#define U2X0 		U2X
+#endif
+#if !defined(RXC0)
+#define RXC0 	  RXC
+#endif
+#if !defined(RXEN0)
+#define RXEN0 	RXEN
+#endif
+#if !defined(TXEN0)
+#define TXEN0 	TXEN
+#endif
+#if !defined(UDRE0)
+#define UDRE0 	UDRE
+#endif
+#if !defined(UCSZ00)
+#define UCSZ00 	UCSZ0
+#endif
+#if !defined(UCSZ01)
+#define UCSZ01 	UCSZ1
+#endif
+#if !defined(FE0)
+#define FE0 	  FE
+#endif
+
+//Timer
+#if !defined(CS10)
+#define CS10 	  CS0
 #endif
 
 /* Ports for soft UART */
@@ -18,18 +62,58 @@
 //#endif
 #endif
 
-#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega32__)
-  //Name conversion R.Wiersma
-  #define UCSR0A  UCSRA
-  #define UDR0    UDR
-  #define UDRE0   UDRE
-  #define RXC0    RXC
-  #define FE0     FE
-  #define TIFR1   TIFR
-  #define WDTCSR  WDTCR
+/*
+ * Handle devices with up to 4 uarts (eg m1280.)  Rather inelegantly.
+ * Note that mega8/m32 still needs special handling, because ubrr is handled
+ * differently.
+ */
+#if UART == 0
+# define UART_SRA UCSR0A
+# define UART_SRB UCSR0B
+# define UART_SRC UCSR0C
+# define UART_SRL UBRR0L
+# define UART_UDR UDR0
+#elif UART == 1
+#if !defined(UDR1)
+#error UART == 1, but no UART1 on device
 #endif
-#if defined(__AVR_ATmega32__)
-  #define WDCE    WDTOE
+# define UART_SRA UCSR1A
+# define UART_SRB UCSR1B
+# define UART_SRC UCSR1C
+# define UART_SRL UBRR1L
+# define UART_UDR UDR1
+#elif UART == 2
+#if !defined(UDR2)
+#error UART == 2, but no UART2 on device
+#endif
+# define UART_SRA UCSR2A
+# define UART_SRB UCSR2B
+# define UART_SRC UCSR2C
+# define UART_SRL UBRR2L
+# define UART_UDR UDR2
+#elif UART == 3
+#if !defined(UDR1)
+#error UART == 3, but no UART3 on device
+#endif
+# define UART_SRA UCSR3A
+# define UART_SRB UCSR3B
+# define UART_SRC UCSR3C
+# define UART_SRL UBRR3L
+# define UART_UDR UDR3
+#endif
+
+#if defined(__AVR_ATmega8__) || defined (__AVR_ATmega32__) || defined (__AVR_ATmega16__)
+  //Name conversion R.Wiersma
+  #define UCSR0A	UCSRA
+  #define UDR0 		UDR
+  #define UDRE0 	UDRE
+  #define RXC0		RXC
+  #define FE0		  FE
+  #define TIFR1 	TIFR
+  #define WDTCSR	WDTCR
+#endif
+#if defined (__AVR_ATmega32__) || defined (__AVR_ATmega16__)
+  #define WDCE		WDTOE
 #endif
 
 /* Luminet support */
@@ -53,7 +137,7 @@
 
 /*------------------------------------------------------------------------ */
 /* Sanguino support (and other 40pin DIP cpus) */
-#if defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega32__)
+#if defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega32__) || defined (__AVR_ATmega16__)
 /*------------------------------------------------------------------------ */
 /* Onboard LED is connected to pin PB0 on Sanguino */ 
 #if !defined(LED)

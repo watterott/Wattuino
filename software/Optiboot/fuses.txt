@@ -1,0 +1,6 @@
+ATmega328 Fuse Settings
+-----------------------
+Extended: 0xFD
+High:     0xD6
+Low:      0xFF
+Lockbits: 0xCF (LPM and SPM prohibited in Boot Section)

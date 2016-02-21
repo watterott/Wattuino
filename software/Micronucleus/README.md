@@ -1,8 +1,8 @@
 # Micronucleus
 
-[Micronucleus](https://github.com/micronucleus/micronucleus) is a bootloader designed for Atmel AVR ATtiny microcontrollers with a minimal usb interface, cross platform libusb-based program upload tool, and a strong emphasis on bootloader compactness. To the authors knowledge this is, by far, the smallest USB bootloader for AVR ATtiny.
+[Micronucleus](https://github.com/micronucleus/micronucleus) is a small USB bootloader designed for Atmel AVR ATtiny microcontrollers.
 
-This project is released under the GPLv2 license.
+The Micronucleus project is released under GPL license.
 Code uploaded via the bootloader is not subject to any license issues.
 
 **Credits**

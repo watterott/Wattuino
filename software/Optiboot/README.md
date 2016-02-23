@@ -1,6 +1,6 @@
 # Optiboot
 
-[Optiboot](https://github.com/Optiboot) is a small serial bootloader designed for Atmel AVR microcontrollers.
+[Optiboot](https://github.com/Optiboot/optiboot) is a small serial bootloader designed for Atmel AVR microcontrollers.
 
 This project is a modified Optiboot with auto baud rate detection specially for ATmega328 microcontrollers.
 

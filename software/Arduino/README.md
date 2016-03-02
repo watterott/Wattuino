@@ -8,7 +8,7 @@ Add the following URL to the Arduino Boards Manager (*File->Preferences*):
 ```
 https://github.com/watterott/wattuino/raw/master/software/Arduino/package_watterott_index.json
 ```
-and install the Watterott Boards via the Boards Manager (*Tools->Boards->Boards Manager*).
+and install the *Watterott Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Known Issues

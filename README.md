@@ -2,6 +2,19 @@
 Arduino/Genuino compatible Boards and Modules.
 
 
+## Hardware and Software
+* [Schematics + Layout of all Boards/Modules](https://github.com/watterott/wattuino/tree/master/hardware)
+* [Board Support Package for Arduino IDE](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
+* Drivers:
+  [FTDI FT23x](http://www.ftdichip.com/Drivers/VCP.htm),
+  [Caterina Atmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),
+  [Micronucleus Attiny](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip)
+  (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
+* CAD Parts:
+  [Eagle](https://github.com/watterott/Eagle-Libs),
+  [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)
+
+
 ## Wattuino Uno
 [![Wattuino Uno](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-UNO)
 * Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO), [Wattuino Uno Kit](http://www.watterott.com/en/Wattuino-Uno-Kit)
@@ -63,16 +76,3 @@ Arduino/Genuino compatible Boards and Modules.
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader ([Windows Driver](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip))
 * MicroUSB connector for programming/communication
 * PCB Size: 17.46mm x 10.16mm
-
-
-## Hardware and Software
-* [Schematics + Layout](https://github.com/watterott/wattuino/tree/master/hardware)
-* [Board Support Package for Arduino IDE](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
-* Drivers:
-  [FTDI FT23x](http://www.ftdichip.com/Drivers/VCP.htm),
-  [Caterina Atmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),
-  [Micronucleus Attiny](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip)
-  (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
-* CAD Parts:
-  [Eagle](https://github.com/watterott/Eagle-Libs),
-  [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)

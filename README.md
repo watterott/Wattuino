@@ -30,7 +30,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 ## Wattuino Pro Mini
 [![Wattuino Pro Mini](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
-* Shop [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz), [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
+* Shop: [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz), [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
 * Compatible with Pro Mini (Arduino IDE)
 * Atmel AVR **ATmega328P** @ 16 MHz or 8 MHz (external resonator)
 * Arduino compatible Bootloader (optiboot) with auto baud rate detection
@@ -43,7 +43,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 ## Wattuino Pro Mini PB
 [![Wattuino Pro Mini PB](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Pro-Mini-PB_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
-* Shop [Wattuino Pro Mini PB 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz), [Wattuino Pro Mini PB 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-PB-3V3-8MHz)
+* Shop: [Wattuino Pro Mini PB 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz), [Wattuino Pro Mini PB 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-PB-3V3-8MHz)
 * Atmel AVR **ATmega328PB** @ 16 MHz or 8 MHz (external resonator)
 * [Differences between ATmega328P and ATmega328PB](http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application Note_AT15007.pdf)
 * Arduino compatible Bootloader (optiboot) with auto baud rate detection

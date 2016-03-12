@@ -1,6 +1,6 @@
 /*
-  pins_arduino.c - pin definitions for the Arduino board
-  Part of Arduino / Wiring Lite
+  pins_arduino.h - Pin definition functions for Arduino
+  Part of Arduino - http://www.arduino.cc/
 
   Copyright (c) 2005 David A. Mellis
 
@@ -18,8 +18,6 @@
   Public License along with this library; if not, write to the
   Free Software Foundation, Inc., 59 Temple Place, Suite 330,
   Boston, MA  02111-1307  USA
-
-  $Id: pins_arduino.c 565 2009-03-25 10:50:00Z dmellis $
 
   Modified 28-08-2009 for attiny84 R.Wiersma
   Modified 09-10-2009 for attiny45 A.Saporetti

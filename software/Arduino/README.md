@@ -16,7 +16,7 @@ and install the *Watterott Boards* via the Boards Manager (*Tools->Boards->Board
 ### Windows
 Sometimes the driver for the USB Bootloader (Caterina or Micronucleus) is not loaded correctly.
 This is the case when *Done uploading.* is not shown after the upload process.
-Check the driver state in the Device Manager, when the Bootloader is active (Caterina after the *Upload* is started and Micronucleus after a reset).
+Check the driver state in the [Device Manager](https://github.com/watterott/wattuino/raw/master/software/Caterina/usb-devices.png), when the Bootloader is active (Caterina after the *Upload* is started and Micronucleus after a reset).
 If you cannot install the driver on Windows 8 or higher then deactivate the [driver signature enforcement](https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8/disabling-signed-driver-enforcement-on-windows-8).
 * [Caterina Driver](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip)
 * [Micronucleus Driver](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip) (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))

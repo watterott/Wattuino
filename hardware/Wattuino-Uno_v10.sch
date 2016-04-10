@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10966,9 +10966,10 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <sheets>
 <sheet>
 <plain>
-<text x="162.56" y="21.59" size="1.27" layer="95">Released under the Creative Commons Attribution Share-Alike License</text>
-<text x="162.56" y="19.05" size="1.27" layer="95">http://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="162.56" y="12.7" size="1.27" layer="95">Designed by Andreas Watterott (Watterott electronic)
+<text x="162.56" y="22.86" size="1.27" layer="95" align="top-left">Released under the Creative Commons Attribution Share-Alike 
+License. http://creativecommons.org/licenses/by-sa/4.0/
+
+Designed by Andreas Watterott (Watterott electronic)
 Inspired by the original Arduino Uno design - http://arduino.cc</text>
 <text x="73.66" y="161.29" size="3.81" layer="97">ATmega328</text>
 <text x="195.58" y="161.29" size="3.81" layer="97">FT231X</text>

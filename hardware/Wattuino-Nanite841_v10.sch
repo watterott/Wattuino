@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9673,9 +9673,10 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <sheets>
 <sheet>
 <plain>
-<text x="162.56" y="21.59" size="1.27" layer="95">Released under the Creative Commons Attribution Share-Alike License</text>
-<text x="162.56" y="19.05" size="1.27" layer="95">http://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="162.56" y="12.7" size="1.27" layer="95">Designed by Tim Böscke
+<text x="162.56" y="22.86" size="1.27" layer="95" align="top-left">Released under the Creative Commons Attribution Share-Alike 
+License. http://creativecommons.org/licenses/by-sa/4.0/
+
+Designed by Tim Böscke
 https://github.com/cpldcpu/Nanite</text>
 <wire x1="189.865" y1="102.87" x2="191.135" y2="102.87" width="0.4064" layer="94"/>
 <text x="52.07" y="139.7" size="1.778" layer="97">The used USB-Bootloader on the ATtiny841 is Micronucleus 

@@ -8,7 +8,7 @@ Lockbits: 0xFF (no memory lock)
 
 ATtiny841 Fuse Settings
 -----------------------
-Extended: 0xFE
+Extended: 0xF4
 High:     0xDD
 Low:      0xE2
 Lockbits: 0xFF (no memory lock)

@@ -1581,7 +1581,7 @@
 <attribute name="NAME" x="23.1775" y="11.27125" size="0.8128" layer="25" font="vector" ratio="10" rot="R180" align="center"/>
 <attribute name="VALUE" x="23.1775" y="5.3975" size="0.8128" layer="27" font="vector" ratio="10" rot="R180" align="center"/>
 </element>
-<element name="L1" library="we-rcl" package="C0603" value="" x="40.005" y="9.525" smashed="yes" rot="R90">
+<element name="L1" library="we-rcl" package="C0603" value="10u" x="40.005" y="9.525" smashed="yes" rot="R90">
 <attribute name="NAME" x="40.005" y="10.795" size="0.8128" layer="25" font="vector" ratio="10" align="center"/>
 <attribute name="VALUE" x="40.005" y="10.795" size="0.8128" layer="27" font="vector" ratio="10" align="center"/>
 </element>

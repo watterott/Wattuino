@@ -251,7 +251,7 @@ uint8_t hexton (uint8_t h)
  * pulse
  * turn a pin on and off a few times; indicates life via LED
  */
-#define PTIME 30
+#define PTIME 40
 void pulse (int pin, int times) {
   do {
     digitalWrite(pin, HIGH);
@@ -499,8 +499,13 @@ boolean target_identify ()
 boolean target_progfuses ()
 {
   uint8_t f;
-  fp("\nSetting fuses for programming");
 
+  fp("\nErase Chip");
+  spi_transaction(0xAC, 0x80, 0, 0);  /* chip erase */
+  delay(250);
+  spi_poll_ready();
+
+  fp("\nSetting fuses for programming");
   f = pgm_read_byte(&target_flashptr->image_progfuses[FUSE_PROT]);
   if (f) {
     fp("\n  Lock: ");
@@ -554,9 +559,6 @@ boolean target_program ()
   fp(" bytes at 0x");
   Serial.println(here, HEX);
 
-  spi_transaction(0xAC, 0x80, 0, 0);  /* chip erase */
-  delay(200);
-  spi_poll_ready();
   if (write_flash(l) != STK_OK) {
     error("\nFlash Write Failed");
     return false;
@@ -574,14 +576,6 @@ boolean target_normfuses ()
   uint8_t f;
   fp("\nRestoring normal fuses");
 
-  f = pgm_read_byte(&target_flashptr->image_normfuses[FUSE_PROT]);
-  if (f) {
-    fp("\n  Lock: ");
-    Serial.print(f, HEX);
-    fp(" ");
-    Serial.print(spi_transaction(0xAC, 0xE0, 0x00, f), HEX);
-    spi_poll_ready();
-  }
   f = pgm_read_byte(&target_flashptr->image_normfuses[FUSE_LOW]);
   if (f) {
     fp("  Low: ");
@@ -604,6 +598,14 @@ boolean target_normfuses ()
     Serial.print(f, HEX);
     fp(" ");
     Serial.print(spi_transaction(0xAC, 0xA4, 0x00, f), HEX);
+    spi_poll_ready();
+  }
+  f = pgm_read_byte(&target_flashptr->image_normfuses[FUSE_PROT]);
+  if (f) {
+    fp("\n  Lock: ");
+    Serial.print(f, HEX);
+    fp(" ");
+    Serial.print(spi_transaction(0xAC, 0xE0, 0x00, f), HEX);
     spi_poll_ready();
   }
   Serial.println();
@@ -736,9 +738,9 @@ uint16_t read_signature () {
 const image_t PROGMEM image_328p = {
   { "optiboot_m328p.hex" },
   { "atmega328p" },
-    0x950F,              /* 0x1E 0x95 0x16 Signature bytes for 328PB */
-  { 0xFF,0xFF,0xD6,0xFD,0 },
-  { 0xCF,0,0,0,0 },
+    0x950F,              /* 0x1E 0x95 0x0F Signature bytes for 328P */
+  { 0xFF,0xFF,0xD6,0xFD },
+  { 0xCF,0x00,0x00,0x00 },
     128,
   {
     ":107E00001F92CDB7DEB7112484B714BE982F9D7092\n"
@@ -782,8 +784,8 @@ const image_t PROGMEM image_328pb = {
   { "optiboot_m328pb.hex" },
   { "atmega328pb" },
     0x9516,              /* 0x1E 0x95 0x16 Signature bytes for 328PB */
-  { 0xFF,0xFF,0xD6,0xFD,0 },
-  { 0xCF,0,0,0,0 },
+  { 0xFF,0xFF,0xD6,0xFD },
+  { 0xCF,0x00,0x00,0x00 },
     128,
   {
     ":107E00001F92CDB7DEB7112484B714BE982F9D7092\n"

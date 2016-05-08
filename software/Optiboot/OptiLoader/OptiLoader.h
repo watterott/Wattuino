@@ -4,8 +4,8 @@ typedef struct image {
     char image_name[30];	       /* Ie "optiboot_diecimila.hex" */
     char image_chipname[12];	       /* ie "atmega168" */
     uint16_t image_chipsig;	       /* Low two bytes of signature */
-    uint8_t image_progfuses[5];	       /* fuses to set during programming */
-    uint8_t image_normfuses[5];	       /* fuses to set after programming */
+    uint8_t image_progfuses[4];	       /* fuses to set during programming */
+    uint8_t image_normfuses[4];	       /* fuses to set after programming */
     uint8_t image_pagesize;	       /* page size for flash programming */
     char image_hexcode[1500];	       /* intel hex format image (text) */
 } image_t;

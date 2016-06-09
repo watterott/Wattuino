@@ -16,7 +16,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Uno
-[![Wattuino Uno](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Uno_v10.jpg)](http://www.watterott.com/en/Wattuino-UNO)
+[![Wattuino Uno](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Uno_v11.jpg)](http://www.watterott.com/en/Wattuino-UNO)
 * Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO), [Wattuino Uno Kit](http://www.watterott.com/en/Wattuino-Uno-Kit)
 * Compatible with Uno R3 (Arduino IDE)
 * Atmel AVR **ATmega328P** @ 16 MHz (external resonator)
@@ -55,7 +55,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Nanite 841
-[![Wattuino Nanite841](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite841_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
+[![Wattuino Nanite841](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite841_v11.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
 * Shop: [Wattuino Nanite 841](http://www.watterott.com/en/Wattuino-Nanite841)
 * Compatible with [Arduino IDE](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package) (Bootloader started via Reset-Switch)
 * Atmel AVR **ATtiny841** @ 8 MHz (internal clock) with USART, SPI, I2C Slave, ADC, EEPROM
@@ -67,7 +67,7 @@ Arduino/Genuino compatible Boards and Modules.
 
 
 ## Wattuino Nanite 85
-[![Wattuino Nanite85](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite85_v10.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
+[![Wattuino Nanite85](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite85_v11.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
 * Shop: [Wattuino Nanite 85](http://www.watterott.com/en/Wattuino-Nanite85)
 * Compatible with [Arduino IDE](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package) (Bootloader started via Reset-Switch)
 * Atmel AVR **ATtiny85** @ 16.5 MHz (internal clock) with USI, ADC, EEPROM

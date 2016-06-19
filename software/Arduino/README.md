@@ -36,6 +36,11 @@ ATTRS{idVendor}=="6666", ENV{ID_MM_DEVICE_IGNORE}="1"
 ATTRS{idVendor}=="1D50", ATTRS{idProduct}=="60B0", ENV{ID_MM_DEVICE_IGNORE}="1"
 ```
 
+Reload udev rules:
+```
+sudo udevadm control --reload-rules
+```
+
 Or you can also remove the Modem Manager from your system with
 ```
 sudo apt-get uninstall modemmanager
@@ -55,6 +60,11 @@ and add the following lines to the file:
 ```
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666"
 KERNEL=="ttyACM*", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1"
+```
+
+Reload udev rules:
+```
+sudo udevadm control --reload-rules
 ```
 
 

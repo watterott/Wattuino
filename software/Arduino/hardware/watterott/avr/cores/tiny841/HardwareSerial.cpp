@@ -168,7 +168,7 @@ inline void store_char(unsigned char c, ring_buffer *rx_buffer)
 
 HardwareSerial::HardwareSerial(ring_buffer *rx_buffer,
   volatile uint8_t *ubrrh, volatile uint8_t *ubrrl,
-  volatile uint8_t *ucsra, volatile uint8_t *ucsrb,
+  volatile uint8_t *ucsra, volatile uint8_t *ucsrb,  volatile uint8_t *ucsrc,
   volatile uint8_t *udr,
   uint8_t rxen, uint8_t txen, uint8_t rxcie, uint8_t udre, uint8_t u2x)
 {
@@ -177,6 +177,7 @@ HardwareSerial::HardwareSerial(ring_buffer *rx_buffer,
   _ubrrl = ubrrl;
   _ucsra = ucsra;
   _ucsrb = ucsrb;
+  _ucsrc = ucsrc;
   _udr = udr;
   _rxen = rxen;
   _txen = txen;
@@ -187,7 +188,7 @@ HardwareSerial::HardwareSerial(ring_buffer *rx_buffer,
 
 // Public Methods //////////////////////////////////////////////////////////////
 
-void HardwareSerial::begin(long baud)
+void HardwareSerial::begin(unsigned long baud, byte config)
 {
   uint16_t baud_setting;
   bool use_u2x = true;
@@ -213,6 +214,7 @@ void HardwareSerial::begin(long baud)
   *_ubrrh = baud_setting >> 8;
   *_ubrrl = baud_setting;
 
+  *_ucsrc = config;
   sbi(*_ucsrb, _rxen);
   sbi(*_ucsrb, _txen);
   sbi(*_ucsrb, _rxcie);
@@ -279,9 +281,9 @@ size_t HardwareSerial::write(uint8_t c)
 
 #if ! DEFAULT_TO_TINY_DEBUG_SERIAL
   #if defined(UBRRH) && defined(UBRRL)
-    HardwareSerial Serial(&rx_buffer, &UBRRH, &UBRRL, &UCSRA, &UCSRB, &UDR, RXEN, TXEN, RXCIE, UDRE, U2X);
+    HardwareSerial Serial(&rx_buffer, &UBRRH, &UBRRL, &UCSRA, &UCSRB, &UCSRC, &UDR, RXEN, TXEN, RXCIE, UDRE, U2X);
   #elif defined(UBRR0H) && defined(UBRR0L)
-    HardwareSerial Serial(&rx_buffer, &UBRR0H, &UBRR0L, &UCSR0A, &UCSR0B, &UDR0, RXEN0, TXEN0, RXCIE0, UDRE0, U2X0);
+    HardwareSerial Serial(&rx_buffer, &UBRR0H, &UBRR0L, &UCSR0A, &UCSR0B, &UCSR0C, &UDR0, RXEN0, TXEN0, RXCIE0, UDRE0, U2X0);
   #elif defined(USBCON)
     #warning no serial port defined  (port 0)
   #else
@@ -290,13 +292,13 @@ size_t HardwareSerial::write(uint8_t c)
 #endif
 
 #if defined(UBRR1H)
-  HardwareSerial Serial1(&rx_buffer1, &UBRR1H, &UBRR1L, &UCSR1A, &UCSR1B, &UDR1, RXEN1, TXEN1, RXCIE1, UDRE1, U2X1);
+  HardwareSerial Serial1(&rx_buffer1, &UBRR1H, &UBRR1L, &UCSR1A, &UCSR1B, &UCSR1C, &UDR1, RXEN1, TXEN1, RXCIE1, UDRE1, U2X1);
 #endif
 #if defined(UBRR2H)
-  HardwareSerial Serial2(&rx_buffer2, &UBRR2H, &UBRR2L, &UCSR2A, &UCSR2B, &UDR2, RXEN2, TXEN2, RXCIE2, UDRE2, U2X2);
+  HardwareSerial Serial2(&rx_buffer2, &UBRR2H, &UBRR2L, &UCSR2A, &UCSR2B, &UCSR2C, &UDR2, RXEN2, TXEN2, RXCIE2, UDRE2, U2X2);
 #endif
 #if defined(UBRR3H)
-  HardwareSerial Serial3(&rx_buffer3, &UBRR3H, &UBRR3L, &UCSR3A, &UCSR3B, &UDR3, RXEN3, TXEN3, RXCIE3, UDRE3, U2X3);
+  HardwareSerial Serial3(&rx_buffer3, &UBRR3H, &UBRR3L, &UCSR3A, &UCSR3B, &UCSR3C, &UDR3, RXEN3, TXEN3, RXCIE3, UDRE3, U2X3);
 #endif
 
 #endif // whole file

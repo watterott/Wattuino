@@ -203,6 +203,40 @@
               "version": "2.0a5"
             }
           ]
+        },
+        {
+          "name": "Watterott AVR Boards",
+          "architecture": "avr",
+          "version": "1.0.6",
+          "category": "contributed",
+          "help": {"online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"},
+          "url": "https://github.com/watterott/wattuino/raw/5eb365fad84a196cbf8f368d9f5352239f252acf/software/Arduino/watterott.zip",
+          "archiveFileName": "watterott-1.0.6.zip",
+          "size": "1577594",
+          "boards": [
+            {"name": "ATmega32u4"},
+            {"name": "ATmega328PB"},
+            {"name": "ATmega328P"},
+            {"name": "ATtiny841"},
+            {"name": "ATtiny85"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.9.2-atmel3.5.3-arduino2"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.3.0-arduino2"
+            },
+            {
+              "packager": "watterott",
+              "name": "micronucleus",
+              "version": "2.0a5"
+            }
+          ]
         }
       ],
 

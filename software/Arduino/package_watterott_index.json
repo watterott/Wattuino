@@ -25,11 +25,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",
@@ -55,11 +55,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",
@@ -85,11 +85,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",
@@ -115,11 +115,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",
@@ -147,11 +147,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",
@@ -179,11 +179,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",
@@ -211,11 +211,11 @@
           "toolsDependencies": [
             {
               "packager": "arduino",
-              "name": "avr-gcc",
+              "name": "avr-gcc"
             },
             {
               "packager": "arduino",
-              "name": "avrdude",
+              "name": "avrdude"
             },
             {
               "packager": "watterott",

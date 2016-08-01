@@ -24,16 +24,6 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
-            {
               "packager": "watterott",
               "name": "micronucleus",
               "version": "2.0a4"
@@ -55,16 +45,6 @@
             {"name": "ATtiny85"}
           ],
           "toolsDependencies": [
-            {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
             {
               "packager": "watterott",
               "name": "micronucleus",
@@ -88,16 +68,6 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
-            {
               "packager": "watterott",
               "name": "micronucleus",
               "version": "2.0a4"
@@ -119,16 +89,6 @@
             {"name": "ATtiny85"}
           ],
           "toolsDependencies": [
-            {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
             {
               "packager": "watterott",
               "name": "micronucleus",
@@ -154,16 +114,6 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
-            {
               "packager": "watterott",
               "name": "micronucleus",
               "version": "2.0a5"
@@ -188,16 +138,6 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
-            {
               "packager": "watterott",
               "name": "micronucleus",
               "version": "2.0a5"
@@ -221,16 +161,6 @@
             {"name": "ATtiny85"}
           ],
           "toolsDependencies": [
-            {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": ""
-            },
-            {
-              "packager": "arduino",
-              "name": "avrdude",
-              "version": ""
-            },
             {
               "packager": "watterott",
               "name": "micronucleus",

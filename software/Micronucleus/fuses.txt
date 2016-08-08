@@ -5,6 +5,13 @@ High:     0xDD
 Low:      0xE1
 Lockbits: 0xFF (no memory lock)
 
+ATtiny85 ISP Pins
+-----------------
+MOSI: PB0 / D0
+MISO: PB1 / D1
+SCK:  PB2 / D2
+RST:  PB5 / D5
+
 
 ATtiny841 Fuse Settings
 -----------------------
@@ -12,6 +19,13 @@ Extended: 0xF4
 High:     0xDD
 Low:      0xE2
 Lockbits: 0xFF (no memory lock)
+
+ATtiny841 ISP Pins
+------------------
+MOSI: PA6 / D6
+MISO: PA5 / D5
+SCK:  PA4 / D4
+RST:  PB3 / D11
 
 
 Bootloader Activation

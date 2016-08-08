@@ -4,3 +4,10 @@ Extended: 0xFD
 High:     0xD6
 Low:      0xFF
 Lockbits: 0xCF (LPM and SPM prohibited in Boot Section)
+
+ATmega328 ISP Pins
+------------------
+MOSI: PB3 / D11
+MISO: PB4 / D12
+SCK:  PB5 / D13
+RST:  PC6 / Reset

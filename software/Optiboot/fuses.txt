@@ -14,4 +14,4 @@ RST:  PC6 / Reset
 
 ATmega328 AVRdude Parameters
 ----------------------------
-avrdude -c avrisp2 -B 10 -p atmega328p -e -U flash:w:optiboot_m328p.hex -U lfuse:w:0xFF:m -U hfuse:w:0xD6:m -U efuse:w:0xFD:m -U lock:w:0xCF:m
+avrdude -c avrisp2 -B 10 -p atmega328p -e -U flash:w:optiboot_m328p.hex:i -U lfuse:w:0xFF:m -U hfuse:w:0xD6:m -U efuse:w:0xFD:m -U lock:w:0xCF:m

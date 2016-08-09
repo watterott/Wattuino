@@ -12,6 +12,10 @@ MISO: PB1 / D1
 SCK:  PB2 / D2
 RST:  PB5 / D5
 
+ATtiny85 AVRdude Parameters
+---------------------------
+avrdude -c avrisp2 -B 10 -p attiny85 -e -U flash:w:micronucleus-t85_ext_reset.hex -U lfuse:w:0xE1:m -U hfuse:w:0xDD:m -U efuse:w:0xFE:m
+
 
 ATtiny841 Fuse Settings
 -----------------------
@@ -26,6 +30,10 @@ MOSI: PA6 / D6
 MISO: PA5 / D5
 SCK:  PA4 / D4
 RST:  PB3 / D11
+
+ATtiny841 AVRdude Parameters
+----------------------------
+avrdude -c avrisp2 -B 10 -p attiny841 -e -U flash:w:micronucleus-t841_ext_reset.hex -U lfuse:w:0xE2:m -U hfuse:w:0xDD:m -U efuse:w:0xF4:m
 
 
 Bootloader Activation

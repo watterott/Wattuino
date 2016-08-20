@@ -3,7 +3,7 @@
 
 menu.speed=Speed
 menu.core=Core
-menu.info=Info
+menu.msg=Info
 
 
 # ATmega32u4 @ 8MHz or 16MHz
@@ -113,7 +113,7 @@ tiny841.menu.core.tinycore=ATtiny841 (by Spence Konde)
 tiny841.menu.core.tinycore.build.core=tiny841
 tiny841.menu.core.tinycore.build.variant=tiny14
 # info menu item
-tiny841.menu.info.info=Press Reset, when Uploading is shown.
+tiny841.menu.msg.info=Press Reset when Uploading is shown.
 tiny841.vid.0=0x16D0
 tiny841.pid.0=0x0753
 tiny841.bootloader.tool=avrdude
@@ -133,8 +133,9 @@ tiny841.upload.maximum_data_size=512
 tiny841.build.mcu=attiny841
 tiny841.build.f_cpu=8000000L
 tiny841.build.board=AVR_ATTINY841
-#tiny841.build.core=arduino:arduino
-#tiny841.build.variant=tiny14
+# default core+variant may be overridden by menu
+tiny841.build.core=arduino:arduino
+tiny841.build.variant=tiny14
 
 
 # ATtiny85 @ internal 16.5MHz
@@ -156,7 +157,7 @@ tiny85.menu.core.digistump.build.board=AVR_DIGISPARK
 tiny85.menu.core.digistump.build.core=digistump:tiny
 tiny85.menu.core.digistump.build.variant=digistump:digispark
 # info menu item
-tiny85.menu.info.info=Press Reset, when Uploading is shown.
+tiny85.menu.msg.info=Press Reset when Uploading is shown.
 tiny85.vid.0=0x16D0
 tiny85.pid.0=0x0753
 tiny85.bootloader.tool=avrdude
@@ -176,5 +177,6 @@ tiny85.upload.maximum_data_size=512
 tiny85.build.mcu=attiny85
 tiny85.build.f_cpu=16500000L
 tiny85.build.board=AVR_ATTINY85
-#tiny85.build.core=arduino:arduino
-#tiny85.build.variant=tiny8
+# default core+variant may be overridden by menu
+tiny85.build.core=arduino:arduino
+tiny85.build.variant=tiny8

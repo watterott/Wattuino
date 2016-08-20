@@ -26,6 +26,8 @@
 #ifndef Pins_Arduino_h
 #define Pins_Arduino_h
 
+#include <avr/pgmspace.h>
+
 #define ATTINYX5 1       //backwards compatibility
 #define __AVR_ATtinyX5__ //this is recommended way
 #define USE_SOFTWARE_SPI 1
@@ -34,13 +36,21 @@
 #define INITIALIZE_SECONDARY_TIMERS 1
 #define TIMER_TO_USE_FOR_MILLIS 0
 
+#define TCCR1A GTCCR
+
 //Analog reference bit masks
 // X 0 0 VCC used as Voltage Reference, disconnected from PB0 (AREF).
+#ifndef DEFAULT
 #define DEFAULT (0)
+#endif
 // X 0 1 External Voltage Reference at PB0 (AREF) pin, Internal Voltage Reference turned off.
+#ifndef EXTERNAL
 #define EXTERNAL (1)
+#endif
 // 0 1 0 Internal 1.1V Voltage Reference.
+#ifndef INTERNAL
 #define INTERNAL (2)
+#endif
 #define INTERNAL1V1 INTERNAL
 // 1 1 1 Internal 2.56V Voltage Reference with external bypass capacitor at PB0 (AREF) pin(1).
 #define INTERNAL2V56 (7)
@@ -53,8 +63,6 @@
 #define ANALOG_COMP_AIN0_BIT  0
 #define ANALOG_COMP_AIN1_BIT  1
 
-#include <avr/pgmspace.h>
-
 // ATMEL ATTINY45 / ARDUINO
 //
 //                  +-\/-+
@@ -64,18 +72,22 @@
 //            GND  4|    |5  PB0 (D 0) PWM0
 //                  +----+
 
-static const uint8_t A0 = 6;
-static const uint8_t A1 = 7;
-static const uint8_t A2 = 8;
-static const uint8_t A3 = 9;
+
+#define PIN_A0   (6)
+#define PIN_A1   (7)
+#define PIN_A2   (8)
+#define PIN_A3   (9)
+
+static const uint8_t A0 = PIN_A0;
+static const uint8_t A1 = PIN_A1;
+static const uint8_t A2 = PIN_A2;
+static const uint8_t A3 = PIN_A3;
 
 #define NUM_DIGITAL_PINS            6
 #define NUM_ANALOG_INPUTS           4
 #define analogInputToDigitalPin(p)  (((p) == 0) ? 5 : (((p) == 1) ? 2 : (((p) == 2) ? 4 :(((p) == 3) ? 3 : -1))))
 #define analogPinToChannel(p)       ( (p) < 6 ? (p) : (p) - 6 )
 #define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1)
-
-#define TCCR1A GTCCR
 
 #define digitalPinToPCICR(p)    (((p) >= 0 && (p) <= 5) ? (&GIMSK) : ((uint8_t *)NULL))
 #define digitalPinToPCICRbit(p) ( PCIE )

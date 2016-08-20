@@ -41,28 +41,50 @@
 //  PWM        (D  6)  PA6  7|    |8   PA5  (D  5)        PWM
 //                           +----+
 
-static const uint8_t A0 = 0;
-static const uint8_t A1 = 1;
-static const uint8_t A2 = 2;
-static const uint8_t A3 = 3;
-static const uint8_t A4 = 4;
-static const uint8_t A5 = 5;
-static const uint8_t A6 = 6;
-static const uint8_t A7 = 7;
+#define PIN_A0   (0)
+#define PIN_A1   (1)
+#define PIN_A2   (2)
+#define PIN_A3   (3)
+#define PIN_A4   (4)
+#define PIN_A5   (5)
+#define PIN_A6   (6)
+#define PIN_A7   (7)
+
+static const uint8_t A0 = PIN_A0;
+static const uint8_t A1 = PIN_A1;
+static const uint8_t A2 = PIN_A2;
+static const uint8_t A3 = PIN_A3;
+static const uint8_t A4 = PIN_A4;
+static const uint8_t A5 = PIN_A5;
+static const uint8_t A6 = PIN_A6;
+static const uint8_t A7 = PIN_A7;
 
 #if defined(__AVR_ATtinyX41__) || defined(__AVR_ATtiny441__) || defined(__AVR_ATtiny841__)
-static const uint8_t A8 = 8;
-static const uint8_t A9 = 9;
-static const uint8_t A10 = 10;
-static const uint8_t A11 = 11;
+#define PIN_A8   (8)
+#define PIN_A9   (9)
+#define PIN_A10  (10)
+#define PIN_A11  (11)
 
-static const uint8_t SS   = 7;
-static const uint8_t MOSI = 6;
-static const uint8_t MISO = 5;
-static const uint8_t SCK  = 4;
+static const uint8_t A8 = PIN_A8;
+static const uint8_t A9 = PIN_A9;
+static const uint8_t A10 = PIN_A10;
+static const uint8_t A11 = PIN_A11;
 
-static const uint8_t SDA = 6;
-static const uint8_t SCL = 4;
+#define PIN_SPI_SS     (7)
+#define PIN_SPI_MOSI   (6)
+#define PIN_SPI_MISO   (5)
+#define PIN_SPI_SCK    (4)
+
+static const uint8_t SS   = PIN_SPI_SS;
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
+static const uint8_t SCK  = PIN_SPI_SCK;
+
+#define PIN_WIRE_SDA   (6)
+#define PIN_WIRE_SCL   (4)
+
+static const uint8_t SDA = PIN_WIRE_SDA;
+static const uint8_t SCL = PIN_WIRE_SCL;
 
 #define LED_BUILTIN 8
 

@@ -213,6 +213,11 @@
               "packager": "watterott",
               "name": "micronucleus",
               "version": "2.0a4"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.3.0-arduino2"
             }
           ]
         }

@@ -30,7 +30,7 @@
 #----------------------------------------------------------------------------
 
 
-# MCU name atmega328p or atmega328pb
+# MCU name: atmega328p or atmega328pb
 MCU = atmega328p
 
 
@@ -58,10 +58,6 @@ OBJDIR = .
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC = $(TARGET).c
-
-
-# List C++ source files here. (C dependencies are automatically generated.)
-CPPSRC = 
 
 
 # List Assembler source files here.
@@ -107,12 +103,6 @@ CDEFS = -DF_CPU=$(F_CPU)UL
 ADEFS = -DF_CPU=$(F_CPU)
 
 
-# Place -D or -U options here for C++ sources
-CPPDEFS = -DF_CPU=$(F_CPU)UL
-#CPPDEFS += -D__STDC_LIMIT_MACROS
-#CPPDEFS += -D__STDC_CONSTANT_MACROS
-
-
 #---------------- Compiler Options C ----------------
 #  -g*:          generate debugging information
 #  -O*:          optimization level
@@ -140,35 +130,6 @@ CFLAGS += -mrelax
 CFLAGS += -Wa,-adhlns=$(<:%.c=$(OBJDIR)/%.lst)
 CFLAGS += $(patsubst %,-I%,$(EXTRAINCDIRS))
 CFLAGS += $(CSTANDARD)
-
-
-#---------------- Compiler Options C++ ----------------
-#  -g*:          generate debugging information
-#  -O*:          optimization level
-#  -f...:        tuning, see GCC manual and avr-libc documentation
-#  -Wall...:     warning level
-#  -Wa,...:      tell GCC to pass this to the assembler.
-#    -adhlns...: create assembler listing
-CPPFLAGS = -g$(DEBUG)
-CPPFLAGS += $(CPPDEFS)
-CPPFLAGS += -O$(OPT)
-CPPFLAGS += -funsigned-char
-CPPFLAGS += -funsigned-bitfields
-CPPFLAGS += -fpack-struct
-CPPFLAGS += -fshort-enums
-CPPFLAGS += -fno-exceptions
-CPPFLAGS += -Wall
-CPPFLAGS += -Wundef
-#CPPFLAGS += -mshort-calls
-CPPFLAGS += -mrelax
-#CPPFLAGS += -fno-inline-small-functions
-#CPPFLAGS += -fno-split-wide-types
-#CPPFLAGS += -fno-unit-at-a-time
-#CPPFLAGS += -Wunreachable-code
-#CPPFLAGS += -Wsign-compare
-CPPFLAGS += -Wa,-adhlns=$(<:%.cpp=$(OBJDIR)/%.lst)
-CPPFLAGS += $(patsubst %,-I%,$(EXTRAINCDIRS))
-#CPPFLAGS += $(CSTANDARD)
 
 
 #---------------- Assembler Options ----------------
@@ -276,17 +237,16 @@ MSG_EXTENDED_LISTING = Creating Extended Listing:
 MSG_SYMBOL_TABLE = Creating Symbol Table:
 MSG_LINKING = Linking:
 MSG_COMPILING = Compiling C:
-MSG_COMPILING_CPP = Compiling C++:
 MSG_ASSEMBLING = Assembling:
 MSG_CLEANING = Cleaning project:
 MSG_CREATING_LIBRARY = Creating library:
 
 
 # Define all object files.
-OBJ = $(SRC:%.c=$(OBJDIR)/%.o) $(CPPSRC:%.cpp=$(OBJDIR)/%.o) $(ASRC:%.S=$(OBJDIR)/%.o) 
+OBJ = $(SRC:%.c=$(OBJDIR)/%.o) $(ASRC:%.S=$(OBJDIR)/%.o)
 
 # Define all listing files.
-LST = $(SRC:%.c=$(OBJDIR)/%.lst) $(CPPSRC:%.cpp=$(OBJDIR)/%.lst) $(ASRC:%.S=$(OBJDIR)/%.lst) 
+LST = $(SRC:%.c=$(OBJDIR)/%.lst) $(ASRC:%.S=$(OBJDIR)/%.lst)
 
 
 # Compiler flags to generate dependency files.
@@ -296,7 +256,6 @@ GENDEPFLAGS = -MMD -MP -MF .dep/$(@F).d
 # Combine all necessary flags and optional flags.
 # Add target processor to flags.
 ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)
-ALL_CPPFLAGS = -mmcu=$(MCU) -I. -x c++ $(CPPFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
 
 
@@ -398,21 +357,9 @@ $(OBJDIR)/%.o : %.c
 	$(CC) -c $(ALL_CFLAGS) $< -o $@ 
 
 
-# Compile: create object files from C++ source files.
-$(OBJDIR)/%.o : %.cpp
-	@echo
-	@echo $(MSG_COMPILING_CPP) $<
-	$(CC) -c $(ALL_CPPFLAGS) $< -o $@ 
-
-
 # Compile: create assembler files from C source files.
 %.s : %.c
 	$(CC) -S $(ALL_CFLAGS) $< -o $@
-
-
-# Compile: create assembler files from C++ source files.
-%.s : %.cpp
-	$(CC) -S $(ALL_CPPFLAGS) $< -o $@
 
 
 # Assemble: create object files from assembler source files.

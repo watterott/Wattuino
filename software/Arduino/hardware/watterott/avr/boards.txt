@@ -107,11 +107,12 @@ tiny841.name=ATtiny841 (8 MHz)
 tiny841.menu.core.arduino=Standard Arduino
 tiny841.menu.core.arduino.build.core=arduino:arduino
 tiny841.menu.core.arduino.build.variant=tiny14
-# use Spence Konde Core: https://github.com/SpenceKonde/arduino-tiny-841/
-tiny841.menu.core.tinycore=ATtiny841 (by Spence Konde)
-#tiny841.menu.core.tinycore.build.core=arduino-tiny-841:tiny
-tiny841.menu.core.tinycore.build.core=tiny841
+tiny841.menu.core.arduino.build.board=AVR_ATTINY841
+# use ATTinyCore from Spence Konde: https://github.com/SpenceKonde/ATTinyCore
+tiny841.menu.core.tinycore=ATTinyCore (by Spence Konde)
+tiny841.menu.core.tinycore.build.core=ATTinyCore:tinymodern
 tiny841.menu.core.tinycore.build.variant=tiny14
+tiny841.menu.core.tinycore.build.board=AVR_ATTINYX41
 # info menu item
 tiny841.menu.msg.info=Press Reset when Uploading is shown.
 tiny841.vid.0=0x16D0
@@ -132,30 +133,29 @@ tiny841.upload.maximum_size=6500
 tiny841.upload.maximum_data_size=512
 tiny841.build.mcu=attiny841
 tiny841.build.f_cpu=8000000L
-tiny841.build.board=AVR_ATTINY841
-# default core+variant may be overridden by menu
+# default core may be overridden by menu
 tiny841.build.core=arduino:arduino
 tiny841.build.variant=tiny14
+tiny841.build.board=AVR_ATTINY841
 
 
 # ATtiny85 @ internal 16.5MHz
 tiny85.name=ATtiny85 (16.5 MHz)
 # use Standard Arduino Core
 tiny85.menu.core.arduino=Standard Arduino
-tiny85.menu.core.arduino.build.board=AVR_ATTINY85
 tiny85.menu.core.arduino.build.core=arduino:arduino
 tiny85.menu.core.arduino.build.variant=tiny8
-# use Spence Konde Core: https://github.com/SpenceKonde/ATTinyCore
-tiny85.menu.core.tinycore=ATtiny85 (by Spence Konde)
-tiny85.menu.core.tinycore.build.board=AVR_ATTINY85
-#tiny85.menu.core.tinycore.build.core=ATTinyCore:tiny
-tiny85.menu.core.tinycore.build.core=tiny85
+tiny85.menu.core.arduino.build.board=AVR_ATTINY85
+# use ATTinyCore from Spence Konde: https://github.com/SpenceKonde/ATTinyCore
+tiny85.menu.core.tinycore=ATTinyCore (by Spence Konde)
+tiny85.menu.core.tinycore.build.core=ATTinyCore:tiny
 tiny85.menu.core.tinycore.build.variant=tiny8
+tiny85.menu.core.tinycore.build.board=AVR_ATTINYX5
 # use Digistump Core: https://github.com/digistump/DigistumpArduino
 tiny85.menu.core.digistump=Digistump/Digispark
-tiny85.menu.core.digistump.build.board=AVR_DIGISPARK
 tiny85.menu.core.digistump.build.core=digistump:tiny
 tiny85.menu.core.digistump.build.variant=digistump:digispark
+tiny85.menu.core.digistump.build.board=AVR_DIGISPARK
 # info menu item
 tiny85.menu.msg.info=Press Reset when Uploading is shown.
 tiny85.vid.0=0x16D0
@@ -176,7 +176,7 @@ tiny85.upload.maximum_size=6500
 tiny85.upload.maximum_data_size=512
 tiny85.build.mcu=attiny85
 tiny85.build.f_cpu=16500000L
-tiny85.build.board=AVR_ATTINY85
-# default core+variant may be overridden by menu
+# default core may be overridden by menu
 tiny85.build.core=arduino:arduino
 tiny85.build.variant=tiny8
+tiny85.build.board=AVR_ATTINY85

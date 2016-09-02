@@ -28,6 +28,15 @@
 
 #include <avr/pgmspace.h>
 
+// ATMEL ATTINY85 / ARDUINO
+//
+//                  +-\/-+
+// AIN0 (D 5) PB5  1|    |8  Vcc
+// AIN3 (D 3) PB3  2|    |7  PB2 (D 2) AIN1
+// AIN2 (D 4) PB4  3|    |6  PB1 (D 1) PWM1
+//            GND  4|    |5  PB0 (D 0) PWM0
+//                  +----+
+
 #define ATTINYX5 1       //backwards compatibility
 #define __AVR_ATtinyX5__ //this is recommended way
 #define USE_SOFTWARE_SPI 1
@@ -36,8 +45,9 @@
 #define INITIALIZE_SECONDARY_TIMERS 1
 #define TIMER_TO_USE_FOR_MILLIS 0
 
+#ifndef TCCR1A
 #define TCCR1A GTCCR
-
+#endif
 //Analog reference bit masks
 // X 0 0 VCC used as Voltage Reference, disconnected from PB0 (AREF).
 #ifndef DEFAULT
@@ -63,20 +73,10 @@
 #define ANALOG_COMP_AIN0_BIT  0
 #define ANALOG_COMP_AIN1_BIT  1
 
-// ATMEL ATTINY45 / ARDUINO
-//
-//                  +-\/-+
-// AIN0 (D 5) PB5  1|    |8  Vcc
-// AIN3 (D 3) PB3  2|    |7  PB2 (D 2) AIN1
-// AIN2 (D 4) PB4  3|    |6  PB1 (D 1) PWM1
-//            GND  4|    |5  PB0 (D 0) PWM0
-//                  +----+
-
-
-#define PIN_A0   (6)
-#define PIN_A1   (7)
-#define PIN_A2   (8)
-#define PIN_A3   (9)
+#define PIN_A0         (6)
+#define PIN_A1         (7)
+#define PIN_A2         (8)
+#define PIN_A3         (9)
 
 static const uint8_t A0 = PIN_A0;
 static const uint8_t A1 = PIN_A1;
@@ -85,21 +85,20 @@ static const uint8_t A3 = PIN_A3;
 
 #define NUM_DIGITAL_PINS            6
 #define NUM_ANALOG_INPUTS           4
-#define analogInputToDigitalPin(p)  (((p) == 0) ? 5 : (((p) == 1) ? 2 : (((p) == 2) ? 4 :(((p) == 3) ? 3 : -1))))
-#define analogPinToChannel(p)       ( (p) < 6 ? (p) : (p) - 6 )
-#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1)
 
-#define digitalPinToPCICR(p)    (((p) >= 0 && (p) <= 5) ? (&GIMSK) : ((uint8_t *)NULL))
-#define digitalPinToPCICRbit(p) ( PCIE )
-#define digitalPinToPCMSK(p)    (((p) >= 0 && (p) <= 5) ? (&PCMSK) : ((uint8_t *)NULL))
-#define digitalPinToPCMSKbit(p) ( p )
+#define analogInputToDigitalPin(p)  ( ((p) == 0) ? 5 : (((p) == 1) ? 2 : (((p) == 2) ? 4 :(((p) == 3) ? 3 : -1))) )
+#define analogPinToChannel(p)       ( (p) < 6 ? (p) : (p) - 6 )
+
+#define digitalPinHasPWM(p)         ( (p) == 0 || (p) == 1 || (p) == 4 )
+
+#define digitalPinToPCICR(p)        ( ((p) >= 0 && (p) <= 5) ? (&GIMSK) : ((uint8_t *)NULL) )
+#define digitalPinToPCICRbit(p)     ( PCIE )
+#define digitalPinToPCMSK(p)        ( ((p) >= 0 && (p) <= 5) ? (&PCMSK) : ((uint8_t *)NULL) )
+#define digitalPinToPCMSKbit(p)     ( p )
+
+#define digitalPinToInterrupt(p)    ( ((p) == 2) ? 0 : NOT_AN_INTERRUPT )
 
 #ifdef ARDUINO_MAIN
-
-//void initVariant()
-//{
-//	GTCCR |= (1 << PWM1B);
-//}
 
 // these arrays map port names (e.g. port B) to the
 // appropriate addresses for various functions (e.g. reading

@@ -21,7 +21,7 @@
 
   Modified 28-08-2009 for attiny84 R.Wiersma
   Modified 09-10-2009 for attiny45 A.Saporetti
-  Modified 29-05-2015 for attiny841 A.Watterott
+  Modified for attiny841 A.Watterott
 */
 
 #ifndef Pins_Arduino_h
@@ -41,14 +41,14 @@
 //  PWM        (D  6)  PA6  7|    |8   PA5  (D  5)        PWM
 //                           +----+
 
-#define PIN_A0   (0)
-#define PIN_A1   (1)
-#define PIN_A2   (2)
-#define PIN_A3   (3)
-#define PIN_A4   (4)
-#define PIN_A5   (5)
-#define PIN_A6   (6)
-#define PIN_A7   (7)
+#define PIN_A0         (0)
+#define PIN_A1         (1)
+#define PIN_A2         (2)
+#define PIN_A3         (3)
+#define PIN_A4         (4)
+#define PIN_A5         (5)
+#define PIN_A6         (6)
+#define PIN_A7         (7)
 
 static const uint8_t A0 = PIN_A0;
 static const uint8_t A1 = PIN_A1;
@@ -60,10 +60,10 @@ static const uint8_t A6 = PIN_A6;
 static const uint8_t A7 = PIN_A7;
 
 #if defined(__AVR_ATtinyX41__) || defined(__AVR_ATtiny441__) || defined(__AVR_ATtiny841__)
-#define PIN_A8   (8)
-#define PIN_A9   (9)
-#define PIN_A10  (10)
-#define PIN_A11  (11)
+#define PIN_A8         (8)
+#define PIN_A9         (9)
+#define PIN_A10        (10)
+#define PIN_A11        (11)
 
 static const uint8_t A8 = PIN_A8;
 static const uint8_t A9 = PIN_A9;
@@ -86,20 +86,22 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
-#define LED_BUILTIN 8
+#define LED_BUILTIN    (8)
 
-#define NUM_ANALOG_INPUTS 11
+#define NUM_ANALOG_INPUTS           11
 
 #else
-#define NUM_ANALOG_INPUTS 7
+#define NUM_ANALOG_INPUTS           7
 #endif
 
-#define NUM_DIGITAL_PINS 11
+#define NUM_DIGITAL_PINS            11
 
-#define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 10) ? (&GIMSK) : ((uint8_t *)0) )
-#define digitalPinToPCICRbit(p) ( ((p) <= 7) ? PCIE0 : PCIE1 )
-#define digitalPinToPCMSK(p)    ( ((p) <= 7) ? (&PCMSK0) : (((p) <= 10) ? (&PCMSK1) : ((uint8_t *)0)) )
-#define digitalPinToPCMSKbit(p) ( ((p) <= 7) ? (p) : (10 - (p)) )
+#define digitalPinToPCICR(p)        ( ((p) >= 0 && (p) <= 10) ? (&GIMSK) : ((uint8_t *)0) )
+#define digitalPinToPCICRbit(p)     ( ((p) <= 7) ? PCIE0 : PCIE1 )
+#define digitalPinToPCMSK(p)        ( ((p) <= 7) ? (&PCMSK0) : (((p) <= 10) ? (&PCMSK1) : ((uint8_t *)0)) )
+#define digitalPinToPCMSKbit(p)     ( ((p) <= 7) ? (p) : (10 - (p)) )
+
+#define digitalPinToInterrupt(p)    ( ((p) == 9) ? 0 : NOT_AN_INTERRUPT)
 
 #ifdef ARDUINO_MAIN
 

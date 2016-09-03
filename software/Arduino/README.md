@@ -1,5 +1,5 @@
 # Watterott Board Support Package
-Board Support Package for Arduino IDE v1.6.4+
+Board Support Package for [Arduino IDE v1.6.4+](https://www.arduino.cc/en/Main/Software)
 
 
 ## Installation
@@ -8,7 +8,13 @@ Add the following URL to the Arduino Boards Manager (*File->Preferences*):
 ```
 https://github.com/watterott/wattuino/raw/master/software/Arduino/package_watterott_index.json
 ```
-and install the *Watterott Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
+and install the **Watterott AVR Boards** via the Boards Manager (*Tools->Boards->Boards Manager*).
+
+If you want to use the **ATTinyCore** from [Spence Konde](https://github.com/SpenceKonde/ATTinyCore) for the Nanite boards, then also install it via the Arduino Boards Manager.
+Here is the URL:
+```
+http://drazzy.com/package_drazzy.com_index.json
+```
 
 
 ## Known Issues
@@ -66,9 +72,3 @@ Reload udev rules:
 ```
 sudo udevadm control --reload-rules
 ```
-
-
-## Third party libraries/software
-* [Micronucleus ATtiny USB Bootloader by Micronucleus Team](https://github.com/micronucleus/micronucleus)
-* [Arduino Core for ATtiny85 by Spence Konde](https://github.com/SpenceKonde/ATTinyCore)
-* [Arduino Core for ATtiny841 by Spence Konde](https://github.com/SpenceKonde/arduino-tiny-841)

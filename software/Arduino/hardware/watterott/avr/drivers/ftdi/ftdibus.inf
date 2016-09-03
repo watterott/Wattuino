@@ -1,9 +1,9 @@
 ; FTDIBUS.INF
 ; 
-; Copyright © 2000-2015 Future Technology Devices International Limited
+; Copyright © 2000-2016 Future Technology Devices International Limited
 ; 
 ; USB serial converter driver installation file for Windows 2000, XP, Server 2003, Vista, Server 2008,
-; Windows 7, Server 2008 R2, Windows 8, Windows 8.1 and Server 2012 R2.
+; Windows 7, Server 2008 R2, Windows 8, Windows 8.1, Server 2012 R2 and Windows 10.
 ; 
 ; 
 ; IMPORTANT NOTICE: PLEASE READ CAREFULLY BEFORE INSTALLING THE RELEVANT 
@@ -223,7 +223,7 @@ Class=USB
 ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
 Provider=%FTDI%
 CatalogFile=ftdibus.cat
-DriverVer=07/10/2015,2.12.06
+DriverVer=06/16/2016,2.12.18
 
 [SourceDisksNames]
 1=%DriversDisk%,,,
@@ -272,6 +272,11 @@ FtdiBus.NTamd64.Copy3 = 10,syswow64
 %USB\VID_0403&PID_601C&MI_02.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_601C&MI_02
 %USB\VID_0403&PID_601C&MI_03.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_601C&MI_03
 %USB\VID_0403&PID_0FEC.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_0FEC
+%USB\VID_0403&PID_6031&MI_00.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_6031&MI_00
+%USB\VID_0403&PID_6031&MI_01.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_6031&MI_01
+%USB\VID_0403&PID_6031&MI_02.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_6031&MI_02
+%USB\VID_0403&PID_6031&REV_2400.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_6031&REV_2400
+%USB\VID_0403&PID_603E.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_603E
 %USB\VID_0403&PID_0000.DeviceDesc%=FtdiBus.NT,USB\VID_0403&PID_0000
 
 [FtdiHw.NTamd64]
@@ -295,6 +300,11 @@ FtdiBus.NTamd64.Copy3 = 10,syswow64
 %USB\VID_0403&PID_601C&MI_02.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_601C&MI_02
 %USB\VID_0403&PID_601C&MI_03.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_601C&MI_03
 %USB\VID_0403&PID_0FEC.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_0FEC
+%USB\VID_0403&PID_6031&MI_00.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_6031&MI_00
+%USB\VID_0403&PID_6031&MI_01.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_6031&MI_01
+%USB\VID_0403&PID_6031&MI_02.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_6031&MI_02
+%USB\VID_0403&PID_6031&REV_2400.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_6031&REV_2400
+%USB\VID_0403&PID_603E.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_603E
 %USB\VID_0403&PID_0000.DeviceDesc%=FtdiBus.NTamd64,USB\VID_0403&PID_0000
 
 [ControlFlags]
@@ -334,7 +344,15 @@ AddReg = FtdiBus.NT.EventLog_Inst.AddReg
 HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\ftdibus.sys"
 HKR,,TypesSupported,0x00010001,7
 
+[FtdiBus.NT.HW] 
+AddReg=FtdiBus.NT.HW.AddReg 
 
+[FtdiBus.NTamd64.HW] 
+AddReg=FtdiBus.NT.HW.AddReg 
+
+[FtdiBus.NT.HW.AddReg] 
+;HKR,,"ConfigData",0x00010001,0x00000016 
+   
 [FtdiBus.NT.Copy]
 ftdibus.sys
 
@@ -378,6 +396,11 @@ USB\VID_0403&PID_601C&MI_01.DeviceDesc="FT4222H Interface B"
 USB\VID_0403&PID_601C&MI_02.DeviceDesc="FT4222H Interface C"
 USB\VID_0403&PID_601C&MI_03.DeviceDesc="FT4222H Interface D"
 USB\VID_0403&PID_0FEC.DeviceDesc="UMFT4222PROG"
+USB\VID_0403&PID_6031&MI_00.DeviceDesc="USB Serial Converter A"
+USB\VID_0403&PID_6031&MI_01.DeviceDesc="USB Serial Converter B"
+USB\VID_0403&PID_6031&MI_02.DeviceDesc="USB Serial Converter C"
+USB\VID_0403&PID_6031&REV_2400.DeviceDesc="USB Serial Converter"
+USB\VID_0403&PID_603E.DeviceDesc="UMFTPD3A Programming Board"
 USB\VID_0403&PID_0000.DeviceDesc="USB Serial Converter"
 SvcDesc="USB Serial Converter Driver"
 ClassName="USB"

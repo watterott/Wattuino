@@ -26,3 +26,51 @@ Special Thanks:
   * Digistump for motivation and contributing the VID/PID pair
   * Numerous supporters for smaller bug fixes and improvements.
 ```
+
+## Bootloader Activation
+```
+...always    -> run Bootloader on every start
+...ext_reset -> run Bootloader only after the reset switch is pressed
+```
+
+## ISP Pins of ATtiny85
+```
+MOSI: PB0 / D0
+MISO: PB1 / D1
+SCK:  PB2 / D2
+RST:  PB5 / D5
+```
+
+## Fuse Settings for ATtiny85
+```
+Extended: 0xFE
+High:     0xDD
+Low:      0xE1
+Lockbits: 0xFF (no memory lock)
+```
+
+## AVRdude Parameters for ATtiny85
+```
+avrdude -c avrisp2 -B 10 -p attiny85 -e -U flash:w:micronucleus-t85_ext_reset.hex:i -U lfuse:w:0xE1:m -U hfuse:w:0xDD:m -U efuse:w:0xFE:m
+```
+
+## ISP Pins of ATtiny841
+```
+MOSI: PA6 / D6
+MISO: PA5 / D5
+SCK:  PA4 / D4
+RST:  PB3 / D11
+```
+
+## Fuse Settings for ATtiny841
+```
+Extended: 0xF4
+High:     0xDD
+Low:      0xE2
+Lockbits: 0xFF (no memory lock)
+```
+
+## AVRdude Parameters for ATtiny841
+```
+avrdude -c avrisp2 -B 10 -p attiny841 -e -U flash:w:micronucleus-t841_ext_reset.hex:i -U lfuse:w:0xE2:m -U hfuse:w:0xDD:m -U efuse:w:0xF4:m
+```

@@ -10,6 +10,10 @@ Arduino/Genuino compatible Boards and Modules.
   [Caterina Atmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),
   [Micronucleus Attiny](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip)
   (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
+* Bootloader:
+  [Optiboot Atmega328](https://github.com/watterott/wattuino/tree/master/software/Optiboot),
+  [Caterina Atmega32u4](https://github.com/watterott/wattuino/tree/master/software/Caterina),
+  [Micronucleus Attiny](https://github.com/watterott/wattuino/tree/master/software/Micronucleus)
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
   [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)

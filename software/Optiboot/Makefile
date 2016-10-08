@@ -115,10 +115,11 @@ CFLAGS += $(CDEFS)
 CFLAGS += -O$(OPT)
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
+CFLAGS += -ffunction-sections
+CFLAGS += -fdata-sections
 CFLAGS += -fpack-struct
 CFLAGS += -fshort-enums
 CFLAGS += -Wall
-#CFLAGS += -Wundef
 #CFLAGS += -Wstrict-prototypes
 #CFLAGS += -mshort-calls
 CFLAGS += -mrelax
@@ -127,6 +128,7 @@ CFLAGS += -mrelax
 #CFLAGS += -fno-unit-at-a-time
 #CFLAGS += -Wunreachable-code
 #CFLAGS += -Wsign-compare
+#CFLAGS += -mint8
 CFLAGS += -Wa,-adhlns=$(<:%.c=$(OBJDIR)/%.lst)
 CFLAGS += $(patsubst %,-I%,$(EXTRAINCDIRS))
 CFLAGS += $(CSTANDARD)
@@ -250,7 +252,7 @@ LST = $(SRC:%.c=$(OBJDIR)/%.lst) $(ASRC:%.S=$(OBJDIR)/%.lst)
 
 
 # Compiler flags to generate dependency files.
-GENDEPFLAGS = -MMD -MP -MF .dep/$(@F).d
+GENDEPFLAGS = -MD -MP -MF .dep/$(@F).d
 
 
 # Combine all necessary flags and optional flags.

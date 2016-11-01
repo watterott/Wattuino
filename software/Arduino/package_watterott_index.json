@@ -325,9 +325,9 @@
             },
             {
                 "host":"x86_64-apple-darwin",
-                "url":"https://github.com/watterott/wattuino/raw/b5659b5ce0162043326a54d48dff343835f226e3/software/Arduino/micronucleus-osx.tar.gz",
+                "url":"https://github.com/watterott/wattuino/raw/1089a51af582efaad0fb7dc99c706c3ee1b0a125/software/Arduino/micronucleus-osx.tar.gz",
                 "archiveFileName":"micronucleus-2.0a4-osx.tar.gz",
-                "size":"41335"
+                "size":"25140"
             }
           ]
         },

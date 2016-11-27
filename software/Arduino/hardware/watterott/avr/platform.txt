@@ -1,6 +1,6 @@
 
-# Watterott AVR Core and platform.
-# ------------------------------
+# Watterott AVR Core and Platform
+# -------------------------------
 #
 # For more info:
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5-3rd-party-Hardware-specification
@@ -92,7 +92,6 @@ recipe.preproc.macros="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {
 # ------------------------------
 
 ## AVRdude
-#tools.avrdude.path={runtime.tools.avrdude-6.3.0-arduino6.path}
 tools.avrdude.path={runtime.tools.avrdude.path}
 tools.avrdude.cmd=bin/avrdude
 tools.avrdude.cmd.windows=bin/avrdude.exe

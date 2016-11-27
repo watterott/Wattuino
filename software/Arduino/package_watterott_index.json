@@ -280,9 +280,9 @@
           "version": "1.1.1",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/wattuino/tree/master/software/Arduino"},
-          "url": "https://github.com/watterott/wattuino/raw/06932d09e0a6f4ec44d2e2287e3d48354694e8ee/software/Arduino/watterott.zip",
+          "url": "https://github.com/watterott/wattuino/raw/6c46b693679fb10230564a0e3a16c7bd016fe068/software/Arduino/watterott.zip",
           "archiveFileName": "watterott-1.1.1.zip",
-          "size": "1446038",
+          "size": "1446047",
           "boards": [
             {"name": "ATmega32u4"},
             {"name": "ATmega328PB"},

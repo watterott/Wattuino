@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -10022,33 +10022,40 @@ https://github.com/micronucleus/micronucleus</text>
 or
 uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <text x="72.39" y="148.59" size="3.81" layer="97">ATtiny841 AVR</text>
-<text x="104.14" y="58.42" size="1.778" layer="97" align="center-left">GND</text>
-<text x="104.14" y="55.88" size="1.778" layer="97" align="center-left">D0</text>
-<text x="104.14" y="53.34" size="1.778" layer="97" align="center-left">D1</text>
-<text x="104.14" y="50.8" size="1.778" layer="97" align="center-left">D2</text>
-<text x="104.14" y="48.26" size="1.778" layer="97" align="center-left">D3</text>
-<text x="104.14" y="45.72" size="1.778" layer="97" align="center-left">D4</text>
-<text x="104.14" y="43.18" size="1.778" layer="97" align="center-left">D5</text>
-<text x="54.61" y="58.42" size="1.778" layer="97" rot="R180" align="center-left">VCC</text>
-<text x="54.61" y="55.88" size="1.778" layer="97" rot="R180" align="center-left">D10</text>
-<text x="54.61" y="53.34" size="1.778" layer="97" rot="R180" align="center-left">D9</text>
-<text x="54.61" y="50.8" size="1.778" layer="97" rot="R180" align="center-left">RST/D11</text>
-<text x="54.61" y="48.26" size="1.778" layer="97" rot="R180" align="center-left">D8</text>
-<text x="54.61" y="45.72" size="1.778" layer="97" rot="R180" align="center-left">D7</text>
-<text x="54.61" y="43.18" size="1.778" layer="97" rot="R180" align="center-left">D6</text>
-<text x="114.3" y="133.35" size="1.27" layer="97">Arduino</text>
-<text x="114.3" y="130.81" size="1.27" layer="97">D0</text>
-<text x="114.3" y="128.27" size="1.27" layer="97">D1</text>
-<text x="114.3" y="125.73" size="1.27" layer="97">D2</text>
-<text x="114.3" y="123.19" size="1.27" layer="97">D3</text>
-<text x="114.3" y="120.65" size="1.27" layer="97">D4</text>
-<text x="114.3" y="118.11" size="1.27" layer="97">D5</text>
-<text x="114.3" y="115.57" size="1.27" layer="97">D6</text>
-<text x="114.3" y="113.03" size="1.27" layer="97">D7</text>
-<text x="114.3" y="107.95" size="1.27" layer="97">D10</text>
-<text x="114.3" y="105.41" size="1.27" layer="97">D9</text>
-<text x="114.3" y="102.87" size="1.27" layer="97">D8</text>
-<text x="114.3" y="100.33" size="1.27" layer="97">D11/RST</text>
+<text x="137.16" y="58.42" size="1.778" layer="97" align="center-left">GND</text>
+<text x="137.16" y="55.88" size="1.778" layer="97" align="center-left">D0</text>
+<text x="137.16" y="53.34" size="1.778" layer="97" align="center-left">D1</text>
+<text x="137.16" y="50.8" size="1.778" layer="97" align="center-left">D2</text>
+<text x="137.16" y="48.26" size="1.778" layer="97" align="center-left">D3</text>
+<text x="137.16" y="45.72" size="1.778" layer="97" align="center-left">D4</text>
+<text x="137.16" y="43.18" size="1.778" layer="97" align="center-left">D5</text>
+<text x="87.63" y="58.42" size="1.778" layer="97" rot="R180" align="center-left">VCC</text>
+<text x="87.63" y="55.88" size="1.778" layer="97" rot="R180" align="center-left">D10</text>
+<text x="87.63" y="53.34" size="1.778" layer="97" rot="R180" align="center-left">D9</text>
+<text x="87.63" y="50.8" size="1.778" layer="97" rot="R180" align="center-left">RST</text>
+<text x="87.63" y="48.26" size="1.778" layer="97" rot="R180" align="center-left">D8</text>
+<text x="87.63" y="45.72" size="1.778" layer="97" rot="R180" align="center-left">D7</text>
+<text x="87.63" y="43.18" size="1.778" layer="97" rot="R180" align="center-left">D6</text>
+<text x="114.3" y="100.33" size="1.27" layer="97">RESET</text>
+<text x="33.02" y="68.58" size="1.778" layer="97" font="vector" align="top-left">Pin | Map 1 | Map 2
+-------------------
+PA0 | D0    | D10
+PA1 | D1    | D9
+PA2 | D2    | D8
+PA3 | D3    | D7
+PA4 | D4    | D6
+PA5 | D5    | D5
+PA6 | D6    | D4
+PA7 | D7    | D3
+PB0 | D10   | D0
+PB1 | D9    | D1
+PB2 | D8    | D2
+
+Map 1 = David A. Mellis - https://github.com/damellis/attiny
+Map 2 = Spence Konde - https://github.com/SpenceKonde/ATTinyCore</text>
+<text x="114.3" y="115.57" size="1.27" layer="97">ISP-MOSI</text>
+<text x="114.3" y="118.11" size="1.27" layer="97">ISP-MISO</text>
+<text x="114.3" y="120.65" size="1.27" layer="97">ISP-SCK</text>
 </plain>
 <instances>
 <instance part="X1" gate="X" x="165.1" y="7.62"/>
@@ -10091,14 +10098,14 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <instance part="P+10" gate="1" x="170.18" y="123.19" smashed="yes">
 <attribute name="VALUE" x="172.085" y="125.73" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="P+1" gate="1" x="68.58" y="66.294" smashed="yes">
-<attribute name="VALUE" x="70.485" y="68.834" size="1.778" layer="96" rot="R180"/>
+<instance part="P+1" gate="1" x="101.6" y="66.294" smashed="yes">
+<attribute name="VALUE" x="103.505" y="68.834" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND1" gate="1" x="90.17" y="66.04" smashed="yes" rot="R180">
-<attribute name="VALUE" x="92.71" y="68.58" size="1.778" layer="96" rot="R180"/>
+<instance part="GND1" gate="1" x="123.19" y="66.04" smashed="yes" rot="R180">
+<attribute name="VALUE" x="125.73" y="68.58" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="J2" gate="J" x="57.15" y="50.8"/>
-<instance part="J3" gate="J" x="101.6" y="50.8" rot="R180"/>
+<instance part="J2" gate="J" x="90.17" y="50.8"/>
+<instance part="J3" gate="J" x="134.62" y="50.8" rot="R180"/>
 <instance part="IC1" gate="IC" x="80.01" y="115.57"/>
 <instance part="LED" gate="D" x="137.16" y="116.84"/>
 <instance part="R5" gate="R" x="137.16" y="127" rot="R90"/>
@@ -10147,9 +10154,9 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="90.17" y1="63.5" x2="90.17" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="123.19" y1="63.5" x2="123.19" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="J3" gate="J" pin="1"/>
-<wire x1="90.17" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="123.19" y1="58.42" x2="127" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -10176,8 +10183,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J2" gate="J" pin="7"/>
-<wire x1="64.77" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="58.42" x2="68.58" y2="63.754" width="0.1524" layer="91"/>
+<wire x1="97.79" y1="58.42" x2="101.6" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="58.42" x2="101.6" y2="63.754" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
 </segment>
 <segment>
@@ -10195,8 +10202,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J2" gate="J" pin="6"/>
-<wire x1="64.77" y1="55.88" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
-<label x="68.58" y="55.88" size="1.27" layer="95" xref="yes"/>
+<wire x1="97.79" y1="55.88" x2="101.6" y2="55.88" width="0.1524" layer="91"/>
+<label x="101.6" y="55.88" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="D_N" class="0">
@@ -10216,8 +10223,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <net name="PB1" class="0">
 <segment>
 <pinref part="J2" gate="J" pin="5"/>
-<wire x1="64.77" y1="53.34" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
-<label x="68.58" y="53.34" size="1.27" layer="95" xref="yes"/>
+<wire x1="97.79" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
+<label x="101.6" y="53.34" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R2" gate="R" pin="1"/>
@@ -10250,8 +10257,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J2" gate="J" pin="4"/>
-<wire x1="64.77" y1="50.8" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
-<label x="68.58" y="50.8" size="1.27" layer="95" xref="yes"/>
+<wire x1="97.79" y1="50.8" x2="101.6" y2="50.8" width="0.1524" layer="91"/>
+<label x="101.6" y="50.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VBUS" class="0">
@@ -10271,8 +10278,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J2" gate="J" pin="3"/>
-<wire x1="64.77" y1="48.26" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
-<label x="68.58" y="48.26" size="1.27" layer="95" xref="yes"/>
+<wire x1="97.79" y1="48.26" x2="101.6" y2="48.26" width="0.1524" layer="91"/>
+<label x="101.6" y="48.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PA7" class="0">
@@ -10283,8 +10290,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J2" gate="J" pin="2"/>
-<wire x1="64.77" y1="45.72" x2="68.58" y2="45.72" width="0.1524" layer="91"/>
-<label x="68.58" y="45.72" size="1.27" layer="95" xref="yes"/>
+<wire x1="97.79" y1="45.72" x2="101.6" y2="45.72" width="0.1524" layer="91"/>
+<label x="101.6" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PA6" class="0">
@@ -10295,8 +10302,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J2" gate="J" pin="1"/>
-<wire x1="64.77" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
-<label x="68.58" y="43.18" size="1.27" layer="95" xref="yes"/>
+<wire x1="97.79" y1="43.18" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
+<label x="101.6" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PA5" class="0">
@@ -10307,8 +10314,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J3" gate="J" pin="7"/>
-<wire x1="93.98" y1="43.18" x2="90.17" y2="43.18" width="0.1524" layer="91"/>
-<label x="90.17" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="43.18" x2="123.19" y2="43.18" width="0.1524" layer="91"/>
+<label x="123.19" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PA4" class="0">
@@ -10319,8 +10326,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J3" gate="J" pin="6"/>
-<wire x1="93.98" y1="45.72" x2="90.17" y2="45.72" width="0.1524" layer="91"/>
-<label x="90.17" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="45.72" x2="123.19" y2="45.72" width="0.1524" layer="91"/>
+<label x="123.19" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PA3" class="0">
@@ -10331,8 +10338,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J3" gate="J" pin="5"/>
-<wire x1="93.98" y1="48.26" x2="90.17" y2="48.26" width="0.1524" layer="91"/>
-<label x="90.17" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="48.26" x2="123.19" y2="48.26" width="0.1524" layer="91"/>
+<label x="123.19" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PA2" class="0">
@@ -10343,8 +10350,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J3" gate="J" pin="4"/>
-<wire x1="93.98" y1="50.8" x2="90.17" y2="50.8" width="0.1524" layer="91"/>
-<label x="90.17" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="50.8" x2="123.19" y2="50.8" width="0.1524" layer="91"/>
+<label x="123.19" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PA1" class="0">
@@ -10355,8 +10362,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J3" gate="J" pin="3"/>
-<wire x1="93.98" y1="53.34" x2="90.17" y2="53.34" width="0.1524" layer="91"/>
-<label x="90.17" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="53.34" x2="123.19" y2="53.34" width="0.1524" layer="91"/>
+<label x="123.19" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PA0" class="0">
@@ -10367,8 +10374,8 @@ uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 </segment>
 <segment>
 <pinref part="J3" gate="J" pin="2"/>
-<wire x1="93.98" y1="55.88" x2="90.17" y2="55.88" width="0.1524" layer="91"/>
-<label x="90.17" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="55.88" x2="123.19" y2="55.88" width="0.1524" layer="91"/>
+<label x="123.19" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED+" class="0">

@@ -7,13 +7,13 @@ Arduino/Genuino compatible Boards and Modules.
 * [Board Support Package for Arduino IDE](https://github.com/watterott/wattuino/tree/master/software/Arduino#watterott-board-support-package)
 * Drivers:
   [FTDI FT23x](http://www.ftdichip.com/Drivers/VCP.htm),
-  [Caterina Atmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),
-  [Micronucleus Attiny](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip)
+  [Caterina ATmega32u4](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip),
+  [Micronucleus ATtiny](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip)
   (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
 * Bootloader:
-  [Optiboot Atmega328](https://github.com/watterott/wattuino/tree/master/software/Optiboot),
-  [Caterina Atmega32u4](https://github.com/watterott/wattuino/tree/master/software/Caterina),
-  [Micronucleus Attiny](https://github.com/watterott/wattuino/tree/master/software/Micronucleus)
+  [Optiboot ATmega328](https://github.com/watterott/wattuino/tree/master/software/Optiboot),
+  [Caterina ATmega32u4](https://github.com/watterott/wattuino/tree/master/software/Caterina),
+  [Micronucleus ATtiny](https://github.com/watterott/wattuino/tree/master/software/Micronucleus)
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
   [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)

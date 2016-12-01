@@ -31,7 +31,7 @@
 // ATMEL ATTINY85 / ARDUINO
 //
 //                  +-\/-+
-// AIN0 (D 5) PB5  1|    |8  Vcc
+// AIN0 (D 5) PB5  1|    |8  VCC
 // AIN3 (D 3) PB3  2|    |7  PB2 (D 2) AIN1
 // AIN2 (D 4) PB4  3|    |6  PB1 (D 1) PWM1
 //            GND  4|    |5  PB0 (D 0) PWM0

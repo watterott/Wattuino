@@ -31,15 +31,15 @@
 
 // ATMEL ATTINY841 / ARDUINO
 //
-//                           +-\/-+
-//                     VCC  1|    |14  GND
-//             (D 10)  PB0  2|    |13  PA0  (D  0)        AREF
-//      INT0   (D  9)  PB1  3|    |12  PA1  (D  1) 
-//                     PB3  4|    |11  PA2  (D  2) 
-//  PWM        (D  8)  PB2  5|    |10  PA3  (D  3) 
-//  PWM        (D  7)  PA7  6|    |9   PA4  (D  4) 
-//  PWM        (D  6)  PA6  7|    |8   PA5  (D  5)        PWM
-//                           +----+
+//                     +-\/-+
+//               VCC  1|    |14  GND
+//       (D 10)  PB0  2|    |13  PA0  (D  0)  AREF
+//  INT0 (D  9)  PB1  3|    |12  PA1  (D  1)
+//  RST  (D 11)  PB3  4|    |11  PA2  (D  2)
+//  PWM  (D  8)  PB2  5|    |10  PA3  (D  3)
+//  PWM  (D  7)  PA7  6|    |9   PA4  (D  4)
+//  PWM  (D  6)  PA6  7|    |8   PA5  (D  5)  PWM
+//                     +----+
 
 #define PIN_A0         (0)
 #define PIN_A1         (1)
@@ -60,16 +60,6 @@ static const uint8_t A6 = PIN_A6;
 static const uint8_t A7 = PIN_A7;
 
 #if defined(__AVR_ATtinyX41__) || defined(__AVR_ATtiny441__) || defined(__AVR_ATtiny841__)
-#define PIN_A8         (8)
-#define PIN_A9         (9)
-#define PIN_A10        (10)
-#define PIN_A11        (11)
-
-static const uint8_t A8 = PIN_A8;
-static const uint8_t A9 = PIN_A9;
-static const uint8_t A10 = PIN_A10;
-static const uint8_t A11 = PIN_A11;
-
 #define PIN_SPI_SS     (7)
 #define PIN_SPI_MOSI   (6)
 #define PIN_SPI_MISO   (5)
@@ -142,6 +132,7 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] =
   PB, /* 8 */
   PB,
   PB,
+  PB,
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = 
@@ -157,6 +148,7 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] =
   _BV(2), /* port B */
   _BV(1),
   _BV(0),
+  _BV(3),
 };
 
 #if defined(__AVR_ATtinyX41__) || defined(__AVR_ATtiny441__) || defined(__AVR_ATtiny841__)
@@ -173,6 +165,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] =
   NOT_ON_TIMER, /* TOCC7 */
   NOT_ON_TIMER,
   NOT_ON_TIMER,
+  NOT_ON_TIMER,
 };
 
 #else
@@ -187,6 +180,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] =
   TIMER1A, /* OC1A */
   TIMER0B, /* OC0B */
   TIMER0A, /* OC0A */
+  NOT_ON_TIMER,
   NOT_ON_TIMER,
   NOT_ON_TIMER,
 };

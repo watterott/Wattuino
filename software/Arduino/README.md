@@ -25,7 +25,7 @@ This is the case when *Done uploading.* is not shown after the upload process.
 Check the driver state in the [Device Manager](https://github.com/watterott/wattuino/raw/master/software/Caterina/usb-devices.png), when the Bootloader is active (Caterina after the *Upload* is started and Micronucleus after a reset).
 If you cannot install the driver on Windows 8 or higher then deactivate the [driver signature enforcement](https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8/disabling-signed-driver-enforcement-on-windows-8).
 * [Caterina Driver](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip)
-* [Micronucleus Driver](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip) (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
+* [Micronucleus Driver](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip) (on problems use [Zadig](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
 * [FTDI Driver](http://www.ftdichip.com/Drivers/VCP.htm)
 * [SAM-BAR Driver](https://github.com/watterott/SAM-BAR/raw/master/software/arduino/driver.zip)
 

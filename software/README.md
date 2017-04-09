@@ -5,3 +5,5 @@
 [Caterina](https://github.com/watterott/wattuino/tree/master/software/Caterina) - ATmega32u4 USB Bootloader
 
 [Micronucleus](https://github.com/watterott/wattuino/tree/master/software/Micronucleus) - ATtiny USB Bootloader
+
+[SAM-BAR](https://github.com/watterott/SAM-BAR) - SAMD21 USB Bootloader

@@ -1,9 +1,6 @@
 
 # Watterott AVR Core and Platform
 # -------------------------------
-#
-# For more info:
-# https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5-3rd-party-Hardware-specification
 
 name=Watterott AVR Boards
 version=1.0.0

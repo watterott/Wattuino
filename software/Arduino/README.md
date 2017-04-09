@@ -8,7 +8,7 @@ Add the following URL to the Arduino Boards Manager (*File->Preferences*):
 ```
 https://github.com/watterott/wattuino/raw/master/software/Arduino/package_watterott_index.json
 ```
-and install the **Watterott AVR Boards** via the Boards Manager (*Tools->Boards->Boards Manager*).
+and install the **Watterott AVR Boards**, **Watterott SAMD Boards** and **Arduino SAMD Boards** via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 If you want to use the **ATTinyCore** from [Spence Konde](https://github.com/SpenceKonde/ATTinyCore) for the Nanite boards, then also install it via the Arduino Boards Manager.
 Here is the URL:
@@ -27,6 +27,7 @@ If you cannot install the driver on Windows 8 or higher then deactivate the [dri
 * [Caterina Driver](https://github.com/watterott/wattuino/raw/master/software/Caterina/driver.zip)
 * [Micronucleus Driver](https://github.com/watterott/wattuino/raw/master/software/Micronucleus/driver.zip) (on problems use [Zadig libusb Installer](https://github.com/micronucleus/micronucleus/tree/master/windows_driver_installer))
 * [FTDI Driver](http://www.ftdichip.com/Drivers/VCP.htm)
+* [SAM-BAR Driver](https://github.com/watterott/SAM-BAR/raw/master/software/arduino/driver.zip)
 
 ### Linux
 The Modem Manager detects the Serial Ports (e.g. Caterina Bootloader) as a modem and therefore a blacklist rule is needed.
@@ -40,6 +41,8 @@ and add the following lines to the file:
 ```
 ATTRS{idVendor}=="6666", ENV{ID_MM_DEVICE_IGNORE}="1"
 ATTRS{idVendor}=="1D50", ATTRS{idProduct}=="60B0", ENV{ID_MM_DEVICE_IGNORE}="1"
+ATTRS{idVendor}=="1D50", ATTRS{idProduct}=="6112", ENV{ID_MM_DEVICE_IGNORE}="1"
+ATTRS{idVendor}=="1D50", ATTRS{idProduct}=="6113", ENV{ID_MM_DEVICE_IGNORE}="1"
 ```
 
 Reload udev rules:
@@ -52,7 +55,7 @@ Or you can also remove the Modem Manager from your system with
 sudo apt-get uninstall modemmanager
 ```
 
-### Micronucleus
+### Micronucleus Bootloader
 The Micronucleus bootloader is not started automatically. You have to **press the reset switch to activate the bootloader** after *Uploading...* is shown in the Arduino IDE.
 
 The Micronucleus upload tool needs root rights to run and so the Arduino IDE has to be started with sudo or you can also create a rule to allow non-root users access to the Micronucleus USB device.
@@ -72,3 +75,13 @@ Reload udev rules:
 ```
 sudo udevadm control --reload-rules
 ```
+
+## SAM-BAR Bootloader
+
+The bootloader can be activated via the Arduino IDE or by doing two reset in 0.5s (double pressing reset switch).
+
+When the bootloader is active then a new program can be loaded via the Arduino IDE and the serial port or via the mass storage device.
+For the mass storage device delete the file ```FLASH.BIN``` and then copy a new binary file ```FLASH.BIN``` to the drive.
+After the copy process is finished, do a reset to start the new program.
+
+A binary file can be generated and exported in the Arduino IDE with *Sketch->Export compiled Binary* command.

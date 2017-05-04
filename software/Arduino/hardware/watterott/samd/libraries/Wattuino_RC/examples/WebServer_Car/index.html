@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RC-Car</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script type="text/javascript">
+		var transmitInterval = 100; // 100ms interval, don't send too often
+		var timer = null;
+		var canvas;
+		var canvasJoystick;
+		var joystickScreen = { x: 500, y: 500, w: 250, h: 250, r : 70 };
+		var mouse = { x: 0, y: 0, key: 0 };
+		var car = { speed: 0, dir: 0, motorR: 0, motorL: 0 };
+		var readBack = {};
+		var lastSendTime = new Date().getTime();
+
+		function main()
+		{
+			canvas = document.getElementById("background-layer");
+			canvasJoystick = document.getElementById("joystick-layer");
+
+			// touch events
+			canvasJoystick.addEventListener("touchmove", function(evt)
+			{
+				evt.preventDefault();
+				var touch = false;
+				if(evt.touches.length > 0)
+					touch = evt.touches[0];
+				else
+					touch = evt.changedTouches[0];
+
+				if(touch)
+					motorCalc(touch);
+			}, false);
+			canvasJoystick.addEventListener("touchstart", function(evt) { evt.preventDefault(); mouse.key = 1; drawElements(); if(!timer) timer = setInterval(sendToServer, 300); }, false);
+			canvasJoystick.addEventListener("touchend",   function(evt) { mouse.key = 0; car.speed = 0; drawElements(); clearInterval(timer); timer = null; }, false);
+
+			// mouse events
+			canvasJoystick.addEventListener("mousemove", function(evt) { if(mouse.key) motorCalc(evt); }, false);
+			canvasJoystick.addEventListener("mousedown", function(evt) { mouse.key = 1; drawElements(); if(!timer) timer = setInterval(sendToServer, 300); }, false);
+			canvasJoystick.addEventListener("mouseup",   function(evt) { mouse.key = 0; car.speed = 0; drawElements(); clearInterval(timer); timer = null; }, false);
+
+			// window resize event
+			resizeElements();
+			window.addEventListener("resize", resizeElements, false);
+
+			function sendToServer()
+			{
+				var json;
+				var now = new Date().getTime();
+				if(((now-lastSendTime) > transmitInterval) || (car.speed == 0))
+				{
+					lastSendTime = now;
+					var xmlHttp = new XMLHttpRequest();
+					xmlHttp.onreadystatechange = function()
+					{
+						if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+						{
+							json = xmlHttp.responseText;
+							readBack = JSON.parse(json);
+						}
+					};
+					// url = /M/motorL/motorR
+					var url = "/car/"+Math.round(car.motorL)+"/"+Math.round(car.motorR);
+					xmlHttp.open("GET", url, true);
+					xmlHttp.send(null);
+				}
+			}
+
+			function motorCalc(evt)
+			{
+				mouse.x = evt.pageX;
+				mouse.y = evt.pageY;
+
+				var dx =  (mouse.x - (joystickScreen.x + joystickScreen.w/2));
+				var dy = -(mouse.y - (joystickScreen.y + joystickScreen.h/2));
+				var dist = Math.sqrt(dx*dx + dy*dy);
+				if(dist < 3*joystickScreen.r) // not too far away
+				{
+					var joy = {x:0, y:0};
+
+					if(dist > joystickScreen.r)
+					{
+						dist = joystickScreen.r;
+						joy.x = dx * joystickScreen.r / dist;
+						joy.y = dy * joystickScreen.r / dist;
+					}
+					else
+					{
+						joy.x = dx;
+						joy.y = dy;
+					}
+
+					car.speed = dist / joystickScreen.r; // from 0 .. 1.0
+					car.dir = Math.atan2(joy.y, joy.x);  // from PI to -PI
+				}
+
+				drawElements();
+			}
+
+			function drawElements()
+			{
+				var context = canvasJoystick.getContext("2d");
+				context.setTransform(1, 0, 0, 1, 0, 0); // set to identity
+				context.translate(joystickScreen.x, joystickScreen.y);
+				context.font = "14pt Arial";
+
+				context.fillStyle = "rgb(80, 80, 80)";
+
+				context.fillRect(0, 0, joystickScreen.w, joystickScreen.h); // Joystick
+
+				context.fillRect(-110, 0, 100, joystickScreen.h); // Motor
+				context.fillStyle = "rgb(192, 192, 192)";
+				context.fillRect(-105, joystickScreen.h/2, 90, 1);
+
+				context.fillStyle = "rgb(80, 80, 80)";
+				context.fillRect(-110, -70, 110 + joystickScreen.w, 60); // Info
+				context.fillStyle = "rgb(192, 192, 192)";
+				context.fillText("Motor-L:", -100, -47);
+				context.fillText("Motor-R:", -100, -17);
+				context.fillText("Battery:",   70, -47);
+				context.fillText("Volt",      200, -47);
+
+				context.beginPath();
+				context.fillStyle =  "rgb(192, 192, 192)";
+				context.arc(joystickScreen.w/2, joystickScreen.h/2, joystickScreen.r+55, 0, Math.PI*2, true);
+				context.fill();
+
+				// draw joystick
+				var x = joystickScreen.w/2 + car.speed * joystickScreen.r * Math.cos(car.dir);
+				var y = joystickScreen.h/2 - car.speed * joystickScreen.r * Math.sin(car.dir);
+
+				context.beginPath();
+				context.fillStyle =  "rgb(255, 165, 0)"; // rgba(255, 165, 0, 0.75)
+				context.arc(x, y, 50, 0, Math.PI*2, true);
+				context.fill();
+
+				// calc motor value
+				var motorL = 255 * 1.41 * car.speed * Math.cos(car.dir - Math.PI/4); // -45 degree
+				var motorR = 255 * 1.41 * car.speed * Math.sin(car.dir - Math.PI/4);
+
+				// limit to +/-255
+				if     (motorL >  255) { motorL =  255; }
+				else if(motorL < -255) { motorL = -255; }
+				if     (motorR >  255) { motorR =  255; }
+				else if(motorR < -255) { motorR = -255; }
+
+				// draw bars
+				var sc = 0.9 * joystickScreen.h / 512;
+				context.fillRect(-100, joystickScreen.h/2, 30, -motorL * sc);
+				context.fillRect( -50, joystickScreen.h/2, 30, -motorR * sc);
+
+				// draw motor values and voltage
+				context.fillStyle =  "rgb(255, 165, 0)";
+				context.fillText(Math.round(motorL), 10, -47);
+				context.fillText(Math.round(motorR), 10, -17);
+				if(readBack.vbat)
+					context.fillText(readBack.vbat.toFixed(1), 150, -47);
+
+				car.motorL = motorL;
+				car.motorR = motorR;
+				sendToServer();
+			}
+
+			function resizeElements()
+			{
+				canvas = document.getElementById("background-layer");
+				if(canvas.getContext)
+				{
+					canvas.width  = window.innerWidth;
+					canvas.height = window.innerHeight;
+				}
+				canvasJoystick = document.getElementById("joystick-layer");
+				if(canvasJoystick.getContext)
+				{
+					canvasJoystick.width  = window.innerWidth;
+					canvasJoystick.height = window.innerHeight;
+					joystickScreen.x = window.innerWidth - joystickScreen.w - 20;
+					joystickScreen.y = window.innerHeight - joystickScreen.h - 20;
+				}
+				drawElements();
+			}
+		}
+	</script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			border: 0;
+			overflow: hidden;
+			display: block;
+		}
+		#stage {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		canvas {
+			position: absolute;
+		}
+		#joystick-layer {
+			z-index: 2;
+		}
+		#background-layer {
+			z-index: 1;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 100%;
+			position:absolute;
+		}
+	</style>
+</head>
+<body onload="main();">
+	<div id="stage">
+		<canvas id="background-layer"></canvas>
+		<canvas id="joystick-layer" width="300" height="300"></canvas>
+	</div>
+</body>
+</html>

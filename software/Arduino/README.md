@@ -1,5 +1,5 @@
 # Watterott Board Support Package
-Board Support Package for [Arduino IDE v1.6+](https://www.arduino.cc/en/Main/Software)
+Board Support Package for [Arduino IDE v1.8+](https://www.arduino.cc/en/Main/Software)
 
 
 ## Installation

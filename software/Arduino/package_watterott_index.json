@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "watterott",
+      "name": "watterott_old",
       "maintainer": "Watterott electronic",
       "websiteURL": "http://www.watterott.com",
       "email": "",
@@ -16,7 +16,7 @@
           "help": {"online": "https://github.com/watterott/Arduino-Boards"},
           "url": "https://github.com/watterott/Arduino-Boards/watterott-samd.zip",
           "archiveFileName": "watterott-samd.zip",
-          "size": "1",
+          "size": "0",
           "boards": [
             {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
           ]
@@ -30,11 +30,14 @@
           "help": {"online": "https://github.com/watterott/Arduino-Boards"},
           "url": "https://github.com/watterott/Arduino-Boards/watterott-avr.zip",
           "archiveFileName": "watterott-avr.zip",
-          "size": "1",
+          "size": "0",
           "boards": [
             {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
           ]
         }
+      ],
+
+      "tools": [
       ]
     }
   ]

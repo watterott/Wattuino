@@ -9,13 +9,13 @@
 
       "platforms": [
         {
-          "name": "Watterott SAMD (ARM Cortex-M0+) Boards",
+          "name": "Watterott SAMD Boards (old)",
           "architecture": "samd",
           "version": "1.0.0",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/Arduino-Boards"},
           "url": "https://github.com/watterott/Arduino-Boards/watterott-samd.zip",
-          "archiveFileName": "watterott-samd-1.0.0.zip",
+          "archiveFileName": "watterott-samd.zip",
           "size": "1",
           "boards": [
             {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
@@ -23,13 +23,13 @@
         },
 
         {
-          "name": "Watterott AVR Boards",
+          "name": "Watterott AVR Boards (old)",
           "architecture": "avr",
           "version": "1.0.0",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/Arduino-Boards"},
-          "url": "https://github.com/watterott/Arduino-Boards",
-          "archiveFileName": "watterott-avr-1.0.0.zip",
+          "url": "https://github.com/watterott/Arduino-Boards/watterott-avr.zip",
+          "archiveFileName": "watterott-avr.zip",
           "size": "1",
           "boards": [
             {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}

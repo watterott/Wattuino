@@ -14,9 +14,9 @@
           "version": "1.0.0",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/Arduino-Boards"},
-          "url": "https://github.com/watterott/Arduino-Boards",
+          "url": "https://github.com/watterott/Arduino-Boards/watterott-samd.zip",
           "archiveFileName": "watterott-samd-1.0.0.zip",
-          "size": "0",
+          "size": "1",
           "boards": [
             {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
           ]
@@ -30,7 +30,7 @@
           "help": {"online": "https://github.com/watterott/Arduino-Boards"},
           "url": "https://github.com/watterott/Arduino-Boards",
           "archiveFileName": "watterott-avr-1.0.0.zip",
-          "size": "0",
+          "size": "1",
           "boards": [
             {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
           ]

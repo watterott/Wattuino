@@ -18,7 +18,7 @@
           "archiveFileName": "watterott-samd.zip",
           "size": "0",
           "boards": [
-            {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
+            {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - uninstall old package before installing the new one"}
           ]
         },
 
@@ -32,7 +32,7 @@
           "archiveFileName": "watterott-avr.zip",
           "size": "0",
           "boards": [
-            {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - further infos: https://github.com/watterott/Arduino-Boards"}
+            {"name": "Moved to: https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.json - uninstall old package before installing the new one"}
           ]
         }
       ],

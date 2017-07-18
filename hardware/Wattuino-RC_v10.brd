@@ -3778,7 +3778,7 @@ TL3305C - 7.0mm height&lt;br&gt;</description>
 <element name="D-" library="we-rcl" package="PAD-1.0_NC" value="PAD-1.0_NC" x="13.97" y="14.351" rot="MR270"/>
 <element name="IC3" library="we-chip" package="MSOP10-PAD" value="A3909-LY" x="50.8" y="11.43" rot="R270"/>
 <element name="IC4" library="we-chip" package="MSOP10-PAD" value="A3909-LY" x="55.88" y="11.43" rot="R270"/>
-<element name="D2" library="we-rcl" package="SMA_DO214AC" value="2A/16V" x="26.162" y="14.732" rot="R180"/>
+<element name="D2" library="we-rcl" package="SMA_DO214AC" value="2A/20V" x="26.162" y="14.732" rot="R180"/>
 <element name="GND" library="we-rcl" package="PAD-1.0_NC" value="PAD-1.0_NC" x="34.417" y="28.321" rot="MR0"/>
 <element name="3V3" library="we-rcl" package="PAD-1.0_NC" value="PAD-1.0_NC" x="34.417" y="20.701" rot="MR0"/>
 <element name="VBUS" library="we-rcl" package="PAD-1.0_NC" value="PAD-1.0_NC" x="9.779" y="16.256" rot="MR0"/>
@@ -3800,7 +3800,7 @@ TL3305C - 7.0mm height&lt;br&gt;</description>
 <element name="R22" library="we-rcl" package="C0402" value="1k" x="28.0035" y="6.0325"/>
 <element name="C10" library="we-rcl" package="C0402" value="100n" x="13.716" y="16.129"/>
 <element name="C13" library="we-rcl" package="C0402" value="100n" x="66.04" y="31.496" rot="R180"/>
-<element name="D6" library="we-rcl" package="SMA_DO214AC" value="2A/16V" x="19.05" y="4.445" rot="R180"/>
+<element name="D6" library="we-rcl" package="SMA_DO214AC" value="2A/20V" x="19.05" y="4.445" rot="R180"/>
 <element name="C12" library="we-rcl" package="C0805" value="22u/6.3V" x="56.515" y="31.496" rot="R270"/>
 <element name="R2" library="we-rcl" package="C0402" value="47k" x="44.958" y="15.113" rot="R270"/>
 <element name="C1" library="we-rcl" package="C0805" value="22u/16V" x="30.48" y="15.748"/>
@@ -3814,8 +3814,8 @@ TL3305C - 7.0mm height&lt;br&gt;</description>
 <element name="LED9" library="we-opto" package="C0603" value="red" x="38.862" y="26.035" rot="R270"/>
 <element name="R14" library="we-rcl" package="C0402" value="1k" x="37.211" y="27.051" rot="R90"/>
 <element name="R45" library="we-rcl" package="C0402" value="330" x="38.481" y="24.765" rot="R90"/>
-<element name="D5" library="we-rcl" package="SMA_DO214AC" value="2A/16V" x="55.753" y="28.067"/>
-<element name="D1" library="we-rcl" package="SMA_DO214AC" value="2A/16V" x="19.812" y="8.763" rot="R270"/>
+<element name="D5" library="we-rcl" package="SMA_DO214AC" value="2A/20V" x="55.753" y="28.067"/>
+<element name="D1" library="we-rcl" package="SMA_DO214AC" value="2A/20V" x="19.812" y="8.763" rot="R270"/>
 <element name="LOGO2" library="we-symbol" package="OSHW_6X150" value="OSHW_LOGOX0150" x="52.324" y="23.241" rot="MR0"/>
 <element name="LOGO4" library="we-symbol" package="LOGO_TPLACE" value="LOGO-PLACE" x="53.975" y="14.351" rot="MR0"/>
 </elements>

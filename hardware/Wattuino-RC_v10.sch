@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -12390,6 +12390,30 @@ NR6045T101M - 100uH, Ir=0.8A&lt;br&gt;</description>
 <wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
 <text x="0" y="0" size="1.4224" layer="94" align="center">Watterott</text>
 </symbol>
+<symbol name="A4L-LOC">
+<wire x1="256.54" y1="3.81" x2="256.54" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="256.54" y1="8.89" x2="256.54" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="256.54" y1="13.97" x2="256.54" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="256.54" y1="19.05" x2="256.54" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="161.29" y1="3.81" x2="161.29" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="161.29" y1="24.13" x2="215.265" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="24.13" x2="256.54" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="246.38" y1="3.81" x2="246.38" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="246.38" y1="8.89" x2="256.54" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="246.38" y1="8.89" x2="215.265" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="8.89" x2="215.265" y2="3.81" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="8.89" x2="215.265" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="13.97" x2="256.54" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="13.97" x2="215.265" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="19.05" x2="256.54" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="19.05" x2="215.265" y2="24.13" width="0.1016" layer="94"/>
+<frame x1="0" y1="0" x2="260.35" y2="179.07" columns="6" rows="4" layer="94"/>
+<text x="217.17" y="15.24" size="1.778" layer="94" font="vector">&gt;DRAWING_NAME</text>
+<text x="217.17" y="10.16" size="1.778" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
+<text x="230.505" y="5.08" size="2.54" layer="94" font="vector">&gt;SHEET</text>
+<text x="217.17" y="5.08" size="2.54" layer="94" font="vector">Sheet:</text>
+<text x="217.17" y="20.32" size="2.032" layer="94" font="vector">www.watterott.com</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="PASSER" prefix="X">
@@ -12488,6 +12512,19 @@ NR6045T101M - 100uH, Ir=0.8A&lt;br&gt;</description>
 </technologies>
 </device>
 <device name="-S_PLACE_S" package="SPARK_TPLACE_S">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FRAME-A4L" prefix="FRAME">
+<description>Frame: DIN A4 Landscape</description>
+<gates>
+<gate name="F" symbol="A4L-LOC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -12941,7 +12978,7 @@ TL3305C - 7.0mm height&lt;br&gt;</description>
 <part name="D-" library="we-rcl" deviceset="PAD" device="-1.0_NC" value="PAD-1.0_NC"/>
 <part name="IC3" library="we-chip" deviceset="A3909" device="-LY"/>
 <part name="IC4" library="we-chip" deviceset="A3909" device="-LY"/>
-<part name="D2" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/16V"/>
+<part name="D2" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/20V"/>
 <part name="GND" library="we-rcl" deviceset="PAD" device="-1.0_NC" value="PAD-1.0_NC"/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
 <part name="3V3" library="we-rcl" deviceset="PAD" device="-1.0_NC" value="PAD-1.0_NC"/>
@@ -12963,7 +13000,7 @@ TL3305C - 7.0mm height&lt;br&gt;</description>
 <part name="C10" library="we-rcl" deviceset="CAPACITOR" device="-0402" value="100n"/>
 <part name="C13" library="we-rcl" deviceset="CAPACITOR" device="-0402" value="100n"/>
 <part name="GND58" library="supply1" deviceset="GND" device=""/>
-<part name="D6" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/16V"/>
+<part name="D6" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/20V"/>
 <part name="C12" library="we-rcl" deviceset="CAPACITOR" device="-0805" value="22u/6.3V"/>
 <part name="R2" library="we-rcl" deviceset="RESISTOR" device="-0402" value="47k"/>
 <part name="GND59" library="supply1" deviceset="GND" device=""/>
@@ -12991,10 +13028,11 @@ TL3305C - 7.0mm height&lt;br&gt;</description>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="R14" library="we-rcl" deviceset="RESISTOR" device="-0402" value="1k"/>
 <part name="R45" library="we-rcl" deviceset="RESISTOR" device="-0402" value="330"/>
-<part name="D5" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/16V"/>
-<part name="D1" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/16V"/>
+<part name="D5" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/20V"/>
+<part name="D1" library="we-rcl" deviceset="D_SCHOTTKY" device="-SMA" value="2A/20V"/>
 <part name="LOGO2" library="we-symbol" deviceset="OSHW_LOGO" device="X0150" value="OSHW_LOGOX0150"/>
 <part name="LOGO4" library="we-symbol" deviceset="LOGO" device="-PLACE"/>
+<part name="FRAME2" library="we-symbol" deviceset="FRAME-A4L" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15192,6 +15230,120 @@ Output Voltage: 0-3.3V</text>
 <wire x1="76.2" y1="231.14" x2="78.74" y2="231.14" width="0.1524" layer="91"/>
 </segment>
 </net>
+</nets>
+</sheet>
+<sheet>
+<plain>
+<wire x1="78.74" y1="170.18" x2="78.74" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="78.74" y1="35.56" x2="137.16" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="137.16" y1="35.56" x2="137.16" y2="170.18" width="0.6096" layer="94"/>
+<wire x1="137.16" y1="170.18" x2="78.74" y2="170.18" width="0.6096" layer="94"/>
+<text x="106.68" y="121.92" size="2.54" layer="94" align="center">SAMD21 + WINC1500</text>
+<text x="106.68" y="132.08" size="3.81" layer="94" align="center">SAMW25 Module</text>
+<text x="40.64" y="81.28" size="3.81" layer="94" rot="R180" align="center">USB</text>
+<wire x1="58.42" y1="88.9" x2="22.86" y2="88.9" width="0.6096" layer="94"/>
+<wire x1="22.86" y1="88.9" x2="22.86" y2="73.66" width="0.6096" layer="94"/>
+<wire x1="22.86" y1="73.66" x2="58.42" y2="73.66" width="0.6096" layer="94"/>
+<wire x1="58.42" y1="73.66" x2="58.42" y2="88.9" width="0.6096" layer="94"/>
+<text x="106.68" y="86.36" size="3.81" layer="94" rot="R180" align="center">ARM Cortex-M0+
+
+with
+
+USB + WiFi/WLAN</text>
+<wire x1="157.48" y1="55.88" x2="157.48" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="157.48" y1="35.56" x2="193.04" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="193.04" y1="35.56" x2="193.04" y2="55.88" width="0.6096" layer="94"/>
+<wire x1="193.04" y1="55.88" x2="157.48" y2="55.88" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="170.18" x2="203.2" y2="149.86" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="149.86" x2="238.76" y2="149.86" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="149.86" x2="238.76" y2="170.18" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="170.18" x2="203.2" y2="170.18" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="147.32" x2="203.2" y2="127" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="127" x2="238.76" y2="127" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="127" x2="238.76" y2="147.32" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="147.32" x2="203.2" y2="147.32" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="124.46" x2="203.2" y2="104.14" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="104.14" x2="238.76" y2="104.14" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="104.14" x2="238.76" y2="124.46" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="124.46" x2="203.2" y2="124.46" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="101.6" x2="203.2" y2="81.28" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="81.28" x2="238.76" y2="81.28" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="81.28" x2="238.76" y2="101.6" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="101.6" x2="203.2" y2="101.6" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="55.88" x2="203.2" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="35.56" x2="238.76" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="35.56" x2="238.76" y2="55.88" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="55.88" x2="203.2" y2="55.88" width="0.6096" layer="94"/>
+<text x="175.26" y="45.72" size="3.81" layer="94" align="center">2x A3909</text>
+<text x="175.26" y="38.1" size="2.54" layer="94" align="center">Motor Driver</text>
+<text x="220.98" y="162.56" size="3.81" layer="94" align="center">7x
+IOs</text>
+<text x="220.98" y="139.7" size="3.81" layer="94" align="center">2x
+I2C</text>
+<text x="220.98" y="116.84" size="3.81" layer="94" align="center">1x
+UART</text>
+<text x="220.98" y="93.98" size="3.81" layer="94" align="center">1x
+SPI</text>
+<text x="220.98" y="48.26" size="3.81" layer="94" align="center">4x
+Full Bridges</text>
+<wire x1="203.2" y1="78.74" x2="203.2" y2="58.42" width="0.6096" layer="94"/>
+<wire x1="203.2" y1="58.42" x2="238.76" y2="58.42" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="58.42" x2="238.76" y2="78.74" width="0.6096" layer="94"/>
+<wire x1="238.76" y1="78.74" x2="203.2" y2="78.74" width="0.6096" layer="94"/>
+<text x="220.98" y="71.12" size="3.81" layer="94" align="center">1x
+Power Switch</text>
+<wire x1="157.48" y1="78.74" x2="157.48" y2="58.42" width="0.6096" layer="94"/>
+<wire x1="157.48" y1="58.42" x2="193.04" y2="58.42" width="0.6096" layer="94"/>
+<wire x1="193.04" y1="58.42" x2="193.04" y2="78.74" width="0.6096" layer="94"/>
+<wire x1="193.04" y1="78.74" x2="157.48" y2="78.74" width="0.6096" layer="94"/>
+<text x="175.26" y="68.58" size="3.81" layer="94" align="center">1x MosFet</text>
+<text x="40.64" y="55.88" size="3.81" layer="94" rot="R180" align="center">Power Supply</text>
+<wire x1="22.86" y1="63.5" x2="22.86" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="22.86" y1="35.56" x2="58.42" y2="35.56" width="0.6096" layer="94"/>
+<wire x1="58.42" y1="35.56" x2="58.42" y2="63.5" width="0.6096" layer="94"/>
+<wire x1="58.42" y1="63.5" x2="22.86" y2="63.5" width="0.6096" layer="94"/>
+<text x="40.64" y="45.72" size="2.54" layer="94" rot="R180" align="center">7-14V Ext. Power
+or
+5V USB</text>
+<wire x1="203.2" y1="68.58" x2="193.04" y2="68.58" width="0.6096" layer="97"/>
+<wire x1="193.04" y1="45.72" x2="203.2" y2="45.72" width="0.6096" layer="97"/>
+<wire x1="203.2" y1="91.44" x2="137.16" y2="91.44" width="0.6096" layer="97"/>
+<wire x1="203.2" y1="114.3" x2="137.16" y2="114.3" width="0.6096" layer="97"/>
+<wire x1="203.2" y1="137.16" x2="137.16" y2="137.16" width="0.6096" layer="97"/>
+<wire x1="203.2" y1="160.02" x2="137.16" y2="160.02" width="0.6096" layer="97"/>
+<wire x1="58.42" y1="81.28" x2="78.74" y2="81.28" width="0.6096" layer="97"/>
+<wire x1="157.48" y1="68.58" x2="137.16" y2="68.58" width="0.6096" layer="97"/>
+<wire x1="157.48" y1="45.72" x2="137.16" y2="45.72" width="0.6096" layer="97"/>
+<text x="220.98" y="152.4" size="2.54" layer="94" align="center">5V tolerant</text>
+<text x="220.98" y="129.54" size="2.54" layer="94" align="center">5V tolerant</text>
+<text x="220.98" y="106.68" size="2.54" layer="94" align="center">5V tolerant</text>
+<text x="220.98" y="83.82" size="2.54" layer="94" align="center">5V tolerant</text>
+<text x="220.98" y="60.96" size="2.54" layer="94" align="center">up to 2A</text>
+<text x="220.98" y="38.1" size="2.54" layer="94" align="center">up to 1A/phase</text>
+<wire x1="40.64" y1="73.66" x2="40.64" y2="63.5" width="0.6096" layer="97"/>
+<wire x1="40.64" y1="35.56" x2="40.64" y2="30.48" width="0.6096" layer="97"/>
+<wire x1="40.64" y1="30.48" x2="106.68" y2="30.48" width="0.6096" layer="97"/>
+<wire x1="106.68" y1="30.48" x2="175.26" y2="30.48" width="0.6096" layer="97"/>
+<wire x1="175.26" y1="30.48" x2="175.26" y2="35.56" width="0.6096" layer="97"/>
+<text x="162.56" y="22.86" size="1.27" layer="95" align="top-left">Released under the Creative Commons Attribution Share-Alike 
+License. http://creativecommons.org/licenses/by-sa/4.0/
+
+Designed by Watterott electronic (www.watterott.com)</text>
+<wire x1="175.26" y1="30.48" x2="220.98" y2="30.48" width="0.6096" layer="97"/>
+<wire x1="220.98" y1="30.48" x2="220.98" y2="35.56" width="0.6096" layer="97"/>
+<wire x1="220.98" y1="55.88" x2="220.98" y2="58.42" width="0.6096" layer="97"/>
+<wire x1="220.98" y1="78.74" x2="220.98" y2="81.28" width="0.6096" layer="97"/>
+<wire x1="220.98" y1="101.6" x2="220.98" y2="104.14" width="0.6096" layer="97"/>
+<wire x1="220.98" y1="124.46" x2="220.98" y2="127" width="0.6096" layer="97"/>
+<wire x1="220.98" y1="147.32" x2="220.98" y2="149.86" width="0.6096" layer="97"/>
+<wire x1="106.68" y1="30.48" x2="106.68" y2="35.56" width="0.6096" layer="97"/>
+</plain>
+<instances>
+<instance part="FRAME2" gate="F" x="0" y="0"/>
+</instances>
+<busses>
+</busses>
+<nets>
 </nets>
 </sheet>
 </sheets>

@@ -3,20 +3,20 @@ Arduino compatible Boards and Modules.
 
 
 ## Hardware and Software
-* [Schematics + Layout of all Boards/Modules](https://github.com/watterott/wattuino/tree/master/hardware)
+* [Schematics + Layout of all Boards/Modules](https://github.com/watterott/Wattuino/tree/master/hardware)
 * [Boards Package for Arduino IDE](https://github.com/watterott/Arduino-Boards#watterott-boards-package)
 * Bootloader:
-  [Optiboot ATmega328](https://github.com/watterott/wattuino/tree/master/software/Optiboot),
-  [Caterina ATmega32u4](https://github.com/watterott/wattuino/tree/master/software/Caterina),
-  [Micronucleus ATtiny](https://github.com/watterott/wattuino/tree/master/software/Micronucleus),
+  [Optiboot ATmega328](https://github.com/watterott/Wattuino/tree/master/software/Optiboot),
+  [Caterina ATmega32u4](https://github.com/watterott/Wattuino/tree/master/software/Caterina),
+  [Micronucleus ATtiny](https://github.com/watterott/Wattuino/tree/master/software/Micronucleus),
   [SAM-BAR SAMD21](https://github.com/watterott/SAM-BAR)
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
-  [Fritzing](https://github.com/watterott/wattuino/raw/master/hardware/wattuino.fzpz)
+  [Fritzing](https://github.com/watterott/Wattuino/raw/master/hardware/wattuino.fzpz)
 
 
 ## Wattuino RC
-[![Wattuino RC](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-RC_v10.jpg)](http://www.watterott.com/en/Wattuino-RC)
+[![Wattuino RC](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-RC_v10.jpg)](http://www.watterott.com/en/Wattuino-RC)
 * Shop: [Wattuino RC](http://www.watterott.com/en/Wattuino-RC)
 * Microchip **SAMW25** Module (SAMD21 ARM Cortex-M0+ and WINC1500 WiFi/WLAN SoC)
 * [SAM-BAR](https://github.com/watterott/SAM-BAR) USB Bootloader (Arduino compatible)
@@ -28,7 +28,7 @@ Arduino compatible Boards and Modules.
 
 
 ## Wattuino Uno
-[![Wattuino Uno](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Uno_v11.jpg)](http://www.watterott.com/en/Wattuino-UNO)
+[![Wattuino Uno](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Uno_v11.jpg)](http://www.watterott.com/en/Wattuino-UNO)
 * Shop: [Wattuino Uno](http://www.watterott.com/en/Wattuino-UNO), [Wattuino Uno Kit](http://www.watterott.com/en/Wattuino-Uno-Kit)
 * Microchip AVR **ATmega328P** @ 16 MHz (external resonator)
 * Compatible with Arduino Uno R3 (Arduino IDE)
@@ -41,7 +41,7 @@ Arduino compatible Boards and Modules.
 
 
 ## Wattuino Pro Mini
-[![Wattuino Pro Mini](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
+[![Wattuino Pro Mini](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Pro-Mini_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz)
 * Shop: [Wattuino Pro Mini 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-5V-16MHz), [Wattuino Pro Mini 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-3V3-8MHz)
 * Microchip AVR **ATmega328P** @ 16 MHz or 8 MHz (external resonator)
 * Compatible with Arduino Pro Mini (Arduino IDE)
@@ -54,7 +54,7 @@ Arduino compatible Boards and Modules.
 
 
 ## Wattuino Pro Mini PB
-[![Wattuino Pro Mini PB](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Pro-Mini-PB_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
+[![Wattuino Pro Mini PB](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Pro-Mini-PB_v10.jpg)](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
 * Shop: [Wattuino Pro Mini PB 5V 16MHz](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz), [Wattuino Pro Mini PB 3V3 8MHz](http://www.watterott.com/en/Wattuino-pro-mini-PB-3V3-8MHz)
 * Microchip AVR **ATmega328PB** @ 16 MHz or 8 MHz (external resonator)
 * OptiBoot Bootloader with auto baud rate detection (Arduino compatible)
@@ -66,7 +66,7 @@ Arduino compatible Boards and Modules.
 
 
 ## Wattuino Nanite 841
-[![Wattuino Nanite841](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite841_v11.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
+[![Wattuino Nanite841](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Nanite841_v11.jpg)](http://www.watterott.com/en/Wattuino-Nanite841)
 * Shop: [Wattuino Nanite 841](http://www.watterott.com/en/Wattuino-Nanite841)
 * Microchip AVR **ATtiny841** @ 8 MHz (internal clock) with USART, SPI, I2C Slave, ADC, EEPROM
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader (Arduino compatible)
@@ -77,7 +77,7 @@ Arduino compatible Boards and Modules.
 
 
 ## Wattuino Nanite 85
-[![Wattuino Nanite85](https://github.com/watterott/wattuino/raw/master/hardware/Wattuino-Nanite85_v11.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
+[![Wattuino Nanite85](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Nanite85_v11.jpg)](http://www.watterott.com/en/Wattuino-Nanite85)
 * Shop: [Wattuino Nanite 85](http://www.watterott.com/en/Wattuino-Nanite85)
 * Microchip AVR **ATtiny85** @ 16.5 MHz (internal clock) with USI, ADC, EEPROM
 * [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader (Arduino compatible)

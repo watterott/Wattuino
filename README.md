@@ -13,6 +13,8 @@ Arduino compatible Boards and Modules.
 * CAD Parts:
   [Eagle](https://github.com/watterott/Eagle-Libs),
   [Fritzing](https://github.com/watterott/Wattuino/raw/master/hardware/wattuino.fzpz)
+* Tutorials:
+  [Wattuino RC](https://doc.schlenker.dk/watterott-electronic/rc-roboter-controller-english/)
 
 
 ## Wattuino RC

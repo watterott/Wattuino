@@ -8,4 +8,4 @@ https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.j
 
 Further infos:
 
-https://github.com/watterott/Arduino-Boards#watterott-boards-package
+http://learn.watterott.com/arduino/watterott-boards/

@@ -14,8 +14,6 @@ Code uploaded via the bootloader is not subject to any license issues.
 
 ## USB Vendor and Product ID
 * VID: 0x1D50 - [Openmoko](http://wiki.openmoko.org/wiki/USB_Product_IDs) + PID: 0x60B0 - [Watterott](http://wiki.openmoko.org/wiki/USB_Product_IDs)
-* VID 0x6666 - [Prototype Product Vendor ID](http://www.linux-usb.org/usb.ids)
-* VID 0x1209 - [Open-Source Projects](http://pid.codes)
 
 ## ISP Pins of ATmega32U4
 ```

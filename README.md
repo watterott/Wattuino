@@ -5,7 +5,7 @@ Arduino compatible Boards and Modules.
 
 
 ## Wattuino RC
-![Wattuino RC](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-RC_v10.jpg)](http://www.watterott.com/en/Wattuino-RC)
+![Wattuino RC](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-RC_v10.jpg)
 * Microchip **SAMW25** Module (SAMD21 ARM Cortex-M0+ and WINC1500 WiFi/WLAN SoC)
 * USB CDC+MSC Bootloader (Arduino compatible)
 * 5V tolerant IOs

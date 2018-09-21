@@ -7,5 +7,4 @@ https://github.com/watterott/Arduino-Boards/raw/master/package_watterott_index.j
 ```
 
 Further infos:
-
-http://learn.watterott.com/arduino/watterott-boards/
+https://learn.watterott.com/arduino/watterott-boards/

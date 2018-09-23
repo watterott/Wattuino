@@ -1,7 +1,7 @@
 # Wattuino
 Arduino compatible Boards and Modules.
 
-[Wattuino Board Support Package](http://learn.watterott.com/arduino/watterott-boards) for Arduino IDE.
+[Wattuino Board Support Package](https://learn.watterott.com/arduino/watterott-boards) for Arduino IDE.
 
 
 ## Wattuino RC
@@ -11,7 +11,6 @@ Arduino compatible Boards and Modules.
 * 5V tolerant IOs
 * Dual Full-Bridge Motor Drivers (Allegro Micro A3909)
 * MicroUSB connector for programming/communication
-* 5V switching voltage regulator
 * PCB Size: 70mm x 50mm
 
 
@@ -21,7 +20,6 @@ Arduino compatible Boards and Modules.
 * OptiBoot Bootloader with auto baud rate detection (Arduino compatible)
 * FTDI FT231X USB-UART-Bridge
 * USB-B or MicroUSB connector for programming/communication
-* 5V and 3.3V LDO voltage regulators
 * PCB Size: 68.58mm x 53.34mm
 
 
@@ -30,7 +28,6 @@ Arduino compatible Boards and Modules.
 * Microchip AVR **ATmega328P** @ 16 MHz or 8 MHz (external resonator)
 * OptiBoot Bootloader with auto baud rate detection (Arduino compatible)
 * All pins of the AVR are available (also ADC6, ADC7)
-* 5V or 3.3V LDO voltage regulator
 * FTDI connector for programming/communication
 * PCB Size: 33.02mm x 17.78mm
 
@@ -40,7 +37,6 @@ Arduino compatible Boards and Modules.
 * Microchip AVR **ATmega328PB** @ 16 MHz or 8 MHz (external resonator)
 * OptiBoot Bootloader with auto baud rate detection (Arduino compatible)
 * All pins of the AVR are available (also PE0/SDA1, PE1/SCL1, PE2/ADC6, PE3/ADC7)
-* 5V or 3.3V LDO voltage regulator
 * FTDI connector for programming/communication
 * PCB Size: 33.02mm x 17.78mm
 

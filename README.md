@@ -45,7 +45,7 @@ Arduino compatible Boards and Modules.
 ![Wattuino Nanite841](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Nanite841_v11.jpg)
 * Microchip AVR **ATtiny841** @ 8 MHz (internal clock) with USART, SPI, I2C Slave, ADC, EEPROM
 * Micronucleus USB Bootloader (Arduino compatible)
-* Designed by [Tim Böscke](https://github.com/cpldcpu)
+* Designed by [cpldcpu](https://github.com/cpldcpu)
 * 14-Pin DIP and pin-compatible with 14-Pin SOIC ATtiny841
 * MicroUSB connector for programming/communication
 * PCB Size: 24.13mm x 10.16mm
@@ -55,7 +55,7 @@ Arduino compatible Boards and Modules.
 ![Wattuino Nanite85](https://github.com/watterott/Wattuino/raw/master/hardware/Wattuino-Nanite85_v11.jpg)
 * Microchip AVR **ATtiny85** @ 16.5 MHz (internal clock) with USI, ADC, EEPROM
 * Micronucleus USB Bootloader (Arduino compatible)
-* Based on the original [Nanite 85](https://github.com/cpldcpu/Nanite) design by [Tim Böscke](https://github.com/cpldcpu)
+* Based on the original [Nanite 85](https://github.com/cpldcpu/Nanite) design by [cpldcpu](https://github.com/cpldcpu)
 * Pin-compatible with 8-Pin DIP ATtiny85
 * MicroUSB connector for programming/communication
 * PCB Size: 17.46mm x 10.16mm

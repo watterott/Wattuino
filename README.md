@@ -1,7 +1,9 @@
 # Wattuino
 Arduino compatible Boards and Modules.
 
-[Wattuino Board Support Package](https://learn.watterott.com/arduino/watterott-boards) for Arduino IDE.
+* [Wattuino Board Support Package](https://learn.watterott.com/arduino/watterott-boards) for Arduino IDE.
+* [Documentation on learn.watterott.com](https://learn.watterott.com)
+* Open-Source and released under the [Creative Commons Attribution Share-Alike License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 
 ## Wattuino RC

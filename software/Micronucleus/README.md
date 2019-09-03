@@ -8,7 +8,7 @@ Code uploaded via the bootloader is not subject to any license issues.
 **Credits**
 ```
 Firmware:
-  * Micronucleus V2.x             (c) 2015 Tim Boescke
+  * Micronucleus V2.x             (c) 2016 T. Boescke
                                   (c) 2014 Shay Green
   * Original Micronucleus         (c) 2012 Jenna Fox
   * Based on USBaspLoader-tiny85  (c) 2012 Louis Beaudoin
@@ -17,7 +17,7 @@ Firmware:
 Commandline tool:
   * Original commandline tool     (c) 2012 ihsan Kehribar
                                   (c) 2012 Jenna Fox
-  * Updates for V2.x              (c) 2014 Tim Boescke
+  * Updates for V2.x              (c) 2014 T. Boescke
 
 Special Thanks:
   * Aaron Stone/@sodabrew for building the OS X command line tool and various fixes.
